@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cuadricula : MonoBehaviour
+public class GestorCuadricula : MonoBehaviour
 {
     public LayerMask mascaraCaminable;
-    public LayerMask mascaraNoCaminable;
     public Vector2 dimensionesCuadricula;
     public float radioNodoNuevo = 1f;
     public float margen = 0f;
+
     Nodo[,] cuadricula;
     float radioNodo = 1f;
 
-    float diametroNodo = 0f;
+    float diametroNodo;
     int nodosEnX, nodosEnY;
 
 
@@ -61,18 +61,18 @@ public class Cuadricula : MonoBehaviour
                 Vector3 posicionNodo = posicionAbajoIzq + Vector3.right * (x * diametroNodo + radioNodo) + Vector3.forward * (y * diametroNodo + radioNodo);
 
                 // detectar si hay casilla caminable
-                RaycastHit colision;
-                if(Physics.Raycast(posicionNodo + Vector3.up * 3, Vector3.down, out colision, Mathf.Infinity, mascaraCaminable))
+                Nodo nodo = null;
+                if(Physics.Raycast(posicionNodo + Vector3.up * 3, Vector3.down, out RaycastHit colision, Mathf.Infinity, mascaraCaminable))
                 {
-                    Nodo nodo = colision.collider.GetComponent<Nodo>();
-                    // definir si la casilla es caminable
-                    nodo.caminable = !Physics.Raycast(posicionNodo + Vector3.up * 3, Vector3.down, Mathf.Infinity, mascaraNoCaminable);
+                    nodo = colision.collider.GetComponent<Nodo>();
 
-                    // guardar casilla
-                    nodo.gridX = x;
-                    nodo.gridY = y;
-                    cuadricula[x, y] = nodo;
+                    // indicar posicion del nodo
+                    nodo.posicionX = x;
+                    nodo.posicionY = y;
                 }
+
+                // guardar casilla
+                cuadricula[x, y] = nodo;
             }
         }
     }
@@ -81,13 +81,16 @@ public class Cuadricula : MonoBehaviour
     {
         List<Nodo> neighbours = new List<Nodo>();
 
-        for(int x = -1; x <= 1; x++)
-        {
-            for(int y = -1; y <= 1; y++)
-            {
+        if (nodo.posicionY + 1 < dimensionesCuadricula.y)
+            neighbours.Add(cuadricula[nodo.posicionX, nodo.posicionY + 1]);
+        if (nodo.posicionX - 1 >= 0)
+            neighbours.Add(cuadricula[nodo.posicionX - 1, nodo.posicionY]);
+        if (nodo.posicionX + 1 < dimensionesCuadricula.x)
+            neighbours.Add(cuadricula[nodo.posicionX + 1, nodo.posicionY]);
+        if (nodo.posicionY - 1 >= 0)
+            neighbours.Add(cuadricula[nodo.posicionX, nodo.posicionY - 1]);
 
-            }
-        }
+        return neighbours;
     }
 
     public Nodo NodoCoincidente(Vector3 posicion)

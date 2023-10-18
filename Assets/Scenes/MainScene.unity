@@ -361,7 +361,7 @@ MonoBehaviour:
     m_Bits: 8
   mascaraNoCaminable:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 64
   dimensionesCuadricula: {x: 7, y: 7}
   radioNodoNuevo: 0.5
   margen: 0
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 220273746}
   - component: {fileID: 220273745}
   - component: {fileID: 220273744}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: caja (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 269390312}
   - component: {fileID: 269390311}
   - component: {fileID: 269390310}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: caja (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1698,7 +1698,7 @@ GameObject:
   - component: {fileID: 867808247}
   - component: {fileID: 867808246}
   - component: {fileID: 867808245}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: caja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2822,7 +2822,7 @@ GameObject:
   - component: {fileID: 1651986726}
   - component: {fileID: 1651986725}
   - component: {fileID: 1651986724}
-  m_Layer: 4
+  m_Layer: 6
   m_Name: caja (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

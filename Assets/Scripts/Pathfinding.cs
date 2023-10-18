@@ -4,37 +4,78 @@ using UnityEngine;
 
 public class Pathfinding : MonoBehaviour
 {
-    Cuadricula grid;
+    GestorCuadricula gestorCuadricula;
+
+    public static int DISTANCIA_ENTRE_NODOS = 10;
 
     private void Awake()
     {
-        grid = GetComponent<Cuadricula>();
+        gestorCuadricula = GetComponent<GestorCuadricula>();
     }
 
-    void FindPath(Vector3 startPos, Vector3 targetPos)
+    Stack<Nodo> HacerPathFinding(Vector3 posicionInicial, Vector3 posicionDestino)
     {
-        Nodo startNode = grid.NodoCoincidente(startPos);
-        Nodo targetNode = grid.NodoCoincidente(targetPos);
+        Nodo nodoInicial = gestorCuadricula.NodoCoincidente(posicionInicial);
+        Nodo nodoDestino = gestorCuadricula.NodoCoincidente(posicionDestino);
 
-        List<Nodo> openSet = new List<Nodo>();
-        HashSet<Nodo> closedSet = new HashSet<Nodo>();
-        openSet.Add(startNode);
+        List<Nodo> nodosAccesibles = new List<Nodo>();
+        HashSet<Nodo> nodosRevisados = new HashSet<Nodo>();
+        nodosAccesibles.Add(nodoInicial);
+        nodoInicial.previo = null;
 
-        while(openSet.Count > 0)
+        // INICIO --------------------------------------------
+
+        while(nodosAccesibles.Count > 0)
         {
-            Nodo currentNode = openSet[0];
-            for(int i = 1; i < openSet.Count; i++)
+            // BUSCAR MENOR COSTE F --------------
+            Nodo nodoActual = nodosAccesibles[0];
+            for(int i = 1; i < nodosAccesibles.Count; i++)
             {
-                if(openSet[i].FCost < currentNode.FCost || openSet[i].FCost == currentNode.FCost && openSet[i].hCost < currentNode.hCost)
+                if(nodosAccesibles[i].CosteF < nodoActual.CosteF || nodosAccesibles[i].CosteF == nodoActual.CosteF && nodosAccesibles[i].costeH < nodoActual.costeH)
                 {
-                    currentNode = openSet[i];
+                    nodoActual = nodosAccesibles[i];
                 }
             }
 
-            openSet.Remove(currentNode);
-            closedSet.Add(currentNode);
+            // MARCAR NODO PROCESADO -------------
+            nodosAccesibles.Remove(nodoActual);
+            nodosRevisados.Add(nodoActual);
 
-            if (currentNode == targetNode) return;
+            // NODO DESTINO ENCONTRADO -----------
+            if (nodoActual == nodoDestino)
+                return TrazarCamino(nodoActual);
+
+            // REVISAR VECINOS -------------------
+            foreach(Nodo vecino in gestorCuadricula.GetNeighbours(nodoActual))
+            {
+                if (!vecino.caminable || nodosRevisados.Contains(vecino)) continue;
+
+                int costeHastaVecino = nodoActual.costeG + Pathfinding.DISTANCIA_ENTRE_NODOS;
+                if(costeHastaVecino < vecino.costeG || !nodosRevisados.Contains(vecino))
+                {
+                    vecino.costeG = costeHastaVecino;
+                    vecino.costeH = vecino.GetDistancia(nodoDestino);
+                    vecino.previo = nodoActual;
+
+                    if (!nodosRevisados.Contains(vecino)) nodosRevisados.Add(vecino);
+                }
+            }
         }
+
+        return null;
+    }
+
+    Stack<Nodo> TrazarCamino(Nodo nodoDestino)
+    {
+        Stack<Nodo> camino = new();
+
+        Nodo nodoActual = nodoDestino;
+        while (nodoActual.previo != null)
+        {
+            camino.Push(nodoActual);
+            nodoActual = nodoActual.previo;
+        }
+
+        return camino;
     }
 }
