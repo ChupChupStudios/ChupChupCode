@@ -69,8 +69,23 @@ public class Cuadricula : MonoBehaviour
                     nodo.caminable = !Physics.Raycast(posicionNodo + Vector3.up * 3, Vector3.down, Mathf.Infinity, mascaraNoCaminable);
 
                     // guardar casilla
+                    nodo.gridX = x;
+                    nodo.gridY = y;
                     cuadricula[x, y] = nodo;
                 }
+            }
+        }
+    }
+
+    public List<Nodo> GetNeighbours(Nodo nodo)
+    {
+        List<Nodo> neighbours = new List<Nodo>();
+
+        for(int x = -1; x <= 1; x++)
+        {
+            for(int y = -1; y <= 1; y++)
+            {
+
             }
         }
     }
@@ -103,7 +118,7 @@ public class Cuadricula : MonoBehaviour
             {
                 if (n == null) continue;
                 Gizmos.color = (n.caminable) ? Color.white : Color.red;
-                Gizmos.DrawCube(n.posicionGlobal.position, Vector3.one * (radioNodo * 2 - margen));
+                Gizmos.DrawCube(n.posicionGlobal, Vector3.one * (radioNodo * 2 - margen));
             }
         }
     }

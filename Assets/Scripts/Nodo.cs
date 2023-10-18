@@ -5,19 +5,20 @@ using UnityEngine;
 public class Nodo : MonoBehaviour
 {
     public bool caminable = true;
-    //public Vector3 posicionGlobal;
-    public Transform posicionGlobal;
+    public Vector3 posicionGlobal;
 
+    public int gridX;
+    public int gridY;
 
-    /*
-    public Nodo(bool caminable, Vector3 posicionGlobal)
+    public int gCost;
+    public int hCost;
+    public int FCost
     {
-        this.caminable = caminable;
-        this.posicionGlobal = posicionGlobal;
+        get => gCost + hCost;
     }
-    */
 
     private void Start()
     {
+        posicionGlobal = transform.GetChild(0).transform.position;
     }
 }
