@@ -37,8 +37,8 @@ public class Pathfinding : MonoBehaviour
         Nodo nodoInicial = gestorCuadricula.NodoCoincidente(posicionInicial);
         Nodo nodoDestino = gestorCuadricula.NodoCoincidente(posicionDestino);
 
-        List<Nodo> nodosAccesibles = new ();
-        HashSet<Nodo> nodosRevisados = new ();
+        List<Nodo> nodosAccesibles = new();
+        HashSet<Nodo> nodosRevisados = new();
         nodosAccesibles.Add(nodoInicial);
         nodoInicial.previo = null;
         nodoInicial.costeG = 0;
@@ -63,7 +63,7 @@ public class Pathfinding : MonoBehaviour
 
             // NODO DESTINO ENCONTRADO -----------
             if (nodoActual == nodoDestino)
-                return TrazarCamino(nodoActual);
+                return TrazarCamino(nodoActual, nodoInicial);
 
             // REVISAR VECINOS -------------------
             foreach(Nodo vecino in gestorCuadricula.ListaDeVecinos(nodoActual))
@@ -86,12 +86,12 @@ public class Pathfinding : MonoBehaviour
         return null;
     }
 
-    Stack<Nodo> TrazarCamino(Nodo nodoDestino)
+    Stack<Nodo> TrazarCamino(Nodo nodoDestino, Nodo nodoInicio)
     {
         Stack<Nodo> camino = new();
 
         Nodo nodoActual = nodoDestino;
-        while (nodoActual.previo != null)
+        while (nodoActual != null)
         {
             camino.Push(nodoActual);
             nodoActual = nodoActual.previo;

@@ -362,8 +362,6 @@ MonoBehaviour:
   dimensionesCuadricula: {x: 7, y: 7}
   radioNodoNuevo: 0.5
   margen: 0
-  jugador: {fileID: 0}
-  destino: {fileID: 0}
 --- !u!4 &184528806
 Transform:
   m_ObjectHideFlags: 0
@@ -1989,7 +1987,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056832170}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.65, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0.65, z: 0}
   m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2713,7 +2711,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563552571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 4}
+  m_LocalPosition: {x: 0.53, y: 0.5, z: 4.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2756,7 +2754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00073eba9cb32341896f794618e8f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 0.5
+  velocidad: 1
   destino: {fileID: 1582662091}
   cambiarCamino: 0
 --- !u!1 &1582662090
@@ -2783,7 +2781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582662090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.66, y: 1, z: 2.27}
+  m_LocalPosition: {x: 3.51, y: 1, z: 5.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

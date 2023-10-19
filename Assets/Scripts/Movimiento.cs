@@ -41,7 +41,7 @@ public class Movimiento : MonoBehaviour
         transform.position = transform.position + velocidad * Time.deltaTime * direccion;
 
         // AVANZAR NODO
-        Debug.Log($"{camino.Peek().posicionGlobal} y {transform.position}, distancia {Vector3.Distance(camino.Peek().posicionGlobal,transform.position)}");
+        //Debug.Log($"{camino.Peek().posicionGlobal} y {transform.position}, distancia {Vector3.Distance(camino.Peek().posicionGlobal,transform.position)}");
         if (Vector3.Distance(camino.Peek().posicionGlobal, transform.position) < 0.1)
         {
             camino.Pop();
