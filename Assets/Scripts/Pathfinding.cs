@@ -4,24 +4,44 @@ using UnityEngine;
 
 public class Pathfinding : MonoBehaviour
 {
-    GestorCuadricula gestorCuadricula;
+    //-------------------------------------------------------------------------
+    //  ATRIBUTOS
+    //-------------------------------------------------------------------------
 
+    // Singleton
+    static Pathfinding instance;
+    public static Pathfinding Instance
+    {
+        get => instance;
+    }
+
+    GestorCuadricula gestorCuadricula;
     public static int DISTANCIA_ENTRE_NODOS = 10;
+
+    //-------------------------------------------------------------------------
+    //  METODOS
+    //-------------------------------------------------------------------------
 
     private void Awake()
     {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
+
         gestorCuadricula = GetComponent<GestorCuadricula>();
     }
 
-    Stack<Nodo> HacerPathFinding(Vector3 posicionInicial, Vector3 posicionDestino)
+
+
+    public Stack<Nodo> HacerPathFinding(Vector3 posicionInicial, Vector3 posicionDestino)
     {
         Nodo nodoInicial = gestorCuadricula.NodoCoincidente(posicionInicial);
         Nodo nodoDestino = gestorCuadricula.NodoCoincidente(posicionDestino);
 
-        List<Nodo> nodosAccesibles = new List<Nodo>();
-        HashSet<Nodo> nodosRevisados = new HashSet<Nodo>();
+        List<Nodo> nodosAccesibles = new ();
+        HashSet<Nodo> nodosRevisados = new ();
         nodosAccesibles.Add(nodoInicial);
         nodoInicial.previo = null;
+        nodoInicial.costeG = 0;
 
         // INICIO --------------------------------------------
 
@@ -46,8 +66,9 @@ public class Pathfinding : MonoBehaviour
                 return TrazarCamino(nodoActual);
 
             // REVISAR VECINOS -------------------
-            foreach(Nodo vecino in gestorCuadricula.GetNeighbours(nodoActual))
+            foreach(Nodo vecino in gestorCuadricula.ListaDeVecinos(nodoActual))
             {
+                if (vecino == null) continue;
                 if (!vecino.caminable || nodosRevisados.Contains(vecino)) continue;
 
                 int costeHastaVecino = nodoActual.costeG + Pathfinding.DISTANCIA_ENTRE_NODOS;
@@ -57,11 +78,11 @@ public class Pathfinding : MonoBehaviour
                     vecino.costeH = vecino.GetDistancia(nodoDestino);
                     vecino.previo = nodoActual;
 
-                    if (!nodosRevisados.Contains(vecino)) nodosRevisados.Add(vecino);
+                    if (!nodosAccesibles.Contains(vecino)) nodosAccesibles.Add(vecino);
                 }
             }
         }
-
+        
         return null;
     }
 

@@ -14,6 +14,7 @@ public class GestorCuadricula : MonoBehaviour
 
     float diametroNodo;
     int nodosEnX, nodosEnY;
+    float porcentajeCasillaX, porcentajeCasillaY;
 
 
     //--------------------------------------------------------------------
@@ -47,6 +48,8 @@ public class GestorCuadricula : MonoBehaviour
         // calcular filas y columnas
         nodosEnX = Mathf.RoundToInt(dimensionesCuadricula.x / diametroNodo);
         nodosEnY = Mathf.RoundToInt(dimensionesCuadricula.y / diametroNodo);
+        porcentajeCasillaX = 1f / nodosEnX;
+        porcentajeCasillaY = 1f / nodosEnY;
         // crear cuadricula
         cuadricula = new Nodo[nodosEnX, nodosEnY];
 
@@ -77,7 +80,7 @@ public class GestorCuadricula : MonoBehaviour
         }
     }
 
-    public List<Nodo> GetNeighbours(Nodo nodo)
+    public List<Nodo> ListaDeVecinos(Nodo nodo)
     {
         List<Nodo> neighbours = new List<Nodo>();
 
@@ -95,13 +98,15 @@ public class GestorCuadricula : MonoBehaviour
 
     public Nodo NodoCoincidente(Vector3 posicion)
     {
-        float porcentajeX = (posicion.x + dimensionesCuadricula.x / 2) / dimensionesCuadricula.x;
-        float porcentajeY = (posicion.z + dimensionesCuadricula.y / 2) / dimensionesCuadricula.y;
+        float porcentajeX = (posicion.x) / dimensionesCuadricula.x;
+        float porcentajeY = (posicion.z) / dimensionesCuadricula.y;
         porcentajeX = Mathf.Clamp01(porcentajeX);
         porcentajeY = Mathf.Clamp01(porcentajeY);
 
-        int x = Mathf.RoundToInt((nodosEnX - 1) * porcentajeX);
-        int y = Mathf.RoundToInt((nodosEnY - 1) * porcentajeY);
+        // x * porcCasillaX > porcentajeX
+        // x < porcentajeX / porcCasillaX
+        int x = Mathf.FloorToInt(porcentajeX / porcentajeCasillaX);
+        int y = Mathf.FloorToInt(porcentajeY / porcentajeCasillaY);
 
         return cuadricula[x,y];
     }
@@ -111,6 +116,10 @@ public class GestorCuadricula : MonoBehaviour
     // METODOS PARA VISUALIZACION
     //--------------------------------------------------------------------
 
+    /**
+    public Nodo jugador;
+    public Nodo destino;
+    public Stack<Nodo> path;
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position, new Vector3(dimensionesCuadricula.x, 2, dimensionesCuadricula.y));
@@ -121,8 +130,19 @@ public class GestorCuadricula : MonoBehaviour
             {
                 if (n == null) continue;
                 Gizmos.color = (n.caminable) ? Color.white : Color.red;
+                if (path != null)
+                {
+                    if (path.Contains(n))
+                    {
+                        Debug.Log("camino");
+                        Gizmos.color = Color.yellow;
+                    }
+                }
+                if (n == jugador || n == destino)
+                    Gizmos.color = (n == jugador) ? Color.cyan : Color.green;
                 Gizmos.DrawCube(n.posicionGlobal, Vector3.one * (radioNodo * 2 - margen));
             }
         }
     }
+    //*/
 }
