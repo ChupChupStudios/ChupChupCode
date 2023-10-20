@@ -116,7 +116,7 @@ public class GestorCuadricula : MonoBehaviour
     // METODOS PARA VISUALIZACION
     //--------------------------------------------------------------------
 
-    /**
+    /**/
     public Nodo jugador;
     public Nodo destino;
     public Stack<Nodo> path;

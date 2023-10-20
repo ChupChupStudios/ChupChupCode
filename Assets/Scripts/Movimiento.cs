@@ -12,6 +12,10 @@ public class Movimiento : MonoBehaviour
 
     Stack<Nodo> camino;
 
+    // Declarar un delegado de evento
+    public delegate void CasillaMovidaEventHandler();
+    public event CasillaMovidaEventHandler CasillaMovida;
+
     //----------------------------------------------------------------
     //  METODOS
     //----------------------------------------------------------------
@@ -25,6 +29,7 @@ public class Movimiento : MonoBehaviour
         }
 
         SeguirCamino();
+        //Debug.Log(camino.Count);
     }
 
     void DefinirCamino()
@@ -45,6 +50,10 @@ public class Movimiento : MonoBehaviour
         if (Vector3.Distance(camino.Peek().posicionGlobal, transform.position) < 0.1)
         {
             camino.Pop();
+
+            // Emitir el evento cuando se mueve una casilla
+            CasillaMovida?.Invoke();
+
             if (camino.Count == 0) return;
 
             direccion = camino.Peek().posicionGlobal - transform.position;
