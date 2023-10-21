@@ -37,6 +37,9 @@ public class Pathfinding : MonoBehaviour
         Nodo nodoInicial = gestorCuadricula.NodoCoincidente(posicionInicial);
         Nodo nodoDestino = gestorCuadricula.NodoCoincidente(posicionDestino);
 
+        if (nodoInicial == null || nodoDestino == null) return null;
+        if (!nodoInicial.caminable || !nodoDestino.caminable) return null;
+
         List<Nodo> nodosAccesibles = new();
         HashSet<Nodo> nodosRevisados = new();
         nodosAccesibles.Add(nodoInicial);
@@ -45,10 +48,11 @@ public class Pathfinding : MonoBehaviour
 
         // INICIO --------------------------------------------
 
+        Nodo nodoActual = null;
         while(nodosAccesibles.Count > 0)
         {
             // BUSCAR MENOR COSTE F --------------
-            Nodo nodoActual = nodosAccesibles[0];
+            nodoActual = nodosAccesibles[0];
             for(int i = 1; i < nodosAccesibles.Count; i++)
             {
                 if(nodosAccesibles[i].CosteF < nodoActual.CosteF || nodosAccesibles[i].CosteF == nodoActual.CosteF && nodosAccesibles[i].costeH < nodoActual.costeH)
@@ -82,7 +86,7 @@ public class Pathfinding : MonoBehaviour
                 }
             }
         }
-        
+
         return null;
     }
 

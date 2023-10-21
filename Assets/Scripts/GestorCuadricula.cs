@@ -6,7 +6,7 @@ public class GestorCuadricula : MonoBehaviour
 {
     public LayerMask mascaraCaminable;
     public Vector2 dimensionesCuadricula;
-    public float radioNodoNuevo = 1f;
+    public float radioNodoNuevo = 0.5f;
     public float margen = 0f;
 
     Nodo[,] cuadricula;
@@ -25,6 +25,7 @@ public class GestorCuadricula : MonoBehaviour
     {
         radioNodo = radioNodoNuevo;
         CrearCuadricula();
+        Debug.Log($"Creada {cuadricula.Length} {cuadricula[6,6]}");
     }
 
     private void Update()
