@@ -12,12 +12,12 @@ public class Card : MonoBehaviour
     bool selected;
 
     public CardBehaviour cb;
-    public PlayerBehaviour pb;
+    public PlayerRayCastManager pm;
 
     // Start is called before the first frame update
     void Start()
     {
-        pb = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
+        pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerRayCastManager>();
 
         if (cardType % 3 == 0)
         {
@@ -50,14 +50,14 @@ public class Card : MonoBehaviour
                          *|o j o|*/
                         //Debug.Log("Weak attack card selected");
 
-                        tile = pb.Raycast(pb.transform.forward);
+                        tile = pm.Raycast(pm.transform.forward);
                         if (tile != null)
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
                         }
 
-                        tile = pb.Raycast(pb.transform.forward * 2);
+                        tile = pm.Raycast(pm.transform.forward * 2);
                         if (tile == null) return;
                         cb.tileList.Add(tile);
                         tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
@@ -68,7 +68,7 @@ public class Card : MonoBehaviour
                          *|o j o|*/
                         //Debug.Log("Small fog card selected");
 
-                        tile = pb.Raycast(pb.transform.forward);
+                        tile = pm.Raycast(pm.transform.forward);
                         if (tile == null) return;
                         cb.tileList.Add(tile);
                         tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
@@ -79,7 +79,7 @@ public class Card : MonoBehaviour
                          *|o  o  o|*/
                         //Debug.Log("Stamina card selected");
 
-                        tile = pb.Raycast(Vector3.zero);
+                        tile = pm.Raycast(Vector3.zero);
                         if (tile == null) return;
                         cb.tileList.Add(tile);
                         tile.GetComponent<Renderer>().material.color = new Color32(75, 255, 75, 255);
@@ -90,28 +90,28 @@ public class Card : MonoBehaviour
                          *|o j o|*/
                         //Debug.Log("Strong attack card selected");
 
-                        tile = pb.Raycast(pb.transform.forward);
+                        tile = pm.Raycast(pm.transform.forward);
                         if (tile != null)
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
                         }
 
-                        tile = pb.Raycast(pb.transform.forward * 2);
+                        tile = pm.Raycast(pm.transform.forward * 2);
                         if (tile != null)
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
                         }
 
-                        tile = pb.Raycast(pb.transform.forward * 2 + pb.transform.right);
+                        tile = pm.Raycast(pm.transform.forward * 2 + pm.transform.right);
                         if (tile != null)
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
                         }
 
-                        tile = pb.Raycast(pb.transform.forward * 2 + pb.transform.right * -1);
+                        tile = pm.Raycast(pm.transform.forward * 2 + pm.transform.right * -1);
                         if (tile != null)
                         {
                             cb.tileList.Add(tile);
@@ -124,28 +124,28 @@ public class Card : MonoBehaviour
                          *|o j o|*/
                         //Debug.Log("Large fog card selected");
 
-                        tile = pb.Raycast(pb.transform.forward);
+                        tile = pm.Raycast(pm.transform.forward);
                         if (tile != null)
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
                         }
 
-                        tile = pb.Raycast(pb.transform.forward * 2);
+                        tile = pm.Raycast(pm.transform.forward * 2);
                         if (tile != null)
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
                         }
 
-                        tile = pb.Raycast(pb.transform.forward + pb.transform.right);
+                        tile = pm.Raycast(pm.transform.forward + pm.transform.right);
                         if (tile != null)
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
                         }
 
-                        tile = pb.Raycast(pb.transform.forward + pb.transform.right * -1);
+                        tile = pm.Raycast(pm.transform.forward + pm.transform.right * -1);
                         if (tile != null)
                         {
                             cb.tileList.Add(tile);

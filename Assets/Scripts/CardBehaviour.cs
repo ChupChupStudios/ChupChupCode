@@ -29,7 +29,7 @@ public class CardBehaviour : MonoBehaviour
 
             card.transform.position = cardPositions[i];
             card.transform.localScale = new Vector3(0.2f, 1.0f, 0.3f);
-            card.transform.rotation = Quaternion.Euler(new Vector3(-65.0f, 45.0f, 0.0f));
+            card.transform.rotation = Quaternion.Euler(new Vector3(-60.0f, 45.0f, 0.0f));
 
             cards.Add(card);
         }
