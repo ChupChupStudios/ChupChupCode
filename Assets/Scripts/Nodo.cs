@@ -5,20 +5,20 @@ using UnityEngine;
 public class Nodo : MonoBehaviour
 {
     // ATRIBUTOS GENERALES
-    public bool caminable = true;
-    public Vector3 posicionGlobal;
     [SerializeField] LayerMask capaObstaculos;
+    [HideInInspector] public bool caminable = true;
+    [HideInInspector] public Vector3 posicionGlobal;
 
     // NODO PREVIO EN EL CAMINO
-    public Nodo previo;
+    [HideInInspector] public Nodo previo;
 
     // INDICES EN CUADRICULA
-    public int posicionX;
-    public int posicionY;
+    [HideInInspector] public int posicionX;
+    [HideInInspector] public int posicionY;
 
     // COSTES PARA PATHFINDING
-    public int costeG;
-    public int costeH;
+    [HideInInspector] public int costeG;
+    [HideInInspector] public int costeH;
     public int CosteF
     {
         get => costeG + costeH;
