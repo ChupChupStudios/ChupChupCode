@@ -7,18 +7,18 @@ public class Card : MonoBehaviour
     public int id;
     public Vector3 pos;
     public int cardType;
+    public bool used = false;
 
     bool selected;
 
     public CardBehaviour cb;
     public PlayerBehaviour pb;
-    public SectionBehaviour sb;
 
     // Start is called before the first frame update
     void Start()
     {
         pb = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehaviour>();
-        sb = GameObject.FindGameObjectWithTag("Floor").GetComponent<SectionBehaviour>();
+
         if (cardType % 3 == 0)
         {
             gameObject.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
@@ -41,63 +41,121 @@ public class Card : MonoBehaviour
         {
             if (selected)
             {
+                GameObject tile;
                 switch (cardType)
                 {
                     case 0:
-                        // Si se mira en otra dirección habría que tenerlo en cuenta.
-                        Debug.Log("Weak attack card selected");
-                        sb.sections[pb.onSection].GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
-                        if (pb.onSection % 7 != 6)
+                        /*|o x o|
+                         *|o x o|
+                         *|o j o|*/
+                        //Debug.Log("Weak attack card selected");
+
+                        tile = pb.Raycast(pb.transform.forward);
+                        if (tile != null)
                         {
-                            sb.sections[pb.onSection + 1].GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
+                            cb.tileList.Add(tile);
+                            tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
                         }
+
+                        tile = pb.Raycast(pb.transform.forward * 2);
+                        if (tile == null) return;
+                        cb.tileList.Add(tile);
+                        tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
                         break;
                     case 1:
-                        Debug.Log("Small fog card selected");
-                        // Si se mira en otra dirección habría que tenerlo en cuenta.
-                        sb.sections[pb.onSection].GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
-                        if (pb.onSection % 7 != 6)
-                        {
-                            sb.sections[pb.onSection + 1].GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
-                        }
+                        /*|o o o|
+                         *|o x o|
+                         *|o j o|*/
+                        //Debug.Log("Small fog card selected");
+
+                        tile = pb.Raycast(pb.transform.forward);
+                        if (tile == null) return;
+                        cb.tileList.Add(tile);
+                        tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
                         break;
                     case 2:
-                        Debug.Log("Stamina card selected");
-                        sb.sections[pb.onSection].GetComponent<Renderer>().material.color = new Color32(75, 255, 75, 255);
+                        /*|o  o  o|
+                         *|o xjx o|
+                         *|o  o  o|*/
+                        //Debug.Log("Stamina card selected");
+
+                        tile = pb.Raycast(Vector3.zero);
+                        if (tile == null) return;
+                        cb.tileList.Add(tile);
+                        tile.GetComponent<Renderer>().material.color = new Color32(75, 255, 75, 255);
                         break;
                     case 3:
-                        Debug.Log("Strong attack card selected");
-                        sb.sections[pb.onSection].GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
-                        if (pb.onSection % 7 != 6)
+                        /*|x x x|
+                         *|o x o|
+                         *|o j o|*/
+                        //Debug.Log("Strong attack card selected");
+
+                        tile = pb.Raycast(pb.transform.forward);
+                        if (tile != null)
                         {
-                            sb.sections[pb.onSection + 1].GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
-                            if (pb.onSection % 7 != 5)
-                            {
-                                sb.sections[pb.onSection + 2].GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
-                            }
+                            cb.tileList.Add(tile);
+                            tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
+                        }
+
+                        tile = pb.Raycast(pb.transform.forward * 2);
+                        if (tile != null)
+                        {
+                            cb.tileList.Add(tile);
+                            tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
+                        }
+
+                        tile = pb.Raycast(pb.transform.forward * 2 + pb.transform.right);
+                        if (tile != null)
+                        {
+                            cb.tileList.Add(tile);
+                            tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
+                        }
+
+                        tile = pb.Raycast(pb.transform.forward * 2 + pb.transform.right * -1);
+                        if (tile != null)
+                        {
+                            cb.tileList.Add(tile);
+                            tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
                         }
                         break;
                     case 4:
-                        Debug.Log("Large fog card selected");
-                        // Si se mira en otra dirección habría que tenerlo en cuenta.
-                        sb.sections[pb.onSection].GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
-                        if (pb.onSection % 7 != 6)
+                        /*|o x o|
+                         *|x x x|
+                         *|o j o|*/
+                        //Debug.Log("Large fog card selected");
+
+                        tile = pb.Raycast(pb.transform.forward);
+                        if (tile != null)
                         {
-                            sb.sections[pb.onSection + 1].GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
-                            if (pb.onSection % 7 != 5)
-                            {
-                                sb.sections[pb.onSection + 2].GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
-                            }
-                            if (pb.onSection > 6)
-                            {
-                                sb.sections[pb.onSection - 6].GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
-                            }
-                            if (pb.onSection < 42)
-                            {
-                                sb.sections[pb.onSection + 8].GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
-                            }
+                            cb.tileList.Add(tile);
+                            tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
+                        }
+
+                        tile = pb.Raycast(pb.transform.forward * 2);
+                        if (tile != null)
+                        {
+                            cb.tileList.Add(tile);
+                            tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
+                        }
+
+                        tile = pb.Raycast(pb.transform.forward + pb.transform.right);
+                        if (tile != null)
+                        {
+                            cb.tileList.Add(tile);
+                            tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
+                        }
+
+                        tile = pb.Raycast(pb.transform.forward + pb.transform.right * -1);
+                        if (tile != null)
+                        {
+                            cb.tileList.Add(tile);
+                            tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
                         }
                         break;
+                }
+                if (used)
+                {
+                    cb.cardSelected = -1;
                 }
             }
         }
@@ -105,6 +163,15 @@ public class Card : MonoBehaviour
         {
             selected = false;
             transform.position = pos;
+            if (used)
+            {
+                foreach (GameObject go in cb.tileList)
+                {
+                    go.GetComponent<Renderer>().material.color = new Color32(0, 159, 8, 255);
+                }
+                cb.tileList.Clear();
+                Destroy(this.gameObject);
+            }
         }
     }
 
@@ -112,11 +179,11 @@ public class Card : MonoBehaviour
     {
         if (!selected)
         {
-            foreach (GameObject go in sb.sections)
+            foreach (GameObject go in cb.tileList)
             {
                 go.GetComponent<Renderer>().material.color = new Color32(0, 159, 8, 255);
             }
-
+            cb.tileList.Clear();
             selected = true;
             transform.position += new Vector3(0.0f, 0.5f, 0.0f);
             cb.cardSelected = id;
@@ -124,12 +191,11 @@ public class Card : MonoBehaviour
         else
         {
             selected = false;
-
-            foreach (GameObject go in sb.sections)
+            foreach (GameObject go in cb.tileList)
             {
                 go.GetComponent<Renderer>().material.color = new Color32(0, 159, 8, 255);
             }
-
+            cb.tileList.Clear();
             cb.cardSelected = -1;
         }
     }

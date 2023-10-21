@@ -10,6 +10,9 @@ public class CardBehaviour : MonoBehaviour
 
     public int cardSelected = -1;
 
+    public List<GameObject> tileList = new List<GameObject>();
+    public List<GameObject> cards = new List<GameObject>();
+
     Vector3[] cardPositions = { new Vector3(-5.5f, 0.0f, 0.5f), new Vector3(-4.0f, 0.0f, -1.0f), new Vector3(-2.5f, 0.0f, -2.5f), new Vector3(-1.0f, 0.0f, -4.0f), new Vector3(0.5f, 0.0f, -5.5f) };
 
     void Start()
@@ -27,6 +30,8 @@ public class CardBehaviour : MonoBehaviour
             card.transform.position = cardPositions[i];
             card.transform.localScale = new Vector3(0.2f, 1.0f, 0.3f);
             card.transform.rotation = Quaternion.Euler(new Vector3(-65.0f, 45.0f, 0.0f));
+
+            cards.Add(card);
         }
     }
 

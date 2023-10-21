@@ -6,6 +6,8 @@ public class PlayerBehaviour : MonoBehaviour
 {
     public int onSection;
 
+    public LayerMask tileLayer;
+
     public CardBehaviour cb;
 
     // Start is called before the first frame update
@@ -38,12 +40,20 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    public GameObject Raycast(Vector3 offset)
     {
-        if(collision.gameObject.tag == "Section")
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position + Vector3.up * 3 + offset, Vector3.down, out hit, Mathf.Infinity, tileLayer))
         {
-            //Debug.Log("Colision con casilla " + collision.gameObject.GetComponent<Section>().id);
-            onSection = collision.gameObject.GetComponent<Section>().id;
+            //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            //Debug.Log(hit.collider.gameObject);
+
+            return hit.collider.gameObject;
+        }
+        else
+        {
+            return null;
         }
     }
 }
