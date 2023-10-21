@@ -22,7 +22,6 @@ public class Movimiento : MonoBehaviour
     private void Update()
     {
         SeguirCamino();
-        //Debug.Log(camino.Count);
     }
 
     public void DefinirCamino(Nodo destino)
@@ -46,17 +45,18 @@ public class Movimiento : MonoBehaviour
             
             // Actualizar siguiente nodo -------
             
+            // FINAL DE CAMINO
             if (camino.Count == 0)
             {
                 nodoObjetivo = null;
                 return;
             }
 
+            // El nodo del camino es el mismo que en el que esta el personaje
             if (camino.Peek() == nodoObjetivo)
                 camino.Pop();
 
-            if (camino.Count == 0) return;
-
+            // NUEVA DIRECCION
             direccion = camino.Peek().posicionGlobal - nodoObjetivo.posicionGlobal;
             nodoObjetivo = camino.Pop();
             transform.forward = direccion.normalized;
