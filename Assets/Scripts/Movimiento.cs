@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movimiento : MonoBehaviour
 {
@@ -47,6 +48,12 @@ public class Movimiento : MonoBehaviour
             // FINAL DE CAMINO
             if (camino.Count == 0)
             {
+                Goal goal = nodoObjetivo.gameObject.GetComponent<Goal>();
+                if (goal!=null)
+                {
+                    Debug.Log("Entra if");
+                    SceneManager.LoadScene("FinalScene");
+                }
                 nodoObjetivo = null;
                 return;
             }

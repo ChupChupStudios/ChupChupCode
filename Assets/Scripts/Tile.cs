@@ -36,4 +36,17 @@ public class Tile : MonoBehaviour
             }
         }
     }
+
+    private void OnMouseEnter()
+    {
+
+        gameObject.GetComponent<Renderer>().material.color = new Color32(255, 245, 21, 255);
+
+    }
+    private void OnMouseExit()
+    {
+
+        gameObject.GetComponent<Renderer>().material.color = new Color32(0, 159, 8, 255);
+
+    }
 }
