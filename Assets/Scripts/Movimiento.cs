@@ -8,10 +8,9 @@ public class Movimiento : MonoBehaviour
     public float velocidad = 0.5f;
     Vector3 direccion = Vector3.zero;
 
-    public Transform destino;
-    public bool cambiarCamino = false;
-
     Stack<Nodo> camino;
+    Nodo nodoObjetivo;
+
 
     public EventHandler<float> CasillaMovida;
 
@@ -21,42 +20,44 @@ public class Movimiento : MonoBehaviour
 
     private void Update()
     {
-        if (cambiarCamino)
-        {
-            cambiarCamino = false;
-            DefinirCamino();
-        }
-
         SeguirCamino();
-        //Debug.Log(camino.Count);
     }
 
-    void DefinirCamino()
+    public void DefinirCamino(Nodo destino)
     {
-        camino = Pathfinding.Instance.HacerPathFinding(transform.position, destino.position);
+        camino = Pathfinding.Instance.HacerPathFinding(transform.position, destino.posicionGlobal);
+        if(nodoObjetivo == null && camino != null) nodoObjetivo = camino.Pop();
     }
 
     void SeguirCamino()
     {
-        // si no hay camino
-        if (camino == null || camino.Count == 0) return;
+        if (nodoObjetivo == null) return;
 
         // SEGUIR CAMINO
         transform.position = transform.position + velocidad * Time.deltaTime * direccion;
 
         // AVANZAR NODO
-        //Debug.Log($"{camino.Peek().posicionGlobal} y {transform.position}, distancia {Vector3.Distance(camino.Peek().posicionGlobal,transform.position)}");
-        if (Vector3.Distance(camino.Peek().posicionGlobal, transform.position) < 0.1)
+        if (Vector3.Distance(nodoObjetivo.posicionGlobal, transform.position) < 0.1)
         {
-            camino.Pop();
-
             // Emitir el evento cuando se mueve una casilla
             CasillaMovida?.Invoke(this, 5.0f);
+            
+            // Actualizar siguiente nodo -------
+            
+            // FINAL DE CAMINO
+            if (camino.Count == 0)
+            {
+                nodoObjetivo = null;
+                return;
+            }
 
-            if (camino.Count == 0) return;
+            // El nodo del camino es el mismo que en el que esta el personaje
+            if (camino.Peek() == nodoObjetivo)
+                camino.Pop();
 
-            direccion = camino.Peek().posicionGlobal - transform.position;
-            direccion = new Vector3(direccion.x, 0f, direccion.z);
+            // NUEVA DIRECCION
+            direccion = camino.Peek().posicionGlobal - nodoObjetivo.posicionGlobal;
+            nodoObjetivo = camino.Pop();
             transform.forward = direccion.normalized;
         }
     }

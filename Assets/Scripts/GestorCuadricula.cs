@@ -6,11 +6,10 @@ public class GestorCuadricula : MonoBehaviour
 {
     public LayerMask mascaraCaminable;
     public Vector2 dimensionesCuadricula;
-    public float radioNodoNuevo = 1f;
-    public float margen = 0f;
+    public float margenDePintado = 0f;
 
     Nodo[,] cuadricula;
-    float radioNodo = 1f;
+    float radioNodo = 0.5f;
 
     float diametroNodo;
     int nodosEnX, nodosEnY;
@@ -23,17 +22,7 @@ public class GestorCuadricula : MonoBehaviour
 
     private void Start()
     {
-        radioNodo = radioNodoNuevo;
         CrearCuadricula();
-    }
-
-    private void Update()
-    {
-        if (radioNodoNuevo != radioNodo)
-        {
-            radioNodo = radioNodoNuevo;
-            CrearCuadricula();
-        }
     }
 
 
@@ -140,7 +129,7 @@ public class GestorCuadricula : MonoBehaviour
                 }
                 if (n == jugador || n == destino)
                     Gizmos.color = (n == jugador) ? Color.cyan : Color.green;
-                Gizmos.DrawCube(n.posicionGlobal, Vector3.one * (radioNodo * 2 - margen));
+                Gizmos.DrawCube(n.posicionGlobal, Vector3.one * (radioNodo * 2 - margenDePintado));
             }
         }
     }
