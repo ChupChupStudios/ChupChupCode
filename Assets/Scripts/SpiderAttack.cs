@@ -48,13 +48,13 @@ public class SpiderAttack : MonoBehaviour
             {
                 aux = true;
 
-                Debug.Log($"Rayo {i} detectó un jugador");
-                Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.white);
+                //Debug.Log($"Rayo {i} detectó un jugador");
+                //Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.white);
             }
             else
             {
-                Debug.Log($"Rayo {i} NO detectó un jugador");
-                Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.black);
+                //Debug.Log($"Rayo {i} NO detectó un jugador");
+                //Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.black);
             }
         }
 
@@ -77,13 +77,13 @@ public class SpiderAttack : MonoBehaviour
                     renderer.material.color = nuevoColor;
                 }
 
-                Debug.Log($"Rayo {i} detectó una casilla");
-                Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.blue);
+                //Debug.Log($"Rayo {i} detectó una casilla");
+                //Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.blue);
             }
             else
             {
-                Debug.Log($"Rayo {i} NO detectó una casilla");
-                Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.red);
+                //Debug.Log($"Rayo {i} NO detectó una casilla");
+                //Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.red);
             }
         }
     }

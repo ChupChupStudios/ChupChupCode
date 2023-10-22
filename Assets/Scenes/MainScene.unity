@@ -2854,7 +2854,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1431001432
 PrefabInstance:
@@ -3174,7 +3174,7 @@ GameObject:
   - component: {fileID: 1563552574}
   - component: {fileID: 1563552575}
   - component: {fileID: 1563552576}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
