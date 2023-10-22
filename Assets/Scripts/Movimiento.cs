@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,9 +12,7 @@ public class Movimiento : MonoBehaviour
     Nodo nodoObjetivo;
 
 
-    // Declarar un delegado de evento
-    public delegate void CasillaMovidaEventHandler();
-    public event CasillaMovidaEventHandler CasillaMovida;
+    public EventHandler<float> CasillaMovida;
 
     //----------------------------------------------------------------
     //  METODOS
@@ -41,7 +40,7 @@ public class Movimiento : MonoBehaviour
         if (Vector3.Distance(nodoObjetivo.posicionGlobal, transform.position) < 0.1)
         {
             // Emitir el evento cuando se mueve una casilla
-            CasillaMovida?.Invoke();
+            CasillaMovida?.Invoke(this, 5.0f);
             
             // Actualizar siguiente nodo -------
             

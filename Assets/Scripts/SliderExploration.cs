@@ -8,7 +8,6 @@ public class SliderExploration : MonoBehaviour
 {
     public Slider slider;
 
-    public int explorationPerStep = 5;
     public int maxExploration = 100;
 
     void Start()
@@ -28,8 +27,8 @@ public class SliderExploration : MonoBehaviour
         }
     }
 
-    void ActualizarSlider()
+    void ActualizarSlider(object sender, float value)
     {
-        slider.value += explorationPerStep;
+        slider.value += (value * 2);
     }
 }
