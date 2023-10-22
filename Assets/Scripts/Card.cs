@@ -9,10 +9,14 @@ public class Card : MonoBehaviour
     public int cardType;
     public bool used = false;
 
-    bool selected;
+    public bool selected;
 
     public CardBehaviour cb;
     public PlayerRayCastManager pm;
+
+
+    public List<GameObject> fogList = new List<GameObject>();
+    public PlayerVariablesManager playerManager;
 
     // Start is called before the first frame update
     void Start()
@@ -68,10 +72,24 @@ public class Card : MonoBehaviour
                          *|o j o|*/
                         //Debug.Log("Small fog card selected");
 
+
                         tile = pm.Raycast(pm.transform.forward);
                         if (tile == null) return;
                         cb.tileList.Add(tile);
                         tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
+                        if (tile.tag == "Fog")
+                        {
+                            tile.GetComponent<Fog>().fogSelected = true;
+                        }
+                        /*
+                        GameObject[] fog = GameObject.FindGameObjectsWithTag("Fog");
+                        foreach(GameObject go in fog)
+                        {
+                            go.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
+                        }
+                        */
+
+
                         break;
                     case 2:
                         /*|o  o  o|
@@ -95,6 +113,7 @@ public class Card : MonoBehaviour
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
+
                         }
 
                         tile = pm.Raycast(pm.transform.forward * 2);
@@ -102,6 +121,7 @@ public class Card : MonoBehaviour
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
+
                         }
 
                         tile = pm.Raycast(pm.transform.forward * 2 + pm.transform.right);
@@ -109,6 +129,7 @@ public class Card : MonoBehaviour
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
+
                         }
 
                         tile = pm.Raycast(pm.transform.forward * 2 + pm.transform.right * -1);
@@ -116,6 +137,7 @@ public class Card : MonoBehaviour
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(255, 75, 75, 255);
+
                         }
                         break;
                     case 4:
@@ -129,6 +151,10 @@ public class Card : MonoBehaviour
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
+                            if (tile.tag == "Fog")
+                            {
+                                tile.GetComponent<Fog>().fogSelected = true;
+                            }
                         }
 
                         tile = pm.Raycast(pm.transform.forward * 2);
@@ -136,6 +162,10 @@ public class Card : MonoBehaviour
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
+                            if (tile.tag == "Fog")
+                            {
+                                tile.GetComponent<Fog>().fogSelected = true;
+                            }
                         }
 
                         tile = pm.Raycast(pm.transform.forward + pm.transform.right);
@@ -143,6 +173,10 @@ public class Card : MonoBehaviour
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
+                            if (tile.tag == "Fog")
+                            {
+                                tile.GetComponent<Fog>().fogSelected = true;
+                            }
                         }
 
                         tile = pm.Raycast(pm.transform.forward + pm.transform.right * -1);
@@ -150,6 +184,10 @@ public class Card : MonoBehaviour
                         {
                             cb.tileList.Add(tile);
                             tile.GetComponent<Renderer>().material.color = new Color32(200, 200, 200, 255);
+                            if (tile.tag == "Fog")
+                            {
+                                tile.GetComponent<Fog>().fogSelected = true;
+                            }
                         }
                         break;
                 }
@@ -187,16 +225,40 @@ public class Card : MonoBehaviour
             selected = true;
             transform.position += new Vector3(0.0f, 0.5f, 0.0f);
             cb.cardSelected = id;
+
+            /*
+            if(cardType % 3 == 1)
+            {
+                playerManager.fogRemover = playerManager.fogRemover+2;
+            }
+            */
         }
         else
         {
-            selected = false;
-            foreach (GameObject go in cb.tileList)
-            {
-                go.GetComponent<Renderer>().material.color = new Color32(0, 159, 8, 255);
-            }
-            cb.tileList.Clear();
-            cb.cardSelected = -1;
+            Deselect();
         }
     }
+    private void OnMouseUp()
+    {
+        if (!selected)
+        {
+            GameObject[] fog = GameObject.FindGameObjectsWithTag("Fog");
+            foreach (GameObject go in fog)
+            {
+                go.GetComponent<Renderer>().material.color = new Color32(21, 26, 255, 255);
+                go.GetComponent<Fog>().fogSelected = false;
+            }
+        }
+    }
+
+    public void Deselect()
+    {
+
+        selected = false;
+        CardBehaviour.Instance.Redraw();
+        cb.tileList.Clear();
+        cb.cardSelected = -1;
+    }
+
+
 }
