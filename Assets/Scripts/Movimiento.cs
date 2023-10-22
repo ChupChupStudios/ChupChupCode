@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,9 +13,7 @@ public class Movimiento : MonoBehaviour
 
     Stack<Nodo> camino;
 
-    // Declarar un delegado de evento
-    public delegate void CasillaMovidaEventHandler();
-    public event CasillaMovidaEventHandler CasillaMovida;
+    public EventHandler<float> CasillaMovida;
 
     //----------------------------------------------------------------
     //  METODOS
@@ -52,7 +51,7 @@ public class Movimiento : MonoBehaviour
             camino.Pop();
 
             // Emitir el evento cuando se mueve una casilla
-            CasillaMovida?.Invoke();
+            CasillaMovida?.Invoke(this, 5.0f);
 
             if (camino.Count == 0) return;
 

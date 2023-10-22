@@ -8,7 +8,6 @@ public class SliderStamina : MonoBehaviour
 {
     public Slider slider;
 
-    public int staminaPerStep = 15;
     public int maxStamina = 100;
 
     void Start()
@@ -28,8 +27,8 @@ public class SliderStamina : MonoBehaviour
         }
     }
 
-    void ActualizarSlider()
+    public void ActualizarSlider(object sender, float value)
     {
-        slider.value -= staminaPerStep;
+        slider.value -= value;
     }
 }
