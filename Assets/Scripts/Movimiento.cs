@@ -51,7 +51,6 @@ public class Movimiento : MonoBehaviour
                 Goal goal = nodoObjetivo.gameObject.GetComponent<Goal>();
                 if (goal!=null)
                 {
-                    Debug.Log("Entra if");
                     SceneManager.LoadScene("FinalScene");
                 }
                 nodoObjetivo = null;

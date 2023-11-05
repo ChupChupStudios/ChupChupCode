@@ -11,7 +11,7 @@ public class SpiderAttack : MonoBehaviour
     public LayerMask casillaLayer;
     public LayerMask playerLayer;
 
-    List<Renderer> renderersAfectados = new List<Renderer>();
+    List<Renderer> renderersAfectados = new();
     private bool jugadorDetectado = false;
 
     public SliderStamina sliderStamina;

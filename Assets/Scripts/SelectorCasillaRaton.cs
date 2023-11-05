@@ -26,10 +26,6 @@ public class SelectorCasillaRaton : MonoBehaviour
         // RAYCAST DESDE LA POSICION DEL RATON HACIA ADELANTE (lookAt de la camara)
         if (!Physics.Raycast(origen, direccion, out RaycastHit hit, Mathf.Infinity, capaSuelo)) return;
 
-        CardBehaviour tempCardGestor = CardBehaviour.Instance;
-        if (tempCardGestor.cardSelected >= 0)
-            tempCardGestor.cards[tempCardGestor.cardSelected].GetComponent<Card>().Deselect();
-
         // DEFINIR NUEVA RUTA DEL PERSONAJE
         GameObject casilla = hit.collider.gameObject;
         movimientoPersonaje.DefinirCamino(casilla.GetComponent<Nodo>());
