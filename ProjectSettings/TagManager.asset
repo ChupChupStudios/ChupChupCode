@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Deck
   - Card
-  - Fog
   - Item
   layers:
   - Default
@@ -16,8 +15,8 @@ TagManager:
   - Water
   - UI
   - Obstacle
+  - Fog
   - Player
-  - 
   - 
   - 
   - 
