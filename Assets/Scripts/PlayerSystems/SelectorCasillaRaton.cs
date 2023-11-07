@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SelectorCasillaRaton : MonoBehaviour
 {
-    public LayerMask capaSuelo;
+    public LayerMask capaBloques;
     Camera camaraPrincipal;
     Movimiento movimientoPersonaje;
 
@@ -24,7 +24,7 @@ public class SelectorCasillaRaton : MonoBehaviour
         Vector3 direccion = camaraPrincipal.transform.forward;
 
         // RAYCAST DESDE LA POSICION DEL RATON HACIA ADELANTE (lookAt de la camara)
-        if (!Physics.Raycast(origen, direccion, out RaycastHit hit, Mathf.Infinity, capaSuelo)) return;
+        if (!Physics.Raycast(origen, direccion, out RaycastHit hit, Mathf.Infinity, capaBloques)) return;
 
         GameObject casilla = hit.collider.gameObject;
         if (DeckManager.Instance.SelectedCard == null)

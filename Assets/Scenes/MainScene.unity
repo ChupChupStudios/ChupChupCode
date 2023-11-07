@@ -994,7 +994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   cardPrefabs:
   - {fileID: 8202897806516960598, guid: 66a452098d06a584ea0901abc178daf1, type: 3}
   - {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
@@ -3167,6 +3167,7 @@ GameObject:
   - component: {fileID: 1563552573}
   - component: {fileID: 1563552574}
   - component: {fileID: 1563552575}
+  - component: {fileID: 1563552576}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -3227,6 +3228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 2
+  umbralLlegadaObjetivo: 0.1
 --- !u!114 &1563552575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3242,6 +3244,18 @@ MonoBehaviour:
   capaSuelo:
     serializedVersion: 2
     m_Bits: 136
+--- !u!114 &1563552576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563552571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16bd15dcca93a347965f88f0da2728f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1604139136
 PrefabInstance:
   m_ObjectHideFlags: 0

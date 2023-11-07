@@ -11,6 +11,7 @@ public class Movimiento : MonoBehaviour
 
     Stack<Nodo> camino;
     Nodo nodoObjetivo;
+    public float umbralLlegadaObjetivo = 0.1f;
 
 
     public EventHandler<float> CasillaMovida;
@@ -18,6 +19,11 @@ public class Movimiento : MonoBehaviour
     //----------------------------------------------------------------
     //  METODOS
     //----------------------------------------------------------------
+
+    private void Start()
+    {
+        PlayerStateManager.Instance.StateChangeRequestedEvent += PeticionCambioDeEstado;
+    }
 
     private void Update()
     {
@@ -28,6 +34,9 @@ public class Movimiento : MonoBehaviour
     {
         camino = Pathfinding.Instance.HacerPathFinding(transform.position, destino.posicionGlobal);
         if(nodoObjetivo == null && camino != null) nodoObjetivo = camino.Pop();
+
+        // NOTIFICAR CAMBIO DE ESTADO (a moviendose)
+        PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.Movement;
     }
 
     void SeguirCamino()
@@ -38,7 +47,7 @@ public class Movimiento : MonoBehaviour
         transform.position = transform.position + velocidad * Time.deltaTime * direccion;
 
         // AVANZAR NODO
-        if (Vector3.Distance(nodoObjetivo.posicionGlobal, transform.position) < 0.1)
+        if (Vector3.Distance(nodoObjetivo.posicionGlobal, transform.position) < umbralLlegadaObjetivo)
         {
             // Emitir el evento cuando se mueve una casilla
             CasillaMovida?.Invoke(this, 5.0f);
@@ -48,12 +57,17 @@ public class Movimiento : MonoBehaviour
             // FINAL DE CAMINO
             if (camino.Count == 0)
             {
+                // COMPROBAR SI ESTA EN CASILLA OBJETIVO
                 Goal goal = nodoObjetivo.gameObject.GetComponent<Goal>();
                 if (goal!=null)
                 {
                     SceneManager.LoadScene("FinalScene");
                 }
                 nodoObjetivo = null;
+
+                // NOTIFICAR CAMBIO DE ESTADO (a idle)
+                PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.Idle;
+
                 return;
             }
 
@@ -66,5 +80,11 @@ public class Movimiento : MonoBehaviour
             nodoObjetivo = camino.Pop();
             transform.forward = direccion.normalized;
         }
+    }
+
+    void PeticionCambioDeEstado(PlayerStateManager.State newState)
+    {
+        if(newState != PlayerStateManager.State.Movement)
+            camino.Clear();
     }
 }

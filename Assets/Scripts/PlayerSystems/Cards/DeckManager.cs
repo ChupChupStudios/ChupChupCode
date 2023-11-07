@@ -41,19 +41,32 @@ public class DeckManager : MonoBehaviour
         set
         {
             if (value == null) return;
-            
+
             var newCard = value;
             if (newCard != selectedCard)
             {
-                if(selectedCard != null) selectedCard.CardDeselected();
-                newCard.CardSelected();
+                // ya habia una carta escogida (se aprovecha el estado UsingCard):
+                if (selectedCard != null)
+                {
+                    selectedCard.CardDeselected();
+                    newCard.CardSelected();
 
+                    selectedCard = newCard;
+                    return;
+                }
+
+                // no habia una carta escogida:
                 selectedCard = newCard;
+                // PETICION DE CAMBIO DE ESTADO
+                PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.UsingCard;
             }
             else
             {
                 selectedCard.CardDeselected();
                 selectedCard = null;
+
+                // NOTIFICAR NUEVO ESTADO (idle)
+                PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.Idle;
             }
         }
     }
@@ -64,7 +77,7 @@ public class DeckManager : MonoBehaviour
     //  METODOS DE UNITY
     //----------------------------------------------------------------
 
-    void Start()
+    void Awake()
     {
         // SINGLETON
         if (Instance != null) Destroy(gameObject);
@@ -79,6 +92,11 @@ public class DeckManager : MonoBehaviour
             //USE CREATE CARD
             CreateCard(cardPrefabs[i%cardPrefabs.Count]);
         }
+    }
+
+    private void Start()
+    {
+        PlayerStateManager.Instance.ConsolidatedNewStateEvent += PlayerStateChanged;
     }
 
 
@@ -99,10 +117,21 @@ public class DeckManager : MonoBehaviour
         currentPositionIndex = (currentPositionIndex + 1) % cardPositions.Length;
     }
 
+    // si el jugador puede usar cartas se notifica a la carta seleccionada
+    void PlayerStateChanged(PlayerStateManager.State newState)
+    {
+        if (newState != PlayerStateManager.State.UsingCard) return;
+
+        selectedCard.CardSelected();
+    }
+
     public void BloquePulsadoCallBack(Block tile)
     {
         if (selectedCard == null) return;
         selectedCard.CheckAndExecute(tile);
+
+        // NOTIFICAR CAMBIO DE ESTADO (idle)
+        PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.Idle;
     }
 
     public void Deselect()
