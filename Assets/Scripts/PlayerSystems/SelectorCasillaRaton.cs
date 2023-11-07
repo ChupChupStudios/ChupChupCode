@@ -26,8 +26,21 @@ public class SelectorCasillaRaton : MonoBehaviour
         // RAYCAST DESDE LA POSICION DEL RATON HACIA ADELANTE (lookAt de la camara)
         if (!Physics.Raycast(origen, direccion, out RaycastHit hit, Mathf.Infinity, capaSuelo)) return;
 
-        // DEFINIR NUEVA RUTA DEL PERSONAJE
         GameObject casilla = hit.collider.gameObject;
-        movimientoPersonaje.DefinirCamino(casilla.GetComponent<Nodo>());
+        if (DeckManager.Instance.SelectedCard == null)
+        {
+            if (casilla.GetComponent<Block>().type == Block.Type.Fog) return;
+
+            // DEFINIR NUEVA RUTA DEL PERSONAJE
+            movimientoPersonaje.DefinirCamino(casilla.GetComponent<Nodo>());
+        }
+        else
+        {
+            // COMPROBAR CASILLA CARTA
+            if (DeckManager.Instance.SelectedCard.affectedBlocks.Contains(casilla))
+                DeckManager.Instance.BloquePulsadoCallBack(casilla.GetComponent<Block>());
+            else
+                DeckManager.Instance.Deselect();
+        }
     }
 }

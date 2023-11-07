@@ -37,7 +37,7 @@ public class Block : MonoBehaviour
     private void OnMouseDown()
     {
         // AVISAR A DECK MANAGER/CARTA DE CASILLA PULSADA
-        DeckManager.Instance.BloquePulsadoCallBack(this);
+        //DeckManager.Instance.BloquePulsadoCallBack(this);
     }
 
 

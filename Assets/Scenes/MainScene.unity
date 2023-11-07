@@ -994,7 +994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileMask:
     serializedVersion: 2
-    m_Bits: 136
+    m_Bits: 8
   cardPrefabs:
   - {fileID: 8202897806516960598, guid: 66a452098d06a584ea0901abc178daf1, type: 3}
   - {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
@@ -3241,7 +3241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   capaSuelo:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
 --- !u!1001 &1604139136
 PrefabInstance:
   m_ObjectHideFlags: 0

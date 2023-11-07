@@ -17,13 +17,13 @@ public class DeckManager : MonoBehaviour
 
     // POSICIONES DE LAS CARTAS
     Vector3[] cardPositions = {
+        new Vector3(-7.0f, 0.0f, 2.0f),
         new Vector3(-5.5f, 0.0f, 0.5f),
         new Vector3(-4.0f, 0.0f, -1.0f),
         new Vector3(-2.5f, 0.0f, -2.5f),
         new Vector3(-1.0f, 0.0f, -4.0f),
         new Vector3(0.5f, 0.0f, -5.5f),
         new Vector3(2.0f, 0.0f, -7.0f),
-        new Vector3(7.0f, 0.0f, -2.0f)
     };
     int currentPositionIndex = 0;
 
