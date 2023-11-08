@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class StaminaCard : ACard
 {
-
+    public static event Action<int> SliderEvent;
     public override void ShowEffectArea()
     {
         /*|o  o  o|
@@ -29,9 +30,11 @@ public class StaminaCard : ACard
     {
         if (!affectedBlocks.Contains(tile.gameObject)) return;
 
-        Debug.Log("CARTA DE ESTAMINA USADA");
+        SliderEvent?.Invoke(25);
 
         deckManager.Deselect();
+        deckManager.cards.Remove(gameObject);
         Destroy(gameObject);
+        deckManager.UpdateCardsPositions();
     }
 }

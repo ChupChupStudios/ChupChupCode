@@ -38,7 +38,8 @@ public class Pathfinding : MonoBehaviour
         Nodo nodoDestino = gestorCuadricula.NodoCoincidente(posicionDestino);
 
         if (nodoInicial == null || nodoDestino == null) return null;
-        if (!nodoInicial.caminable || !nodoDestino.caminable) return null;
+        //if (!nodoInicial.caminable || !nodoDestino.caminable) return null;
+        if (!nodoDestino.caminable) return null;
 
         List<Nodo> nodosAccesibles = new();
         HashSet<Nodo> nodosRevisados = new();

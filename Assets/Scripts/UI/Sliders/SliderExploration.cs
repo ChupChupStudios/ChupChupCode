@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SliderExploration : MonoBehaviour
 {
     public Slider slider;
+    public ACard[] cardPrefab;
 
     public int maxExploration = 100;
 
@@ -30,5 +31,15 @@ public class SliderExploration : MonoBehaviour
     void ActualizarSlider(object sender, float value)
     {
         slider.value += (value * 2);
+    }
+    public void OnClickSlider()
+    {
+        if (slider.value >= 100)
+        {
+            int cardType;
+            cardType = Random.Range(0, 5);
+            DeckManager.Instance.CreateCard(cardPrefab[cardType]);
+            slider.value = 0;
+        }
     }
 }

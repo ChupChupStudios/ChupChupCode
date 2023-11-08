@@ -27,7 +27,7 @@ public class Nodo : MonoBehaviour
     // -----------------------------------------------------------
     // -----------------------------------------------------------
 
-    private void Start()
+    private void Awake()
     {
         posicionGlobal = transform.GetChild(0).transform.position;
         caminable = !Physics.Raycast(transform.position + Vector3.up * 3, Vector3.down, Mathf.Infinity, capaObstaculos);

@@ -12,6 +12,7 @@ public class SliderStamina : MonoBehaviour
 
     void Start()
     {
+        StaminaCard.SliderEvent += CartaUsada;
         slider.maxValue = maxStamina;
         slider.value = maxStamina;
 
@@ -30,5 +31,10 @@ public class SliderStamina : MonoBehaviour
     public void ActualizarSlider(object sender, float value)
     {
         slider.value -= value;
+    }
+    public void CartaUsada(int life)
+    {
+        if (slider.value + life < 100) slider.value += life;
+        else slider.value = 100;
     }
 }

@@ -27,6 +27,8 @@ public abstract class FogCard : ACard
 
         // Eliminar la carta
         deckManager.Deselect();
+        deckManager.cards.Remove(gameObject);
         Destroy(gameObject);
+        deckManager.UpdateCardsPositions();
     }
 }
