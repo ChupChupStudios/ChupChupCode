@@ -3241,7 +3241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e1baa1ca2298904195a0ce2a20cc917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  capaSuelo:
+  capaBloques:
     serializedVersion: 2
     m_Bits: 136
 --- !u!114 &1563552576
