@@ -30,6 +30,9 @@ public class DeckManager : MonoBehaviour
     // LISTA DE CARTAS INSTANCIABLES
     [SerializeField] List<ACard> cardPrefabs = new();
 
+    // LISTA DE CARTAS EN MANO
+    public List<GameObject> cards = new();
+
     // POSICION DEL DUEÑO DEL MAZO
     [HideInInspector] public Transform ownerTransform;
 
@@ -109,7 +112,8 @@ public class DeckManager : MonoBehaviour
         if (card == null || !cardPrefabs.Contains(card)) return;
 
         GameObject cardToInstantiate = card.gameObject;
-        
+        cards.Add(card.gameObject);
+
         // Instantiate the card
         Instantiate(cardToInstantiate, cardPositions[currentPositionIndex], CARD_ROTATION);
 
@@ -147,6 +151,17 @@ public class DeckManager : MonoBehaviour
     public bool BloqueUsuarioDelMazo(Vector3 offset, out GameObject casilla)
     {
         return Utils.CustomRaycast(ownerTransform.position + Vector3.up * 3 + offset, Vector3.down, out casilla, tileMask);
+    }
+
+    public void UpdateCardsPositions()
+    {
+        int cont = 0;
+        foreach (GameObject card in cards)
+        {
+            Debug.Log(cardPositions[cont]);
+            card.transform.position = cardPositions[cont];
+            cont++;
+        }
     }
 
 }
