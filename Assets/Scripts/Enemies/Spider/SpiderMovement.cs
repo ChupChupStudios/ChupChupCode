@@ -18,6 +18,7 @@ public class SpiderMovement : MonoBehaviour
     EnemyVariablesManager evm;
     public LayerMask casillaLayer;
     public GameObject Player;
+    private bool calcularHuida = false;
 
     private void Awake()
     {
@@ -53,44 +54,56 @@ public class SpiderMovement : MonoBehaviour
 
     void SeguirCamino()
     {
-        if (camino != null && camino.Count > 0)
+        if (camino == null || camino.Count == 0)
         {
-            transform.position += velocidad * Time.deltaTime * direccion;
+            if (!calcularHuida) return;
+            Huir();
+            calcularHuida = false;
+        }
 
-            Vector3 posicionSiguiente = camino.Peek().posicionGlobal;
-            posicionSiguiente = new(posicionSiguiente.x, 0f, posicionSiguiente.z);
-            Vector3 posicionArana = transform.position;
-            posicionArana = new(posicionArana.x, 0f, posicionArana.z);
+        transform.position += velocidad * Time.deltaTime * direccion;
 
-            if (Vector3.Distance(posicionSiguiente, posicionArana) < 0.01)
+        Vector3 posicionSiguiente = camino.Peek().posicionGlobal;
+        posicionSiguiente = new(posicionSiguiente.x, 0f, posicionSiguiente.z);
+        Vector3 posicionArana = transform.position;
+        posicionArana = new(posicionArana.x, 0f, posicionArana.z);
+
+        if (Vector3.Distance(posicionSiguiente, posicionArana) < 0.01)
+        {
+            if (contadorTrampasActivas < telarañasPool.Count)
             {
-                if (contadorTrampasActivas < telarañasPool.Count)
+                // Obtener la telaraña del Object Pool
+                GameObject telaraña = ObtenerTelaraña(this.transform.position);
+                if (telaraña != null)
                 {
-                    // Obtener la telaraña del Object Pool
-                    GameObject telaraña = ObtenerTelaraña(this.transform.position);
-                    if (telaraña != null)
-                    {
-                        // Configurar posición y activar la telaraña
-                        telaraña.transform.position = this.transform.position;
-                        telaraña.SetActive(true);
-                        telaraña.GetComponent<SpiderWeb>().trampaActiva = true;
+                    // Configurar posición y activar la telaraña
+                    telaraña.transform.position = this.transform.position;
+                    telaraña.SetActive(true);
+                    telaraña.GetComponent<SpiderWeb>().trampaActiva = true;
 
-                        contadorTrampasActivas++;
-                    }
+                    contadorTrampasActivas++;
                 }
-
-                camino.Pop();
-
-                if (camino.Count == 0)
-                {
-                    casillaAlcanzada = true;
-                    return;
-                }
-                    
-                direccion = camino.Peek().posicionGlobal - transform.position;
-                direccion = new Vector3(direccion.x, 0f, direccion.z).normalized;
-                transform.forward = direccion;
             }
+
+            if (calcularHuida)
+            {
+                camino.Clear();
+                return;
+            }
+
+            camino.Pop();
+
+            if (camino.Count == 0)
+            {
+                casillaAlcanzada = true;
+                return;
+            }
+
+
+            Vector3 casillaActual = gestorCuadricula.NodoCoincidente(transform.position).transform.position;
+            direccion = camino.Peek().posicionGlobal - casillaActual;
+            direccion = new Vector3(direccion.x, 0f, direccion.z).normalized;
+            transform.forward = direccion;
         }
     }
 
@@ -98,7 +111,7 @@ public class SpiderMovement : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitUntil(()=>casillaAlcanzada);
+            yield return new WaitUntil(() => casillaAlcanzada);
             float tiempoEspera = Random.Range(3f, 10f);
             yield return new WaitForSeconds(tiempoEspera);
             if (casillaAlcanzada)
@@ -177,12 +190,17 @@ public class SpiderMovement : MonoBehaviour
     {
         if (vidaRestante == 0) return;
 
-        Huir();
+        calcularHuida = true;
     }
 
     private void Huir()
     {
-        Vector3 direccionHuida = transform.position - Player.transform.position;
+        Vector3 direccionHuida = gestorCuadricula.NodoCoincidente(transform.position).transform.position - gestorCuadricula.NodoCoincidente(Player.transform.position).transform.position;
+        Debug.Log("a " + direccionHuida.magnitude);
+        if (direccionHuida.magnitude > 1)
+        {
+            direccionHuida.z = 0;
+        }
         int pasosDados = 0;
         bool movidoALaIzquierda = false;
         bool movidoALaDerecha = false;
@@ -236,9 +254,17 @@ public class SpiderMovement : MonoBehaviour
         }
 
         casillaAlcanzada = false;
-        Nodo nodoAux = camino.Peek();
+        Nodo nodoAux = null;
+        if (camino != null && camino.Count > 0)
+        {
+            nodoAux = camino.Peek();
+        }
         camino = Pathfinding.Instance.HacerPathFinding(transform.position, ultimoPuntoPartida.position);
-        camino.Push(nodoAux);
+        if (nodoAux != null)
+        {
+            camino.Push(nodoAux);
+        }
+
 
         StartCoroutine(RecuperarArmadura());
     }
