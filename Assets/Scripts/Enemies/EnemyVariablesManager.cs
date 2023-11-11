@@ -20,7 +20,7 @@ public class EnemyVariablesManager : MonoBehaviour
     public void GetDamage()
     {
 
-        Debug.Log("dasdas!");
+        //Debug.Log("dasdas!");
         lifePoints--;
         if (lifePoints <= 0) Destroy(gameObject);
     }

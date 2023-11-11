@@ -7,6 +7,7 @@ TagManager:
   - Deck
   - Card
   - Item
+  - Topo
   layers:
   - Default
   - TransparentFX
