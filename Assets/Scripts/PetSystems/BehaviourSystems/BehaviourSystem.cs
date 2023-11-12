@@ -4,13 +4,13 @@ using UnityEngine;
 
 public abstract class BehaviourSystem
 {
-    protected GameObject systemOwner;
+    protected PetBehaviour systemOwner;
 
-    public BehaviourSystem(GameObject systemOwner)
+    public BehaviourSystem(PetBehaviour systemOwner)
     {
         this.systemOwner = systemOwner;
     }
-    public abstract void OnStart();
+    public abstract void OnEnter();
     public abstract void OnUpdate();
     public abstract void OnExit();
 }

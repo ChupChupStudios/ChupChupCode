@@ -25,11 +25,10 @@ public class PlayerStateManager : MonoBehaviour
         get => currentState;
         set
         {
-            if (value == State.None) return;
+            if (value == State.None || value == requestedState) return;
 
-            // el estado es el que se habia solicitado previamente,
-            //   no se esta haciendo nada o se ha pedido no hacer nada
-            if (requestedState == value || currentState == State.Idle || value == State.Idle)
+            // no se esta haciendo nada o se ha pedido no hacer nada
+            if (currentState == State.Idle || value == State.Idle || value == State.Movement)
             {
                 currentState = (requestedState == State.None) ? value : requestedState;
                 requestedState = State.None;
@@ -40,7 +39,7 @@ public class PlayerStateManager : MonoBehaviour
             else
             {
                 requestedState = value;
-                StateChangeRequestedEvent?.Invoke(requestedState);
+                StateChangeRequestedEvent?.Invoke(requestedState); 
             }
         }
     }

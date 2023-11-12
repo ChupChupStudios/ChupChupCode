@@ -49,7 +49,7 @@ public class DeckManager : MonoBehaviour
             if (newCard != selectedCard)
             {
                 // ya habia una carta escogida (se aprovecha el estado UsingCard):
-                if (selectedCard != null)
+                if (selectedCard != null && PlayerStateManager.Instance.CurrentState == PlayerStateManager.State.UsingCard)
                 {
                     selectedCard.CardDeselected();
                     newCard.CardSelected();
@@ -63,7 +63,7 @@ public class DeckManager : MonoBehaviour
                 // PETICION DE CAMBIO DE ESTADO
                 PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.UsingCard;
             }
-            else
+            else if (PlayerStateManager.Instance.CurrentState == PlayerStateManager.State.UsingCard)
             {
                 selectedCard.CardDeselected();
                 selectedCard = null;
