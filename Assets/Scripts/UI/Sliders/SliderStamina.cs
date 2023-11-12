@@ -29,13 +29,13 @@ public class SliderStamina : MonoBehaviour
         }
     }
 
-    //void Update()
-    //{
-    //    if (slider.value <= 0)
-    //    {
-    //        SceneManager.LoadScene("FinalScene");
-    //    }
-    //}
+    void Update()
+    {
+        if (slider.value <= 0)
+        {
+            SceneManager.LoadScene("FinalScene");
+        }
+    }
 
     public void ActualizarSlider(object sender, float value)
     {

@@ -23,14 +23,17 @@ public class MoleBehaviour : MonoBehaviour
 
     public SliderStamina sliderStamina;
     public EnemyVariablesManager evm;
+    public MoleMovement moleMovement;
 
     public GameObject raiz;
 
     private bool curarse;
 
+    Vector3[] casillaCenters;
+
     void Update()
     {
-        Vector3[] casillaCenters = ObtenerCentrosCasillas();
+        casillaCenters = ObtenerCentrosCasillas();
         if (!root)
         {
             if (!raizDesenterrada && evm.lifePoints == 1 && DetectarCriatura(casillaCenters, true))
@@ -118,7 +121,7 @@ public class MoleBehaviour : MonoBehaviour
 
             for (int i = 0; i < casillaCenters.Length; i++)
             {
-                if (casillaCenters[i] == transform.position + Vector3.forward || casillaCenters[i] == transform.position + Vector3.forward * 2)
+                if (casillaCenters[i] == transform.position + transform.forward || casillaCenters[i] == transform.position + transform.forward * 2)
                 {
                     Vector3 inicioRayo = casillaCenters[i] + Vector3.up * alturaInicialRayoPlayer; // Ajuste de la altura inicial
                     RaycastHit hit;
@@ -173,7 +176,7 @@ public class MoleBehaviour : MonoBehaviour
 
         for (int i = 0; i < 2; i++)
         {
-            if (casillaCenters[i] == transform.position + Vector3.forward || casillaCenters[i] == transform.position + Vector3.forward * 2)
+            if (casillaCenters[i] == transform.position + transform.forward || casillaCenters[i] == transform.position + transform.forward * 2)
             {
                 Vector3 inicioRayo = casillaCenters[i] + Vector3.up * alturaInicialRayoPlayer; // Ajuste de la altura inicial
                 RaycastHit hit;
@@ -199,7 +202,7 @@ public class MoleBehaviour : MonoBehaviour
     {
         for (int i = 0; i < 2; i++)
         {
-            if (casillaCenters[i] == transform.position + Vector3.forward || casillaCenters[i] == transform.position + Vector3.forward * 2)
+            if (casillaCenters[i] == transform.position + transform.forward || casillaCenters[i] == transform.position + transform.forward * 2)
             {
                 Vector3 inicioRayo = casillaCenters[i] + Vector3.up * alturaInicialRayoCasilla; // Ajuste de la altura inicial
                 RaycastHit hit;
@@ -277,6 +280,14 @@ public class MoleBehaviour : MonoBehaviour
         renderersAfectados.Clear(); // Limpiar la lista
     }
 
+    //public void CasillaAlcanzadaCallBack()
+    //{
+    //    if (!DetectarCriatura(casillaCenters, true)) return;
+
+    //    enterrado = true;
+    //    moleMovement.camino.Clear();
+    //}
+
     Vector3[] ObtenerCentrosCasillas()
     {
         Vector3[] casillaCenters = new Vector3[20];
@@ -284,28 +295,52 @@ public class MoleBehaviour : MonoBehaviour
         Vector3 posicionTopo = transform.position;
 
         // Posiciones casillas de ataque
-        casillaCenters[0] = posicionTopo + Vector3.forward;
-        casillaCenters[1] = posicionTopo + Vector3.forward * 2;
+        casillaCenters[0] = posicionTopo + transform.forward;
+        casillaCenters[1] = posicionTopo + transform.forward * 2;
 
         // Posiciones casillas detección
-        casillaCenters[2] = posicionTopo + Vector3.right;
-        casillaCenters[3] = posicionTopo + Vector3.right * 2;
-        casillaCenters[4] = posicionTopo + Vector3.forward * -1;
-        casillaCenters[5] = posicionTopo + Vector3.forward * -2;
-        casillaCenters[6] = posicionTopo + Vector3.right * -1;
-        casillaCenters[7] = posicionTopo + Vector3.right * -2;
-        casillaCenters[8] = posicionTopo + Vector3.forward + Vector3.right;
-        casillaCenters[9] = posicionTopo + Vector3.forward * 2 + Vector3.right;
-        casillaCenters[10] = posicionTopo + Vector3.forward + Vector3.right * 2;
-        casillaCenters[11] = posicionTopo + Vector3.forward * -1 + Vector3.right;
-        casillaCenters[12] = posicionTopo + Vector3.forward * -2 + Vector3.right;
-        casillaCenters[13] = posicionTopo + Vector3.forward * -1 + Vector3.right * 2;
-        casillaCenters[14] = posicionTopo + Vector3.forward * -1 + Vector3.right * -1;
-        casillaCenters[15] = posicionTopo + Vector3.forward * -2 + Vector3.right * -1;
-        casillaCenters[16] = posicionTopo + Vector3.forward * -1 + Vector3.right * -2;
-        casillaCenters[17] = posicionTopo + Vector3.forward + Vector3.right * -1;
-        casillaCenters[18] = posicionTopo + Vector3.forward * 2 + Vector3.right * -1;
-        casillaCenters[19] = posicionTopo + Vector3.forward + Vector3.right * -2;
+        casillaCenters[2] = posicionTopo + transform.right;
+        casillaCenters[3] = posicionTopo + transform.right * 2;
+        casillaCenters[4] = posicionTopo + transform.forward * -1;
+        casillaCenters[5] = posicionTopo + transform.forward * -2;
+        casillaCenters[6] = posicionTopo + transform.right * -1;
+        casillaCenters[7] = posicionTopo + transform.right * -2;
+        casillaCenters[8] = posicionTopo + transform.forward + transform.right;
+        casillaCenters[9] = posicionTopo + transform.forward * 2 + transform.right;
+        casillaCenters[10] = posicionTopo + transform.forward + transform.right * 2;
+        casillaCenters[11] = posicionTopo + transform.forward * -1 + transform.right;
+        casillaCenters[12] = posicionTopo + transform.forward * -2 + transform.right;
+        casillaCenters[13] = posicionTopo + transform.forward * -1 + transform.right * 2;
+        casillaCenters[14] = posicionTopo + transform.forward * -1 + transform.right * -1;
+        casillaCenters[15] = posicionTopo + transform.forward * -2 + transform.right * -1;
+        casillaCenters[16] = posicionTopo + transform.forward * -1 + transform.right * -2;
+        casillaCenters[17] = posicionTopo + transform.forward + transform.right * -1;
+        casillaCenters[18] = posicionTopo + transform.forward * 2 + transform.right * -1;
+        casillaCenters[19] = posicionTopo + transform.forward + transform.right * -2;
+
+        //// Posiciones casillas de ataque
+        //casillaCenters[0] = posicionTopo + Vector3.forward;
+        //casillaCenters[1] = posicionTopo + Vector3.forward * 2;
+
+        //// Posiciones casillas detección
+        //casillaCenters[2] = posicionTopo + Vector3.right;
+        //casillaCenters[3] = posicionTopo + Vector3.right * 2;
+        //casillaCenters[4] = posicionTopo + Vector3.forward * -1;
+        //casillaCenters[5] = posicionTopo + Vector3.forward * -2;
+        //casillaCenters[6] = posicionTopo + Vector3.right * -1;
+        //casillaCenters[7] = posicionTopo + Vector3.right * -2;
+        //casillaCenters[8] = posicionTopo + Vector3.forward + Vector3.right;
+        //casillaCenters[9] = posicionTopo + Vector3.forward * 2 + Vector3.right;
+        //casillaCenters[10] = posicionTopo + Vector3.forward + Vector3.right * 2;
+        //casillaCenters[11] = posicionTopo + Vector3.forward * -1 + Vector3.right;
+        //casillaCenters[12] = posicionTopo + Vector3.forward * -2 + Vector3.right;
+        //casillaCenters[13] = posicionTopo + Vector3.forward * -1 + Vector3.right * 2;
+        //casillaCenters[14] = posicionTopo + Vector3.forward * -1 + Vector3.right * -1;
+        //casillaCenters[15] = posicionTopo + Vector3.forward * -2 + Vector3.right * -1;
+        //casillaCenters[16] = posicionTopo + Vector3.forward * -1 + Vector3.right * -2;
+        //casillaCenters[17] = posicionTopo + Vector3.forward + Vector3.right * -1;
+        //casillaCenters[18] = posicionTopo + Vector3.forward * 2 + Vector3.right * -1;
+        //casillaCenters[19] = posicionTopo + Vector3.forward + Vector3.right * -2;
 
         return casillaCenters;
     }

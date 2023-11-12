@@ -3131,6 +3131,7 @@ MonoBehaviour:
   root: 0
   sliderStamina: {fileID: 2004130862}
   evm: {fileID: 1347758128}
+  moleMovement: {fileID: 0}
   raiz: {fileID: 1357604737}
 --- !u!114 &1347758123
 MonoBehaviour:
