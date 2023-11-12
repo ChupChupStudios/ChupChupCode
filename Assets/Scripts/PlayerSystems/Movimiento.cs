@@ -44,7 +44,9 @@ public class Movimiento : MonoBehaviour
         if (nodoObjetivo == null) return;
 
         // SEGUIR CAMINO
-        transform.position = transform.position + velocidad * Time.deltaTime * direccion;
+        //transform.position = transform.position + velocidad * Time.deltaTime * direccion;
+        Vector3 posicion = nodoObjetivo.transform.GetChild(0).position;
+        transform.position = Vector3.MoveTowards(transform.position, posicion, velocidad * Time.deltaTime);
 
         // AVANZAR NODO
         if (Vector3.Distance(nodoObjetivo.posicionGlobal, transform.position) < umbralLlegadaObjetivo)
@@ -86,5 +88,17 @@ public class Movimiento : MonoBehaviour
     {
         if(newState != PlayerStateManager.State.Movement)
             camino.Clear();
+    }
+
+    public void CambiarVelocidad(int i, float factorCambioVelocidad)
+    {
+        if (i == 1)
+        {
+            velocidad *= factorCambioVelocidad;
+        }
+        else if (i == 2)
+        {
+            velocidad /= factorCambioVelocidad;
+        }
     }
 }

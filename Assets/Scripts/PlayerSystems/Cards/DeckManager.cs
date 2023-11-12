@@ -63,7 +63,7 @@ public class DeckManager : MonoBehaviour
                 // PETICION DE CAMBIO DE ESTADO
                 PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.UsingCard;
             }
-            else
+            else if (PlayerStateManager.Instance.CurrentState == PlayerStateManager.State.UsingCard)
             {
                 selectedCard.CardDeselected();
                 selectedCard = null;
