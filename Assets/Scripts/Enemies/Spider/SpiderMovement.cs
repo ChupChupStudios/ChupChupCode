@@ -124,7 +124,7 @@ public class SpiderMovement : MonoBehaviour
 
     void MoverAUnaCasillaAleatoria()
     {
-        Debug.Log("Pompeya");
+        Debug.Log("Caminando");
         Nodo nodoActual = gestorCuadricula.NodoCoincidente(transform.position);
         List<Nodo> vecinos = gestorCuadricula.ListaDeVecinos(nodoActual);
         List<Nodo> casillasDisponibles = new List<Nodo>();
@@ -195,16 +195,39 @@ public class SpiderMovement : MonoBehaviour
 
     private void Huir()
     {
+        bool diagonal = false;
         Vector3 direccionHuida = gestorCuadricula.NodoCoincidente(transform.position).transform.position - gestorCuadricula.NodoCoincidente(Player.transform.position).transform.position;
-        Debug.Log("a " + direccionHuida.magnitude);
-        if (direccionHuida.magnitude > 1)
+        Vector3 direccionHuida1 = gestorCuadricula.NodoCoincidente(transform.position).transform.position - gestorCuadricula.NodoCoincidente(Player.transform.position).transform.position;
+
+        // Error a veces se mete en diagonal a pesar de que está recto debido a que atacas mientras se mueve a forward.
+        // Ahora no se mete en diagonal pero se recorre más casillas por la puta cara
+
+        Debug.Log("a " + direccionHuida.magnitude + "a " + direccionHuida);
+        if (direccionHuida.magnitude > 1 && direccionHuida.magnitude != 2)
         {
+            diagonal = true;
             direccionHuida.z = 0;
         }
+
+        Debug.Log("b " + direccionHuida1.magnitude + "b " + direccionHuida1);
+        if (direccionHuida1.magnitude > 1 && direccionHuida1.magnitude != 2)
+        {
+            diagonal = true;
+            direccionHuida1.x = 0;
+        }
+
+        direccionHuida.Normalize();
+        direccionHuida1.Normalize();
+
         int pasosDados = 0;
         bool movidoALaIzquierda = false;
         bool movidoALaDerecha = false;
         Transform ultimoPuntoPartida = transform;
+
+        int pasosDados1 = 0;
+        bool movidoALaIzquierda1 = false;
+        bool movidoALaDerecha1 = false;
+        Transform ultimoPuntoPartida1 = transform;
 
         while (pasosDados < 3)
         {
@@ -230,6 +253,34 @@ public class SpiderMovement : MonoBehaviour
             }
         }
 
+        if (diagonal)
+        {
+            Debug.Log("Diagonal");
+            while (pasosDados1 < 3)
+            {
+                if (IntentarMover1(direccionHuida1, "forward")) // Intentar ir hacia adelante
+                {
+                    movidoALaIzquierda1 = false;
+                    movidoALaDerecha1 = false;
+                }
+                else if (!movidoALaDerecha1 && IntentarMover1(Vector3.Cross(direccionHuida1, Vector3.up), "left")) // Intentar ir hacia la izquierda
+                {
+                    movidoALaIzquierda1 = true;
+                    movidoALaDerecha1 = false;
+                }
+                else if (!movidoALaIzquierda1 && IntentarMover1(Vector3.Cross(Vector3.up, direccionHuida1), "right")) // Intentar ir hacia la derecha
+                {
+                    movidoALaIzquierda1 = false;
+                    movidoALaDerecha1 = true;
+                }
+                else
+                {
+                    Debug.Log("ERROR FATAL MUERTE DOLOR Y DESTRUCCIÓN");
+                    break;
+                }
+            }
+        }
+
         bool IntentarMover(Vector3 direction, string debugLog)
         {
             Vector3 rayStart = (ultimoPuntoPartida.position + direction) + Vector3.up * 3.0f;
@@ -238,11 +289,11 @@ public class SpiderMovement : MonoBehaviour
 
             if (Physics.Raycast(rayStart, Vector3.down, out hit, 10.0f, casillaLayer))
             {
-                Debug.Log("EntraIF 1" + hit.collider.name);
+                Debug.Log("aEntraIF 1" + hit.collider.name);
                 Nodo nodoCasilla = hit.collider.GetComponent<Nodo>();
                 if (nodoCasilla != null && nodoCasilla.caminable)
                 {
-                    Debug.Log("EntraIF 2");
+                    Debug.Log("aEntraIF 2");
                     Debug.Log(debugLog);
                     ultimoPuntoPartida = nodoCasilla.transform;
                     pasosDados++;
@@ -253,18 +304,59 @@ public class SpiderMovement : MonoBehaviour
             return false; // No se ha movido
         }
 
+
+        bool IntentarMover1(Vector3 direction1, string debugLog1)
+        {
+            Vector3 rayStart1 = (ultimoPuntoPartida1.position + direction1) + Vector3.up * 3.0f;
+            RaycastHit hit1;
+            Debug.DrawLine(rayStart1, rayStart1 + Vector3.down * 1.0f, Color.cyan);
+
+            if (Physics.Raycast(rayStart1, Vector3.down, out hit1, 10.0f, casillaLayer))
+            {
+                Debug.Log("bEntraIF 1" + hit1.collider.name);
+                Nodo nodoCasilla1 = hit1.collider.GetComponent<Nodo>();
+                if (nodoCasilla1 != null && nodoCasilla1.caminable)
+                {
+                    Debug.Log("bEntraIF 2");
+                    Debug.Log(debugLog1);
+                    ultimoPuntoPartida1 = nodoCasilla1.transform;
+                    pasosDados1++;
+                    return true; // Se ha movido exitosamente
+                }
+            }
+
+            return false; // No se ha movido
+        }
+
+        Vector3 aux = gestorCuadricula.NodoCoincidente(ultimoPuntoPartida.transform.position).transform.position - gestorCuadricula.NodoCoincidente(Player.transform.position).transform.position;
+        Vector3 aux1 = gestorCuadricula.NodoCoincidente(ultimoPuntoPartida1.transform.position).transform.position - gestorCuadricula.NodoCoincidente(Player.transform.position).transform.position;
+
+        Transform ultimoPuntoPartidaDefinitivo;
+
+        if (aux.magnitude > aux1.magnitude && diagonal)
+        {
+            ultimoPuntoPartidaDefinitivo = ultimoPuntoPartida;
+        }
+        else if (aux1.magnitude > aux.magnitude && diagonal)
+        {
+            ultimoPuntoPartidaDefinitivo = ultimoPuntoPartida1;
+        }
+        else
+        {
+            ultimoPuntoPartidaDefinitivo = ultimoPuntoPartida;
+        }
+
         casillaAlcanzada = false;
         Nodo nodoAux = null;
         if (camino != null && camino.Count > 0)
         {
             nodoAux = camino.Peek();
         }
-        camino = Pathfinding.Instance.HacerPathFinding(transform.position, ultimoPuntoPartida.position);
+        camino = Pathfinding.Instance.HacerPathFinding(transform.position, ultimoPuntoPartidaDefinitivo.position);
         if (nodoAux != null)
         {
             camino.Push(nodoAux);
         }
-
 
         StartCoroutine(RecuperarArmadura());
     }
@@ -272,7 +364,7 @@ public class SpiderMovement : MonoBehaviour
     IEnumerator RecuperarArmadura()
     {
         // Esperar 3 segundos
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(15f);
         // Recuperar 1 punto de vidaRestante
         evm.lifePoints++;
     }

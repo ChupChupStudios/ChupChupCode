@@ -25,7 +25,7 @@ public class EnemyVariablesManager : MonoBehaviour
     {
         Debug.Log("dasdas!");
         lifePoints--;
-        if (lifePoints <= 0) Destroy(gameObject);
+        if (lifePoints <= 0) gameObject.SetActive(false);
         Golpeado?.Invoke(this, lifePoints);
     }
 }
