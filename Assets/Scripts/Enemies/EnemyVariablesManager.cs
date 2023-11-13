@@ -12,7 +12,7 @@ public class EnemyVariablesManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lifePoints = 2;
+
     }
 
     // Update is called once per frame

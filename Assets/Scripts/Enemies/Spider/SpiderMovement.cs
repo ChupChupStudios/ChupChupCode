@@ -15,7 +15,7 @@ public class SpiderMovement : MonoBehaviour
     public int contadorTrampasActivas = 0;
     private List<GameObject> telarañasPool = new List<GameObject>();
 
-    EnemyVariablesManager evm;
+    private EnemyVariablesManager enemyVariableManager;
     public LayerMask casillaLayer;
     public GameObject Player;
     private bool calcularHuida = false;
@@ -34,14 +34,14 @@ public class SpiderMovement : MonoBehaviour
 
     void Start()
     {
-        evm = this.gameObject.GetComponent<EnemyVariablesManager>();
+        enemyVariableManager = this.gameObject.GetComponent<EnemyVariablesManager>();
 
         gestorCuadricula = FindObjectOfType<GestorCuadricula>();
         StartCoroutine(EsperarYMover());
 
-        if (evm != null)
+        if (enemyVariableManager != null)
         {
-            evm.Golpeado += ArmaduraRota;
+            enemyVariableManager.Golpeado += ArmaduraRota;
         }
 
         Player = GameObject.FindWithTag("Player");
@@ -124,7 +124,7 @@ public class SpiderMovement : MonoBehaviour
 
     void MoverAUnaCasillaAleatoria()
     {
-        Debug.Log("Caminando");
+        Debug.Log("Spider caminando");
         Nodo nodoActual = gestorCuadricula.NodoCoincidente(transform.position);
         List<Nodo> vecinos = gestorCuadricula.ListaDeVecinos(nodoActual);
         List<Nodo> casillasDisponibles = new List<Nodo>();
@@ -199,9 +199,6 @@ public class SpiderMovement : MonoBehaviour
         Vector3 direccionHuida = gestorCuadricula.NodoCoincidente(transform.position).transform.position - gestorCuadricula.NodoCoincidente(Player.transform.position).transform.position;
         Vector3 direccionHuida1 = gestorCuadricula.NodoCoincidente(transform.position).transform.position - gestorCuadricula.NodoCoincidente(Player.transform.position).transform.position;
 
-        // Error a veces se mete en diagonal a pesar de que está recto debido a que atacas mientras se mueve a forward.
-        // Ahora no se mete en diagonal pero se recorre más casillas por la puta cara
-
         Debug.Log("a " + direccionHuida.magnitude + "a " + direccionHuida);
         if (direccionHuida.magnitude > 1 && direccionHuida.magnitude != 2)
         {
@@ -248,7 +245,7 @@ public class SpiderMovement : MonoBehaviour
             }
             else
             {
-                Debug.Log("ERROR FATAL MUERTE DOLOR Y DESTRUCCIÓN");
+                Debug.Log("no hay salida");
                 break;
             }
         }
@@ -275,7 +272,7 @@ public class SpiderMovement : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("ERROR FATAL MUERTE DOLOR Y DESTRUCCIÓN");
+                    Debug.Log("no hay salida");
                     break;
                 }
             }
@@ -289,11 +286,9 @@ public class SpiderMovement : MonoBehaviour
 
             if (Physics.Raycast(rayStart, Vector3.down, out hit, 10.0f, casillaLayer))
             {
-                Debug.Log("aEntraIF 1" + hit.collider.name);
                 Nodo nodoCasilla = hit.collider.GetComponent<Nodo>();
                 if (nodoCasilla != null && nodoCasilla.caminable)
                 {
-                    Debug.Log("aEntraIF 2");
                     Debug.Log(debugLog);
                     ultimoPuntoPartida = nodoCasilla.transform;
                     pasosDados++;
@@ -313,11 +308,9 @@ public class SpiderMovement : MonoBehaviour
 
             if (Physics.Raycast(rayStart1, Vector3.down, out hit1, 10.0f, casillaLayer))
             {
-                Debug.Log("bEntraIF 1" + hit1.collider.name);
                 Nodo nodoCasilla1 = hit1.collider.GetComponent<Nodo>();
                 if (nodoCasilla1 != null && nodoCasilla1.caminable)
                 {
-                    Debug.Log("bEntraIF 2");
                     Debug.Log(debugLog1);
                     ultimoPuntoPartida1 = nodoCasilla1.transform;
                     pasosDados1++;
@@ -366,6 +359,6 @@ public class SpiderMovement : MonoBehaviour
         // Esperar 3 segundos
         yield return new WaitForSeconds(15f);
         // Recuperar 1 punto de vidaRestante
-        evm.lifePoints++;
+        enemyVariableManager.lifePoints++;
     }
 }
