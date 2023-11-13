@@ -13,8 +13,11 @@ public abstract class FogCard : ACard
     public override void CheckAndExecute(Block tile)
     {
         if (!affectedBlocks.Contains(tile.gameObject)) return;
-
-        Debug.Log("CARTA DE NIEBLA USADA");
+        if (!tile.CheckFogType())
+        {
+            deckManager.Deselect();
+            return;
+        }
 
         // Extraer la niebla afectada por la carta:
         var affectedFog = affectedBlocks.FindAll(
@@ -27,8 +30,6 @@ public abstract class FogCard : ACard
 
         // Eliminar la carta
         deckManager.Deselect();
-        deckManager.cards.Remove(gameObject);
         Destroy(gameObject);
-        deckManager.UpdateCardsPositions();
     }
 }

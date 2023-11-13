@@ -33,8 +33,6 @@ public class StaminaCard : ACard
         SliderEvent?.Invoke(25);
 
         deckManager.Deselect();
-        deckManager.cards.Remove(gameObject);
         Destroy(gameObject);
-        deckManager.UpdateCardsPositions();
     }
 }

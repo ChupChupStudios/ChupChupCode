@@ -115,4 +115,9 @@ public class SpiderAttack : MonoBehaviour
 
         return casillaCenters;
     }
+
+    public void OnDestroy()
+    {
+        RestablecerColorCasillas();
+    }
 }

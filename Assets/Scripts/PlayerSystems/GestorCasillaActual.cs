@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GestorCasillaActual : MonoBehaviour
 {
-    GameObject currentNode;
+    public GameObject currentNode;
     GameObject previousNode;
     public LayerMask Ground;
+    public WolfMovement wolfMovement;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,10 @@ public class GestorCasillaActual : MonoBehaviour
         {
             currentNode.GetComponent<Nodo>().caminable = false;
             previousNode = currentNode;
+            if(wolfMovement!=null) wolfMovement.StartCall();
         }
+        
+        
 
     }
 

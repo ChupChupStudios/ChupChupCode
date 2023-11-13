@@ -29,7 +29,7 @@ public class SelectorCasillaRaton : MonoBehaviour
         GameObject casilla = hit.collider.gameObject;
         if (DeckManager.Instance.SelectedCard == null)
         {
-            if (casilla.GetComponent<Block>().type == Block.Type.Fog) return;
+            if (casilla.GetComponent<Block>().type == Block.Type.Fog || !casilla.GetComponent<Block>().enabled) return;
 
             // DEFINIR NUEVA RUTA DEL PERSONAJE
             movimientoPersonaje.DefinirCamino(casilla.GetComponent<Nodo>());
