@@ -63,7 +63,8 @@ public class Movimiento : MonoBehaviour
                 Goal goal = nodoObjetivo.gameObject.GetComponent<Goal>();
                 if (goal!=null)
                 {
-                    SceneManager.LoadScene("FinalScene");
+                    int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
+                    SceneManager.LoadScene(indiceEscenaActual + 1);
                 }
                 nodoObjetivo = null;
 

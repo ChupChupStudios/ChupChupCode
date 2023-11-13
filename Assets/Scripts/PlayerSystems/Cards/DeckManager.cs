@@ -33,9 +33,9 @@ public class DeckManager : MonoBehaviour
     [SerializeField] List<ACard> cardPrefabs = new();
 
     // LISTA DE CARTAS EN MANO
-    public List<GameObject> cards = new();
+    public static List<ACard> cards = new();
 
-    // POSICION DEL DUE—O DEL MAZO
+    // POSICION DEL DUE≈ÉO DEL MAZO
     [HideInInspector] public Transform ownerTransform;
 
     // GESTION DE LA CARTA SELECCIONADA
@@ -113,9 +113,10 @@ public class DeckManager : MonoBehaviour
     public void CreateCard(ACard card)
     {
         if (card == null || !cardPrefabs.Contains(card)) return;
+        //if (cards.Count == 7) return;
 
         GameObject cardToInstantiate = card.gameObject;
-        cards.Add(card.gameObject);
+        cards.Add(card);
 
         // Instantiate the card
         Instantiate(cardToInstantiate, cardPositions[currentPositionIndex], CARD_ROTATION);
@@ -148,7 +149,7 @@ public class DeckManager : MonoBehaviour
     }
 
     /* Devuelve:
-     *   True si hay una casilla bajo la posicion del dueÒo del mazo con un desplazamiento offset
+     *   True si hay una casilla bajo la posicion del due≈Ño del mazo con un desplazamiento offset
      *   casilla con el GameObject de la casilla
      */
     public bool BloqueUsuarioDelMazo(Vector3 offset, out GameObject casilla)
@@ -159,7 +160,7 @@ public class DeckManager : MonoBehaviour
     public void UpdateCardsPositions()
     {
         int cont = 0;
-        foreach (GameObject card in cards)
+        foreach(ACard card in cards)
         {
             //Debug.Log(cardPositions[cont]);
             card.transform.position = cardPositions[cont];

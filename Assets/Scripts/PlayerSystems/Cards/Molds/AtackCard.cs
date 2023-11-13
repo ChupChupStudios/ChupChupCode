@@ -17,23 +17,27 @@ public abstract class AtackCard : ACard
         if (!affectedBlocks.Contains(tile.gameObject)) return;
 
         RaycastHit hit;
-        if (Physics.Raycast(tile.gameObject.transform.position + Vector3.down, Vector3.up, out hit, Mathf.Infinity, EnemyLayer))
+        foreach (GameObject block in affectedBlocks)
         {
-            enemy = hit.collider.gameObject;
-            if (enemy.tag != "Topo")
-                enemy.GetComponent<EnemyVariablesManager>().GetDamage();
-            else
+            if (Physics.Raycast(block.transform.position + Vector3.down, Vector3.up, out hit, Mathf.Infinity, EnemyLayer))
             {
-                if (!enemy.GetComponent<MoleBehaviour>().enterrado)
+                enemy = hit.collider.gameObject;
+
+                if (enemy.tag != "Topo") enemy.GetComponent<EnemyVariablesManager>().GetDamage();
+
+                else
                 {
-                    enemy.GetComponent<EnemyVariablesManager>().GetDamage();
+                    if (!enemy.GetComponent<MoleBehaviour>().enterrado)
+                    {
+                        enemy.GetComponent<EnemyVariablesManager>().GetDamage();
+                    }
                 }
             }
-        }
 
-        deckManager.Deselect();
-        deckManager.cards.Remove(gameObject);
-        Destroy(gameObject);
-        deckManager.UpdateCardsPositions();
+        }
     }
+
+    deckManager.Deselect();
+        Destroy(gameObject);
 }
+

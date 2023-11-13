@@ -91,6 +91,70 @@ public class Pathfinding : MonoBehaviour
         return null;
     }
 
+
+
+     //PATHFINING MODIFICADO PARA LOBO
+    public Stack<Nodo> HacerPathFindingEnemigo(Vector3 posicionInicial, Vector3 posicionDestino)
+    {
+        Nodo nodoInicial = gestorCuadricula.NodoCoincidente(posicionInicial);
+        Nodo nodoDestino = gestorCuadricula.NodoCoincidente(posicionDestino);
+
+        if (nodoInicial == null || nodoDestino == null) return null;
+
+
+        List<Nodo> nodosAccesibles = new();
+        HashSet<Nodo> nodosRevisados = new();
+        nodosAccesibles.Add(nodoInicial);
+        nodoInicial.previo = null;
+        nodoInicial.costeG = 0;
+
+        // INICIO --------------------------------------------
+
+        Nodo nodoActual = null;
+        while (nodosAccesibles.Count>0)
+        {
+            // BUSCAR MENOR COSTE F --------------
+            nodoActual = nodosAccesibles[0];
+            for (int i = 1; i < nodosAccesibles.Count; i++)
+            {
+                if (nodosAccesibles[i].CosteF < nodoActual.CosteF || nodosAccesibles[i].CosteF == nodoActual.CosteF && nodosAccesibles[i].costeH < nodoActual.costeH)
+                {
+                    nodoActual = nodosAccesibles[i];
+                }
+            }
+
+            // MARCAR NODO PROCESADO -------------
+            nodosAccesibles.Remove(nodoActual);
+            nodosRevisados.Add(nodoActual);
+
+
+            // NODO DESTINO ENCONTRADO -----------
+            if (nodoActual == nodoDestino)
+            {
+                return TrazarCamino(nodoActual, nodoInicial);
+            }
+
+            // REVISAR VECINOS -------------------
+            foreach (Nodo vecino in gestorCuadricula.ListaDeVecinos(nodoActual))
+            {
+                if (vecino == null) continue;
+                if (vecino.objeto || nodosRevisados.Contains(vecino)) continue;
+
+                int costeHastaVecino = nodoActual.costeG + Pathfinding.DISTANCIA_ENTRE_NODOS;
+                if (costeHastaVecino < vecino.costeG || !nodosRevisados.Contains(vecino))
+                {
+                    vecino.costeG = costeHastaVecino;
+                    vecino.costeH = vecino.GetDistancia(nodoDestino);
+                    vecino.previo = nodoActual;
+
+                    if (!nodosAccesibles.Contains(vecino)) nodosAccesibles.Add(vecino);
+                }
+            }
+        }
+
+        return null;
+    }
+
     Stack<Nodo> TrazarCamino(Nodo nodoDestino, Nodo nodoInicio)
     {
         Stack<Nodo> camino = new();

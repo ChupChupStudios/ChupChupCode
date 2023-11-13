@@ -16,6 +16,8 @@ public abstract class ACard : MonoBehaviour
     public CardType type = CardType.None;
     public Color baseColor;
 
+    public int cardIndex;
+
     Vector3 POSITION_OFFSET_IF_SELECTED = new(0.0f, 0.5f, 0.0f);
 
     [HideInInspector] public List<GameObject> affectedBlocks = new();
@@ -57,5 +59,11 @@ public abstract class ACard : MonoBehaviour
     {
         transform.position -= POSITION_OFFSET_IF_SELECTED;
         HideEffectArea();
+    }
+
+    public void OnDestroy()
+    {
+        DeckManager.cards.Remove(this);
+        deckManager.UpdateCardsPositions();
     }
 }

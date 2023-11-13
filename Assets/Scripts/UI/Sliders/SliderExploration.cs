@@ -37,6 +37,7 @@ public class SliderExploration : MonoBehaviour
     {
         if (slider.value >= 100)
         {
+            if (DeckManager.cards.Count == 7) return;
             int cardType;
             cardType = Random.Range(0, 5);
             DeckManager.Instance.CreateCard(cardPrefab[cardType]);
