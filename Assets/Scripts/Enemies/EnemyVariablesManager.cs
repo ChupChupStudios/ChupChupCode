@@ -23,7 +23,6 @@ public class EnemyVariablesManager : MonoBehaviour
 
     public void GetDamage()
     {
-        Debug.Log("dasdas!");
         lifePoints--;
         if (lifePoints <= 0) gameObject.SetActive(false);
         Golpeado?.Invoke(this, lifePoints);

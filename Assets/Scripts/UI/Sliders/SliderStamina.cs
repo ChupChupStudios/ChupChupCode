@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.UI;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SliderStamina : MonoBehaviour
 {
@@ -25,6 +26,14 @@ public class SliderStamina : MonoBehaviour
         else
         {
             Debug.LogWarning("No se encontró un objeto con el script Movimiento en la escena.");
+        }
+    }
+
+    void Update()
+    {
+        if (slider.value <= 0)
+        {
+            SceneManager.LoadScene("FinalScene");
         }
     }
 
