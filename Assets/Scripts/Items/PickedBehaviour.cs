@@ -11,6 +11,7 @@ public class PickedBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            //if (DeckManager.cards.Count == 7) return;
             DeckManager.Instance.CreateCard(cardPrefab);
             Destroy(gameObject);
         }

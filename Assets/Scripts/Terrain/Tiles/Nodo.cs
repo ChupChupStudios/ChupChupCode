@@ -6,7 +6,9 @@ public class Nodo : MonoBehaviour
 {
     // ATRIBUTOS GENERALES
     [SerializeField] LayerMask capaObstaculos;
+    [SerializeField] LayerMask capaObstaculosEnemigo;
     [HideInInspector] public bool caminable = true;
+    [HideInInspector] public bool objeto = false;
     [HideInInspector] public Vector3 posicionGlobal;
 
     // NODO PREVIO EN EL CAMINO
@@ -31,6 +33,7 @@ public class Nodo : MonoBehaviour
     {
         posicionGlobal = transform.GetChild(0).transform.position;
         caminable = !Physics.Raycast(transform.position + Vector3.up * 3, Vector3.down, Mathf.Infinity, capaObstaculos);
+        objeto = Physics.Raycast(transform.position + Vector3.up * 3, Vector3.down, Mathf.Infinity, capaObstaculosEnemigo);
     }
 
     public int GetDistancia(Nodo otro)

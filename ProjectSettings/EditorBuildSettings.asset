@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: "Assets/Scenes/Men\xFA.unity"
+    guid: 0b8105674f4180342afe87a3e4b17308
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: cc8847420fc8e6740a7d70320e17ab4c
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: cd3febb6703445a44bf013f43c2500d5
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 0f82c5638dae1f34ab05765330767ae2
   - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: 500f09daac08d1b4e93d525e76e48922
