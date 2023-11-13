@@ -28,6 +28,7 @@ public class MoleBehaviour : MonoBehaviour
     public GameObject raiz;
 
     private bool curarse;
+    //public bool enCasilla = false;
 
     Vector3[] casillaCenters;
 
@@ -77,6 +78,7 @@ public class MoleBehaviour : MonoBehaviour
             }
         }
 
+        //if (!raizDesenterrada && evm.lifePoints == 1 && !root && !DetectarCriatura(casillaCenters, true) && enCasilla)
         if (!raizDesenterrada && evm.lifePoints == 1 && !root && !DetectarCriatura(casillaCenters, true))
         {
             Desenterrar();
@@ -88,6 +90,8 @@ public class MoleBehaviour : MonoBehaviour
                 curarse = true;
                 StartCoroutine(ConsumirRaiz());
                 raizDesenterrada = true;
+                //enCasilla = false;
+                //moleMovement.camino.Clear();
             }
         }
     }
@@ -282,10 +286,11 @@ public class MoleBehaviour : MonoBehaviour
 
     //public void CasillaAlcanzadaCallBack()
     //{
-    //    if (!DetectarCriatura(casillaCenters, true)) return;
+    //    //if (!DetectarCriatura(casillaCenters, true)) return;
 
-    //    enterrado = true;
-    //    moleMovement.camino.Clear();
+    //    //enterrado = true;
+    //    enCasilla = true;
+    //    //moleMovement.camino.Clear();
     //}
 
     Vector3[] ObtenerCentrosCasillas()
@@ -317,30 +322,6 @@ public class MoleBehaviour : MonoBehaviour
         casillaCenters[17] = posicionTopo + transform.forward + transform.right * -1;
         casillaCenters[18] = posicionTopo + transform.forward * 2 + transform.right * -1;
         casillaCenters[19] = posicionTopo + transform.forward + transform.right * -2;
-
-        //// Posiciones casillas de ataque
-        //casillaCenters[0] = posicionTopo + Vector3.forward;
-        //casillaCenters[1] = posicionTopo + Vector3.forward * 2;
-
-        //// Posiciones casillas detección
-        //casillaCenters[2] = posicionTopo + Vector3.right;
-        //casillaCenters[3] = posicionTopo + Vector3.right * 2;
-        //casillaCenters[4] = posicionTopo + Vector3.forward * -1;
-        //casillaCenters[5] = posicionTopo + Vector3.forward * -2;
-        //casillaCenters[6] = posicionTopo + Vector3.right * -1;
-        //casillaCenters[7] = posicionTopo + Vector3.right * -2;
-        //casillaCenters[8] = posicionTopo + Vector3.forward + Vector3.right;
-        //casillaCenters[9] = posicionTopo + Vector3.forward * 2 + Vector3.right;
-        //casillaCenters[10] = posicionTopo + Vector3.forward + Vector3.right * 2;
-        //casillaCenters[11] = posicionTopo + Vector3.forward * -1 + Vector3.right;
-        //casillaCenters[12] = posicionTopo + Vector3.forward * -2 + Vector3.right;
-        //casillaCenters[13] = posicionTopo + Vector3.forward * -1 + Vector3.right * 2;
-        //casillaCenters[14] = posicionTopo + Vector3.forward * -1 + Vector3.right * -1;
-        //casillaCenters[15] = posicionTopo + Vector3.forward * -2 + Vector3.right * -1;
-        //casillaCenters[16] = posicionTopo + Vector3.forward * -1 + Vector3.right * -2;
-        //casillaCenters[17] = posicionTopo + Vector3.forward + Vector3.right * -1;
-        //casillaCenters[18] = posicionTopo + Vector3.forward * 2 + Vector3.right * -1;
-        //casillaCenters[19] = posicionTopo + Vector3.forward + Vector3.right * -2;
 
         return casillaCenters;
     }

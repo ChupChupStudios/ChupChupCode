@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour
 {
+    public SFXManager sFXManager;
+
     // SINGLETON
     public static DeckManager Instance;
 
@@ -71,6 +73,7 @@ public class DeckManager : MonoBehaviour
                 // NOTIFICAR NUEVO ESTADO (idle)
                 PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.Idle;
             }
+            sFXManager.PickCardSound();
         }
     }
 
