@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour
 {
+    public SFXManager sFXManager;
+
     // SINGLETON
     public static DeckManager Instance;
 
@@ -33,7 +35,7 @@ public class DeckManager : MonoBehaviour
     // LISTA DE CARTAS EN MANO
     public static List<ACard> cards = new();
 
-    // POSICION DEL DUE—O DEL MAZO
+    // POSICION DEL DUE≈ÉO DEL MAZO
     [HideInInspector] public Transform ownerTransform;
 
     // GESTION DE LA CARTA SELECCIONADA
@@ -71,6 +73,7 @@ public class DeckManager : MonoBehaviour
                 // NOTIFICAR NUEVO ESTADO (idle)
                 PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.Idle;
             }
+            sFXManager.PickCardSound();
         }
     }
 
@@ -146,7 +149,7 @@ public class DeckManager : MonoBehaviour
     }
 
     /* Devuelve:
-     *   True si hay una casilla bajo la posicion del dueÒo del mazo con un desplazamiento offset
+     *   True si hay una casilla bajo la posicion del due≈Ño del mazo con un desplazamiento offset
      *   casilla con el GameObject de la casilla
      */
     public bool BloqueUsuarioDelMazo(Vector3 offset, out GameObject casilla)
@@ -159,8 +162,8 @@ public class DeckManager : MonoBehaviour
         int cont = 0;
         foreach(ACard card in cards)
         {
-            Debug.Log(cont);
-
+            //Debug.Log(cardPositions[cont]);
+            card.transform.position = cardPositions[cont];
             cont++;
         }
     }

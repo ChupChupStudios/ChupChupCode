@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SpiderAttack : MonoBehaviour
 {
@@ -103,14 +104,14 @@ public class SpiderAttack : MonoBehaviour
 
         Vector3 posicionAraña = transform.position;
 
-        casillaCenters[0] = posicionAraña + Vector3.forward + Vector3.right;
-        casillaCenters[1] = posicionAraña + Vector3.forward - Vector3.right;
-        casillaCenters[2] = posicionAraña - Vector3.forward + Vector3.right;
-        casillaCenters[3] = posicionAraña - Vector3.forward - Vector3.right;
-        casillaCenters[4] = posicionAraña + Vector3.forward;
-        casillaCenters[5] = posicionAraña - Vector3.forward;
-        casillaCenters[6] = posicionAraña + Vector3.right;
-        casillaCenters[7] = posicionAraña - Vector3.right;
+        casillaCenters[0] = posicionAraña + transform.forward + transform.right;
+        casillaCenters[1] = posicionAraña + transform.forward - transform.right;
+        casillaCenters[2] = posicionAraña - transform.forward + transform.right;
+        casillaCenters[3] = posicionAraña - transform.forward - transform.right;
+        casillaCenters[4] = posicionAraña + transform.forward;
+        casillaCenters[5] = posicionAraña - transform.forward;
+        casillaCenters[6] = posicionAraña + transform.right;
+        casillaCenters[7] = posicionAraña - transform.right;
 
         return casillaCenters;
     }

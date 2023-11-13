@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,9 @@ public class EnemyVariablesManager : MonoBehaviour
     GameObject currentNode;
     GameObject previousNode;
     public LayerMask Ground;
+
+    public EventHandler<int> Golpeado;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +40,8 @@ public class EnemyVariablesManager : MonoBehaviour
 
     public void GetDamage()
     {
-
-        Debug.Log("dasdas!");
         lifePoints--;
-        if (lifePoints <= 0) Destroy(gameObject);
+        if (lifePoints <= 0) gameObject.SetActive(false);
+        Golpeado?.Invoke(this, lifePoints);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GestorCuadricula : MonoBehaviour
 {
+    public static GestorCuadricula Instance;
     public LayerMask mascaraCaminable;
     public Vector2 dimensionesCuadricula;
     public float margenDePintado = 0f;
@@ -22,6 +23,8 @@ public class GestorCuadricula : MonoBehaviour
 
     private void Start()
     {
+        if (Instance != null) Destroy(gameObject);
+        Instance = this;
         CrearCuadricula();
     }
 
@@ -105,7 +108,7 @@ public class GestorCuadricula : MonoBehaviour
     // METODOS PARA VISUALIZACION
     //--------------------------------------------------------------------
 
-    /**/
+    /*
     public Nodo jugador;
     public Nodo destino;
     public Stack<Nodo> path;

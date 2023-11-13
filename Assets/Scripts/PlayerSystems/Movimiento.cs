@@ -90,4 +90,16 @@ public class Movimiento : MonoBehaviour
         if(newState != PlayerStateManager.State.Movement)
             camino.Clear();
     }
+
+    public void CambiarVelocidad(int i, float factorCambioVelocidad)
+    {
+        if (i == 1)
+        {
+            velocidad *= factorCambioVelocidad;
+        }
+        else if (i == 2)
+        {
+            velocidad /= factorCambioVelocidad;
+        }
+    }
 }
