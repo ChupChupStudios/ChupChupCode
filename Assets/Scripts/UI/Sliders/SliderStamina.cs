@@ -41,6 +41,7 @@ public class SliderStamina : MonoBehaviour
     {
         slider.value -= value;
     }
+
     public void CartaUsada(int life)
     {
         if (slider.value + life < 100) slider.value += life;

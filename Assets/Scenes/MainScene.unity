@@ -1422,14 +1422,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480669955}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: 0.8, z: 4.5}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: 5.5, y: 0.8, z: 4.5}
   m_LocalScale: {x: 0.7, y: 0.3, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!114 &480669960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1443,6 +1443,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 0.25
+  prefabSpiderWeb: {fileID: 8026143499979773820, guid: c2e797b79846f204191dcae4fb4a33e1, type: 3}
+  contadorTrampasActivas: 0
+  casillaLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  Player: {fileID: 0}
 --- !u!114 &480669961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1477,7 +1483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2ef5ec497c071d49bcd8e325f307b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifePoints: 0
+  lifePoints: 2
 --- !u!4 &486453332 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 609473194628903469, guid: 62770ffa9e57a614a9e93effd3385670, type: 3}
@@ -3824,7 +3830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563552571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 4.5}
+  m_LocalPosition: {x: 5.5, y: 0.5, z: 6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

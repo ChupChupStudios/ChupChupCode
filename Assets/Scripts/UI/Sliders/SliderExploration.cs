@@ -32,6 +32,7 @@ public class SliderExploration : MonoBehaviour
     {
         slider.value += (value * 2);
     }
+
     public void OnClickSlider()
     {
         if (slider.value >= 100)
