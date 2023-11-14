@@ -39,7 +39,7 @@ public class Pathfinding : MonoBehaviour
 
         if (nodoInicial == null || nodoDestino == null) return null;
         //if (!nodoInicial.caminable || !nodoDestino.caminable) return null;
-        if (!nodoDestino.caminable) return null;
+        //if (!nodoDestino.caminable) return null;
 
         List<Nodo> nodosAccesibles = new();
         HashSet<Nodo> nodosRevisados = new();
@@ -90,6 +90,7 @@ public class Pathfinding : MonoBehaviour
 
         return null;
     }
+
 
     Stack<Nodo> TrazarCamino(Nodo nodoDestino, Nodo nodoInicio)
     {

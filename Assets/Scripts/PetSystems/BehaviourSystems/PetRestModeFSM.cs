@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PetRestModeFSM : BehaviourSystem
 {
-    public PetRestModeFSM(PetBehaviour systemOwner) : base(systemOwner)
+    public PetRestModeFSM(PetBehaviour systemOwner, BehaviourSystem parentSystem) : base(systemOwner, parentSystem)
     {
     }
 
@@ -14,14 +14,8 @@ public class PetRestModeFSM : BehaviourSystem
             "ENTRANDO EN MODO DESCANSO");
     }
 
-    public override void OnExit()
-    {
-        Utils.Log("SALIENDO DE MODO DESCANSO\n" +
-            ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-    }
-
     public override void OnUpdate()
     {
-        Utils.Log("\t\t\tUPDATE DE MODO DESCANSO");
+        //Utils.Log("\t\t\tUPDATE DE MODO DESCANSO");
     }
 }

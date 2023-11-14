@@ -1,12 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PetBehaviour : MonoBehaviour
 {
-    public ClosestEnemy closestEnemy;
+    public PetGlobalFSM globalSystem;
     public Attack attack;
-    PetGlobalFSM fsm;
+    public Button petButton;
+    [HideInInspector] public PetMovement movementManager;
+    [HideInInspector] public PetVariablesManager statusVariables;
+    [HideInInspector] public GameObject player;
+
 
     //----------------------------------------------------------------
     //  METODOS DE UNITY
@@ -14,12 +20,16 @@ public class PetBehaviour : MonoBehaviour
 
     private void Start()
     {
-        fsm = new(this);
-        fsm.OnEnter();
+        movementManager = GetComponent<PetMovement>();
+        statusVariables = GetComponent<PetVariablesManager>();
+        player = GameObject.FindWithTag("Player");
+
+        globalSystem = new(this);
+        globalSystem.OnEnter();
     }
 
     private void Update()
     {
-        fsm.OnUpdate();
+        globalSystem.OnUpdate();
     }
 }

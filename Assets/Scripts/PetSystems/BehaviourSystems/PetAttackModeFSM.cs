@@ -9,22 +9,22 @@ public class PetAttackModeFSM : BehaviourSystem
         None,
         SearchEnemy,
         Moving,
-        Attacking
+        Attacking,
+        WaitingToAttack
     }
     public State currentState = State.SearchEnemy;
 
     // informacion de busqueda del enemigo
     public Transform targetEnemyTransform;
-    private PetMovement movementManager;
 
+    float timeWaiting = 0f;
 
     //----------------------------------------------------------------
     //  METODOS
     //----------------------------------------------------------------
 
-    public PetAttackModeFSM(PetBehaviour systemOwner) : base(systemOwner)
+    public PetAttackModeFSM(PetBehaviour systemOwner, BehaviourSystem parentSystem) : base(systemOwner, parentSystem)
     {
-        movementManager = systemOwner.GetComponent<PetMovement>();
     }
 
     public override void OnEnter()
@@ -36,21 +36,14 @@ public class PetAttackModeFSM : BehaviourSystem
         currentState = State.SearchEnemy;
     }
 
-    public override void OnExit()
-    {
-        Utils.Log("SALIENDO DE MODO ATAQUE\n" +
-            ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-        targetEnemyTransform = null;
-    }
-
     public override void OnUpdate()
     {
-        Utils.Log("\t\t\tUPDATE DE MODO ATAQUE");
+        //Utils.Log("\t\t\tUPDATE DE MODO ATAQUE");
 
         switch (currentState)
         {
             case State.SearchEnemy:
-                DefinirRuta();
+                DefinePath();
                 break;
             case State.Moving:
                 Moving();
@@ -58,47 +51,102 @@ public class PetAttackModeFSM : BehaviourSystem
             case State.Attacking:
                 Attacking();
                 break;
+            case State.WaitingToAttack:
+                WaitingToAttack();
+                break;
         }
     }
 
     void Moving()
     {
-        bool nextToEnemy = movementManager.SeguirCamino();
+        bool nextToEnemy = systemOwner.movementManager.SeguirCamino();
 
         if (nextToEnemy)
+        {
             currentState = State.Attacking;
+        }
     }
 
     void Attacking()
     {
-        // si no esta a distancia de ataque, pasar a buscar ruta
+        // ENEMIGO FUERA DE DISTANCIA DE ATAQUE
         if (!systemOwner.attack.enemiesTouched.Contains(targetEnemyTransform.gameObject))
+        {
             currentState = State.SearchEnemy;
+            return;
+        }
 
-        // realizar ataque
+        // REALIZAR ATAQUE
         // posibilidades:
-        //  - atacar al objetivo concreto
+        //  - atacar al objetivo concreto   (la que esta implementada)
         //  - atacar a todo enemigo en rango de ataque
-        targetEnemyTransform.GetComponent<EnemyVariablesManager>().GetDamage();
+        EnemyVariablesManager enemyVariables = targetEnemyTransform.GetComponent<EnemyVariablesManager>();
+        enemyVariables.GetDamage();
+        // reducir estamina
+        systemOwner.statusVariables.ChangeStamina(-systemOwner.statusVariables.attackCost);
+
+        // EL ENEMIGO NO HA MUERTO
+        if (enemyVariables.lifePoints > 0)
+        {
+            currentState = State.WaitingToAttack;
+            return;
+        }
+
+        // EL ENEMIGO HA MUERTO
+        systemOwner.statusVariables.timeWithoutCombat = 0f;
+        targetEnemyTransform = null;
+        currentState = State.SearchEnemy;
+
+        // NOTIFICAR FIN DE FSM
+        CurrentSystemFinishedEvent.Invoke();
+    }
+
+    // esperar para volver a atacar
+    void WaitingToAttack()
+    {
+        timeWaiting += Time.deltaTime;
+        if (timeWaiting >= systemOwner.statusVariables.timeBetweenAttacks)
+        {
+            timeWaiting = 0f;
+            currentState = State.Attacking;
+        }
     }
 
 
-    void DefinirRuta()
+    void DefinePath()
     {
         if (targetEnemyTransform == null)
         {
-            ////////////////////////////////////////////////
-            // BUSCAR ENEMIGO MAS CERCANO
-            targetEnemyTransform = systemOwner.closestEnemy.closestEnemyTransform;
+            // COGER ENEMIGO MAS CERCANO
+            targetEnemyTransform = SearchClosestEnemy();
             if (targetEnemyTransform == null) return;
 
             Utils.Log("Ruta marcada por enemigo mas cercano");
         }
 
         // definir camino hasta enemigo
-        Nodo enemyNode = GestorCuadricula.Instance.NodoCoincidente(targetEnemyTransform.position);
-        movementManager.DefinirCamino(enemyNode);
+        systemOwner.movementManager.DefinirCamino(targetEnemyTransform, persecucion: true);
 
         currentState = State.Moving;
+    }
+
+    // buscar item mas cercano
+    Transform SearchClosestEnemy()
+    {
+        Transform result = null;
+        float minDistance = Mathf.Infinity;
+
+        // recorrer todos los enemigos para encontrar al mas cercano
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            float distance = Vector3.Distance(enemy.transform.position, systemOwner.transform.position);
+            if (distance < minDistance)
+            {
+                result = enemy.transform;
+                minDistance = distance;
+            }
+        }
+
+        return result;
     }
 }

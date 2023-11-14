@@ -9,19 +9,41 @@ public class PetMovement : MonoBehaviour
     public float velocidad = 0.5f;
     Vector3 direccion = Vector3.zero;
 
+    PetVariablesManager petVariables;
+
+    public Transform ojetivoFinalTransform;
+    Nodo ultimoNodoDeObjetivo;
     Stack<Nodo> camino = new();
     Nodo nodoObjetivo;
-    public float umbralLlegadaObjetivo = 0.1f;
+    public float umbralLlegadaObjetivo = 0.05f;
+
+    bool persecucion = false;
 
 
     //----------------------------------------------------------------
     //  METODOS
     //----------------------------------------------------------------
 
-    public void DefinirCamino(Nodo destino)
+    private void Start()
     {
-        camino = Pathfinding.Instance.HacerPathFinding(transform.position, destino.posicionGlobal);
-        if(nodoObjetivo == null && camino != null) nodoObjetivo = camino.Pop();
+        petVariables = GetComponent<PetVariablesManager>();
+    }
+
+    public void DefinirCamino(Transform objetivo, bool persecucion)
+    {
+        ojetivoFinalTransform = objetivo;
+
+        ultimoNodoDeObjetivo = GestorCuadricula.Instance.NodoCoincidente(objetivo.position);
+        if (persecucion)
+            camino = Pathfinding.Instance.HacerPathFinding(transform.position, ultimoNodoDeObjetivo.posicionGlobal);
+        else
+            camino = Pathfinding.Instance.HacerPathFinding(transform.position, ultimoNodoDeObjetivo.posicionGlobal);
+
+        this.persecucion = persecucion;
+
+        Utils.Log($"{objetivo.gameObject.name}, {camino == null}");
+
+        if (nodoObjetivo == null && camino != null) nodoObjetivo = camino.Pop();
     }
 
     // devuelve true si ha llegado al nodo destino
@@ -37,8 +59,33 @@ public class PetMovement : MonoBehaviour
         // AVANZAR NODO
         if (Vector3.Distance(posicion, transform.position) < umbralLlegadaObjetivo)
         {
+            // REDUCIR ESTAMINA
+            petVariables.ChangeStamina(-petVariables.movementCost);
+
             // Actualizar siguiente nodo -------
-            
+
+            // COMPROBAR CAMBIO EN EL OBJETIVO AL PERSEGUIR
+            if (persecucion)
+            {
+                Nodo nodoObjetivoFinal = GestorCuadricula.Instance.NodoCoincidente(ojetivoFinalTransform.position);
+                // el objetivo se ha movido
+                if (ultimoNodoDeObjetivo != nodoObjetivoFinal)
+                {
+                    nodoObjetivo = null;
+                    DefinirCamino(ojetivoFinalTransform, persecucion);
+                    return false;
+                }
+                // se ha llegado a casilla adyacente a objetivo
+                else if (camino?.Peek() == nodoObjetivoFinal)
+                {
+                    direccion = camino.Peek().posicionGlobal - nodoObjetivo.posicionGlobal;
+                    transform.forward = direccion.normalized;
+                    camino.Clear();
+                    nodoObjetivo = null;
+                    return true;
+                }
+            }
+
             // FINAL DE CAMINO
             if (camino.Count == 0)
             {

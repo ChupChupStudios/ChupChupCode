@@ -6,7 +6,7 @@ public class Nodo : MonoBehaviour
 {
     // ATRIBUTOS GENERALES
     [SerializeField] LayerMask capaObstaculos;
-    [HideInInspector] public bool caminable = true;
+    public bool caminable = true;
     [HideInInspector] public Vector3 posicionGlobal;
 
     // NODO PREVIO EN EL CAMINO

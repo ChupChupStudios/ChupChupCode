@@ -22,7 +22,6 @@ public class PetGlobalFSM : BehaviourSystem
         {
             if (value == GlobalStates.None) return;
 
-            behaviourSystems[currentState].OnExit();
             currentState = value;
             behaviourSystems[currentState].OnEnter();
         }
@@ -33,14 +32,14 @@ public class PetGlobalFSM : BehaviourSystem
     //  METODOS
     //----------------------------------------------------------------
 
-    public PetGlobalFSM(PetBehaviour systemOwner) : base(systemOwner)
+    public PetGlobalFSM(PetBehaviour systemOwner) : base(systemOwner, null)
     {
         behaviourSystems = new Dictionary<GlobalStates, BehaviourSystem>
         {
             { GlobalStates.None, null },
-            { GlobalStates.IndependentUS, new IndependentPetUS(systemOwner) },
-            { GlobalStates.CombatModeFSM, new PetAttackModeFSM(systemOwner) },
-            { GlobalStates.CollectModeFSM, new PetCollectModeFSM(systemOwner) }
+            { GlobalStates.IndependentUS, new IndependentPetUS(systemOwner, this) },
+            { GlobalStates.CombatModeFSM, new PetAttackModeFSM(systemOwner, this) },
+            { GlobalStates.CollectModeFSM, new PetCollectModeFSM(systemOwner, this) }
         };
     }
 
@@ -52,15 +51,9 @@ public class PetGlobalFSM : BehaviourSystem
         behaviourSystems[currentState].OnEnter();
     }
 
-    public override void OnExit()
-    {
-        Utils.Log("SALIENDO DE FSM GLOBAL\n" +
-            ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-    }
-
     public override void OnUpdate()
     {
-        Utils.Log("\t\t\tUPDATE DE FSM GLOBAL");
+        //Utils.Log("\t\t\tUPDATE DE FSM GLOBAL");
 
         behaviourSystems[currentState].OnUpdate();
     }
