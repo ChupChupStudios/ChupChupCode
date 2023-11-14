@@ -27,6 +27,15 @@ public class Tutorial : MonoBehaviour
 
     public GameObject tutorialArrow;
 
+    public GameObject[] tilesSlider;
+
+
+
+    public GameObject WalkImage;
+    public GameObject SliderImage;
+    public GameObject ObjectImage;
+    public GameObject EnemyImage;
+    public GameObject FogImage;
 
     public bool explorationPressed = false;
     public int defoged = 0;
@@ -59,7 +68,8 @@ public class Tutorial : MonoBehaviour
             //text.enabled = true;
         }
             firstMoveTile.GetComponent<Block>().ChangeColor(new Color32(243, 129, 0, 255));
-        text.text = "Clica sobre la casilla marcada";
+        //text.text = "Clica sobre la casilla marcada";
+        WalkImage.gameObject.SetActive(true);
 
     }
 
@@ -70,7 +80,7 @@ public class Tutorial : MonoBehaviour
         GameObject[] foundObjects = GameObject.FindObjectsOfType<GameObject>();
 
         // Itera a través de los objetos encontrados
-        foreach (GameObject foundObject in foundObjects)
+        foreach (GameObject foundObject in tilesSlider)
         {
             if (foundObject.name == "Box")
             {
@@ -82,10 +92,15 @@ public class Tutorial : MonoBehaviour
 
         stamina.gameObject.SetActive(true);
         exploration.gameObject.SetActive(true);
+        /*
         text.text = "Camina para rellenar la barra de exploracion. " +
             "Al rellenarla, podrás clicar sobre ella y recibir una recompensa." +
             "Pero cuidado, cuando caminas, también pierdes estamina." +
             "Si agotas la barra amarilla, perderás la partida.";
+        */
+
+        WalkImage.gameObject.SetActive(false);
+        SliderImage.gameObject.SetActive(true);
 
 
     }
@@ -93,10 +108,16 @@ public class Tutorial : MonoBehaviour
 
     public void TutorialEnemigo()
     {
+        /*
         text.text = "Ha aparecido un enemigo." +
             "Tendras que dirigirta hacia él y usar la carta de ataque para derrotarlo." +
             "Pero cuidado, si entras en su rango de ataque, te atacará y perderás stamina." +
             "Usa las cartas de stamina para no quedarte sin energía en el trayecto y curarte de los ataques.";
+        */
+
+        ObjectImage.gameObject.SetActive(false);
+        EnemyImage.gameObject.SetActive(true);
+
         tutorialTileObject.GetComponent<Block>().ChangeColor(new Color32(0, 159, 8, 255));
         tutorialTileEnemy.GetComponent<Block>().ChangeColor(new Color32(243, 129, 0, 255));
 
@@ -113,7 +134,11 @@ public class Tutorial : MonoBehaviour
 
     public void TutorialNiebla()
     {
-        text.text = "Usa la carta de niebla para despejar el mapa.";
+        Debug.Log("tutoFog");
+        //text.text = "Usa la carta de niebla para despejar el mapa.";
+        EnemyImage.gameObject.SetActive(false);
+        FogImage.gameObject.SetActive(true);
+
         tutorialTileEnemy.GetComponent<Block>().ChangeColor(new Color32(0, 159, 8, 255));
         tutorialFog.gameObject.SetActive(true);
 
@@ -162,7 +187,10 @@ public class Tutorial : MonoBehaviour
         tutorialSliderButton.gameObject.SetActive(false);
         sliderButton.gameObject.SetActive(true);
         tutorialItem.gameObject.SetActive(true);
-        text.text = "Recoge el objeto para recibir una carta.";
+        //text.text = "Recoge el objeto para recibir una carta.";
+        SliderImage.gameObject.SetActive(false);
+        ObjectImage.gameObject.SetActive(true);
+
 
         GameObject[] foundObjects = GameObject.FindObjectsOfType<GameObject>();
 
@@ -171,9 +199,16 @@ public class Tutorial : MonoBehaviour
         {
             if (foundObject.name == "Box")
             {
-                if (foundObject == tutorialTileObject) continue;
-                foundObject.GetComponent<Nodo>().enabled = false;
-                foundObject.GetComponent<Block>().enabled = false;
+                if (foundObject == tutorialTileObject)
+                {
+                    foundObject.GetComponent<Nodo>().enabled = true;
+                    foundObject.GetComponent<Block>().enabled = true;
+                }
+                else
+                {
+                    foundObject.GetComponent<Nodo>().enabled = false;
+                    foundObject.GetComponent<Block>().enabled = false;
+                }
             }
 
             //text.enabled = true;

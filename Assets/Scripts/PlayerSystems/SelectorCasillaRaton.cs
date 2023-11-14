@@ -5,6 +5,7 @@ using UnityEngine;
 public class SelectorCasillaRaton : MonoBehaviour
 {
     public LayerMask capaBloques;
+    public LayerMask capaNiebla;
     Camera camaraPrincipal;
     Movimiento movimientoPersonaje;
 
@@ -27,20 +28,24 @@ public class SelectorCasillaRaton : MonoBehaviour
         if (!Physics.Raycast(origen, direccion, out RaycastHit hit, Mathf.Infinity, capaBloques)) return;
 
         GameObject casilla = hit.collider.gameObject;
-        if (DeckManager.Instance.SelectedCard == null)
         {
-            if (casilla.GetComponent<Block>().type == Block.Type.Fog || !casilla.GetComponent<Block>().enabled) return;
 
-            // DEFINIR NUEVA RUTA DEL PERSONAJE
-            movimientoPersonaje.DefinirCamino(casilla.GetComponent<Nodo>());
-        }
-        else
-        {
-            // COMPROBAR CASILLA CARTA
-            if (DeckManager.Instance.SelectedCard.affectedBlocks.Contains(casilla))
-                DeckManager.Instance.BloquePulsadoCallBack(casilla.GetComponent<Block>());
+            if (DeckManager.Instance.SelectedCard == null)
+            {
+                if (casilla.GetComponent<Block>().type == Block.Type.Fog || !casilla.GetComponent<Block>().enabled) return;
+
+                // DEFINIR NUEVA RUTA DEL PERSONAJE
+                movimientoPersonaje.DefinirCamino(casilla.GetComponent<Nodo>());
+            }
             else
-                DeckManager.Instance.Deselect();
+            {
+                // COMPROBAR CASILLA CARTA
+                if (DeckManager.Instance.SelectedCard.affectedBlocks.Contains(casilla))
+                    DeckManager.Instance.BloquePulsadoCallBack(casilla.GetComponent<Block>());
+                else
+                    DeckManager.Instance.Deselect();
+            }
+
         }
     }
 }

@@ -6,13 +6,14 @@ public class TutorialItem : MonoBehaviour
 {
     [SerializeField] ACard cardPrefab;
     public Tutorial tutorial;
+    public DeckManager deckManager;
 
     void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (DeckManager.cards.Count == 7) return;
-            DeckManager.Instance.CreateCard(cardPrefab);
+            if (deckManager.cards.Count == 7) return;
+            deckManager.CreateCard(cardPrefab);
             tutorial.TutorialEnemigo();
             Destroy(gameObject);
         }
