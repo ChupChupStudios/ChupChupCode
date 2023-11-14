@@ -45,7 +45,7 @@ public class BatMovement : MonoBehaviour
         Vector3 posicioMurcielago = transform.position;
         posicioMurcielago = new Vector3(posicioMurcielago.x, 0f, posicioMurcielago.z);
 
-        if (Vector3.Distance(posicionSiguiente, posicioMurcielago) < 0.1)
+        if (Vector3.Distance(posicionSiguiente, posicioMurcielago) < 0.15)
         {
             camino.Pop();
 
@@ -192,12 +192,15 @@ public class BatMovement : MonoBehaviour
         if (vidaRestante != 0 || !spawner) return;
 
         GameObject nuevoMurcielago1 = Instantiate(prefabBat, transform.position, Quaternion.identity);
+        nuevoMurcielago1.transform.localScale = nuevoMurcielago1.transform.localScale * 0.6f;
         nuevoMurcielago1.SetActive(true);
         nuevoMurcielago1.GetComponent<BatMovement>().spawner = false;
+        
 
         Transform posicionAleatoria = EncontrarCasillaAdyacenteCaminable();
 
         GameObject nuevoMurcielago2 = Instantiate(prefabBat, new Vector3(posicionAleatoria.position.x, transform.position.y, posicionAleatoria.position.z), Quaternion.identity);
+        nuevoMurcielago2.transform.localScale = nuevoMurcielago2.transform.localScale * 0.6f;
         nuevoMurcielago2.SetActive(true);
         nuevoMurcielago2.GetComponent<BatMovement>().spawner = false;
     }
