@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class FogCard : ACard
+public class PlaneCard : ACard
 {
+    public LayerMask plane;
+    private GameObject raycastOutput;
+
     public override void HideEffectArea()
     {
         affectedBlocks.ForEach(tile => tile.GetComponent<Block>().ResetColor());
@@ -13,33 +16,21 @@ public abstract class FogCard : ACard
     public override void CheckAndExecute(Block tile)
     {
         if (!affectedBlocks.Contains(tile.gameObject)) return;
-        if (!tile.CheckFogType())
+
+        if (Utils.CustomRaycast(tile.gameObject.transform.position + Vector3.down, Vector3.up, out raycastOutput, plane))
         {
+            // Cuando la use en el avión cambiar de escena a la pantalla de ganar
+            Debug.Log("Plane repaired successfully");
+            // Eliminar la carta
             deckManager.Deselect();
-            return;
+            Destroy(gameObject);
         }
-
-        // Extraer la niebla afectada por la carta:
-        var affectedFog = affectedBlocks.FindAll(
-            item => item.GetComponent<Block>().type == Block.Type.Fog);
-        affectedBlocks.RemoveAll(
-            item => item.GetComponent<Block>().type == Block.Type.Fog);
-
-        // Eliminar la niebla afectada
-        affectedFog.ForEach(fog => Destroy(fog));
-
-        // Eliminar la carta
         deckManager.Deselect();
-        Destroy(gameObject);
+
     }
 
     public override void ShowEffectArea()
     {
-        /*|o o o|
-         *|o x o|
-         *|o j o|*/
-        //Debug.Log("Small fog card selected");
-
         GameObject tile;
         if (!deckManager.BloqueUsuarioDelMazo(deckManager.ownerTransform.forward, out tile)) return;
         affectedBlocks.Add(tile);

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1865732115415295596}
   - component: {fileID: 1213838664298957855}
   - component: {fileID: 3435761618371026559}
-  - component: {fileID: 6851903375823060754}
+  - component: {fileID: -5715398686018085158}
   m_Layer: 0
-  m_Name: WeakAtackCard
+  m_Name: RepairPlaneCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3123698922573786838}
   m_LocalRotation: {x: -0.46193978, y: 0.33141357, z: 0.19134171, w: 0.8001032}
-  m_LocalPosition: {x: -1, y: 0, z: -4}
+  m_LocalPosition: {x: 2, y: 0, z: -7}
   m_LocalScale: {x: 0.2, y: 1, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -107,7 +107,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &6851903375823060754
+--- !u!114 &-5715398686018085158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,13 +116,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3123698922573786838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d494ea8a35b8f9244aaa8e4d47081cb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 0902264cb2bb4cb40906e7ca2a93b6b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
-  baseColor: {r: 1, g: 0.09803922, b: 0.09803922, a: 1}
-  cardIndex: 4
+  type: 0
+  baseColor: {r: 0.8773585, g: 0.28555536, b: 0.7969006, a: 0}
+  cardIndex: 5
   affectedBlocks: []
-  EnemyLayer:
+  plane:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
