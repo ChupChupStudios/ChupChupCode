@@ -16,6 +16,8 @@ public class Movimiento : MonoBehaviour
 
     public EventHandler<float> CasillaMovida;
 
+    public DeckManager deckManager;
+
     //----------------------------------------------------------------
     //  METODOS
     //----------------------------------------------------------------
@@ -43,6 +45,7 @@ public class Movimiento : MonoBehaviour
     {
         if (nodoObjetivo == null) return;
 
+        Debug.Log("Direccion " + direccion);
         // SEGUIR CAMINO
         //transform.position = transform.position + velocidad * Time.deltaTime * direccion;
         Vector3 posicion = nodoObjetivo.transform.GetChild(0).position;
@@ -101,5 +104,71 @@ public class Movimiento : MonoBehaviour
         {
             velocidad /= factorCambioVelocidad;
         }
+    }
+
+    public void CambiarDireccionAbajoIzquierda()
+    {
+        if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
+        if (deckManager.SelectedCard != null)
+        {
+            ACard cardAux = deckManager.SelectedCard;
+            deckManager.SelectedCard.CardDeselected();
+            transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+            //deckManager.SelectedCard = cardAux;
+            cardAux.CardSelected();
+
+        }
+        else
+            transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+
+    }
+
+    public void CambiarDireccionAbajoDerecha()
+    {
+        if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
+        if (deckManager.SelectedCard!=null)
+        {
+            ACard cardAux = deckManager.SelectedCard;
+            deckManager.SelectedCard.CardDeselected();
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            //deckManager.SelectedCard = cardAux;
+            cardAux.CardSelected();
+
+        }
+        else 
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+    }
+
+    public void CambiarDireccionArribaIzquierda()
+    {
+        if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
+        if (deckManager.SelectedCard != null)
+        {
+            ACard cardAux = deckManager.SelectedCard;
+            deckManager.SelectedCard.CardDeselected();
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            //deckManager.SelectedCard = cardAux;
+            cardAux.CardSelected();
+
+        }
+        else
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+    }
+
+    public void CambiarDireccionArribaDerecha()
+    {
+
+        if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
+        if (deckManager.SelectedCard != null)
+        {
+            ACard cardAux = deckManager.SelectedCard;
+            deckManager.SelectedCard.CardDeselected();
+            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+            //deckManager.SelectedCard = cardAux;
+            cardAux.CardSelected();
+
+        }
+        else
+            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
     }
 }
