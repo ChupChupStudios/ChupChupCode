@@ -46,12 +46,12 @@ public class BatAttack : MonoBehaviour
         {
             aux = true;
 
-            Debug.Log($"Rayo detectó un jugador");
+            //Debug.Log($"Rayo detectó un jugador");
             Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.white);
         }
         else
         {
-            Debug.Log($"Rayo NO detectó un jugador");
+            //Debug.Log($"Rayo NO detectó un jugador");
             Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.black);
         }
 

@@ -35,10 +35,10 @@ public class PetMovement : MonoBehaviour
     public void DefinirCamino(Transform objetivo, bool persecucion, bool emergencia)
     {
         ojetivoFinalTransform = objetivo;
-
+        Utils.Log("definiendo camino");
         ultimoNodoDeObjetivo = GestorCuadricula.Instance.NodoCoincidente(objetivo.position);
         if (persecucion)
-            camino = Pathfinding.Instance.HacerPathFinding(transform.position, ultimoNodoDeObjetivo.posicionGlobal);
+            camino = Pathfinding.Instance.HacerPathFindingEnemigo(transform.position, ultimoNodoDeObjetivo.posicionGlobal);
         else
             camino = Pathfinding.Instance.HacerPathFinding(transform.position, ultimoNodoDeObjetivo.posicionGlobal);
 

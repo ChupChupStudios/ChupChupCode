@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8194918384363548087}
   m_Layer: 9
   m_Name: Spider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,3 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifePoints: 2
+  Ground:
+    serializedVersion: 2
+    m_Bits: 0
