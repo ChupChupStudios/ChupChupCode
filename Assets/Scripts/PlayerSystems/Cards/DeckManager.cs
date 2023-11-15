@@ -33,7 +33,7 @@ public class DeckManager : MonoBehaviour
     [SerializeField] List<ACard> cardPrefabs = new();
 
     // LISTA DE CARTAS EN MANO
-    public static List<ACard> cards = new();
+    public List<ACard> cards = new();
 
     // POSICION DEL DUEŃO DEL MAZO
     [HideInInspector] public Transform ownerTransform;

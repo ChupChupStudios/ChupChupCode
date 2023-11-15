@@ -33,7 +33,7 @@ public class KeyItemManager : MonoBehaviour
     {
         if (objetosRecogidos == totalObjetos)
         {
-            if (DeckManager.cards.Count == 7) return;
+            if (DeckManager.Instance.cards.Count == 7) return;
             DeckManager.Instance.CreateCard(cardPrefab[0]);
             button.gameObject.SetActive(false);
         }

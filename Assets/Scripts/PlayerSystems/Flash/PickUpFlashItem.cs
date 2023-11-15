@@ -10,7 +10,7 @@ public class PickUpFlashItem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (DeckManager.cards.Count == 7) return;
+            if (DeckManager.Instance.cards.Count == 7) return;
             DeckManager.Instance.CreateCard(cardPrefab[0]);
             Destroy(gameObject);
         }

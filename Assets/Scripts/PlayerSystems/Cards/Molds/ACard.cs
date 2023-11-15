@@ -63,7 +63,7 @@ public abstract class ACard : MonoBehaviour
 
     public void OnDestroy()
     {
-        DeckManager.cards.Remove(this);
+        DeckManager.Instance.cards.Remove(this);
         deckManager.UpdateCardsPositions();
     }
 }
