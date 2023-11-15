@@ -141,6 +141,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifePoints: 1
+  Ground:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &7669851506703717566
 MonoBehaviour:
   m_ObjectHideFlags: 0

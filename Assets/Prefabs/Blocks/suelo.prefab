@@ -123,7 +123,11 @@ MonoBehaviour:
   capaObstaculos:
     serializedVersion: 2
     m_Bits: 192
+  capaObstaculosEnemigo:
+    serializedVersion: 2
+    m_Bits: 64
   caminable: 1
+  objeto: 0
   posicionGlobal: {x: 0, y: 0, z: 0}
   previo: {fileID: 0}
   posicionX: 0
@@ -143,6 +147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &7277854556830991249
 GameObject:
