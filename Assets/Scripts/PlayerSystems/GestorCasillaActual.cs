@@ -27,7 +27,7 @@ public class GestorCasillaActual : MonoBehaviour
     {
         if (Utils.CustomRaycast(transform.position + Vector3.up, Vector3.down, out currentNode, Ground))
         {
-            if(currentNode != previousNode)
+            if (currentNode != previousNode)
             {
                 previousNode.GetComponent<Nodo>().caminable = true;
                 currentNode.GetComponent<Nodo>().caminable = false;

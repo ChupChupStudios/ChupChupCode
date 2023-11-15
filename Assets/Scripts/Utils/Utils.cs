@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Utils
 {
+    static bool mostrarLogs = true;
 
     // Devuelve true si choca con un objeto en layermask
     // Si hay colision devuelve el GameObject correspondiente
@@ -15,5 +16,11 @@ public class Utils
 
         result = output.collider.gameObject;
         return true;
+    }
+
+    public static void Log(string mensaje)
+    {
+        
+        if(mostrarLogs) Debug.Log($"<color=white>{mensaje}</color>");
     }
 }

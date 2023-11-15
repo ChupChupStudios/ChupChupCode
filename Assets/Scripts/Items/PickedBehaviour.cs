@@ -9,11 +9,12 @@ public class PickedBehaviour : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            //if (DeckManager.cards.Count == 7) return;
-            DeckManager.Instance.CreateCard(cardPrefab);
-            Destroy(gameObject);
-        }
+        if (collision.gameObject.CompareTag("Player")) PickUpItem();
+    }
+
+    public void PickUpItem()
+    {
+        DeckManager.Instance.CreateCard(cardPrefab);
+        Destroy(gameObject);
     }
 }

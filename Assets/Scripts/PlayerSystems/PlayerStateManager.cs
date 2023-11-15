@@ -39,7 +39,7 @@ public class PlayerStateManager : MonoBehaviour
             else
             {
                 requestedState = value;
-                StateChangeRequestedEvent?.Invoke(requestedState);
+                StateChangeRequestedEvent?.Invoke(requestedState); 
             }
         }
     }
