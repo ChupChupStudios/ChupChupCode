@@ -8,6 +8,7 @@ TagManager:
   - Card
   - Item
   - Enemy
+  - Topo
   layers:
   - Default
   - TransparentFX
@@ -19,9 +20,9 @@ TagManager:
   - Fog
   - Player
   - Enemy
+  - Plane
+  - Flashable
   - Item
-  - 
-  - 
   - 
   - 
   - 

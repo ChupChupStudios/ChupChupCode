@@ -63,7 +63,8 @@ public class Movimiento : MonoBehaviour
                 Goal goal = nodoObjetivo.gameObject.GetComponent<Goal>();
                 if (goal!=null)
                 {
-                    SceneManager.LoadScene("FinalScene");
+                    int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
+                    SceneManager.LoadScene(indiceEscenaActual + 1);
                 }
                 nodoObjetivo = null;
 
@@ -88,5 +89,17 @@ public class Movimiento : MonoBehaviour
     {
         if(newState != PlayerStateManager.State.Movement)
             camino.Clear();
+    }
+
+    public void CambiarVelocidad(int i, float factorCambioVelocidad)
+    {
+        if (i == 1)
+        {
+            velocidad *= factorCambioVelocidad;
+        }
+        else if (i == 2)
+        {
+            velocidad /= factorCambioVelocidad;
+        }
     }
 }
