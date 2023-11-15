@@ -17,7 +17,7 @@ public class PetSliderStamina : MonoBehaviour
 
     private void UpdateSlider(float newValue)
     {
-        Utils.Log($"reducir stamina {newValue}");
+        Utils.Log($"cambio en stamina {newValue}");
         slider.value = newValue;
     }
 }

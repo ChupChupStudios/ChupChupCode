@@ -57,6 +57,11 @@ public class PetAttackModeFSM : BehaviourSystem
         }
     }
 
+
+    //----------------------------------------------------------------
+    //----------------------------------------------------------------
+
+
     void Moving()
     {
         bool nextToEnemy = systemOwner.movementManager.SeguirCamino();
@@ -83,7 +88,7 @@ public class PetAttackModeFSM : BehaviourSystem
         EnemyVariablesManager enemyVariables = targetEnemyTransform.GetComponent<EnemyVariablesManager>();
         enemyVariables.GetDamage();
         // reducir estamina
-        systemOwner.statusVariables.ChangeStamina(-systemOwner.statusVariables.attackCost);
+        systemOwner.statusVariables.AddStamina(-systemOwner.statusVariables.attackCost);
 
         // EL ENEMIGO NO HA MUERTO
         if (enemyVariables.lifePoints > 0)

@@ -27,6 +27,8 @@ public class PetGlobalFSM : BehaviourSystem
         }
     }
 
+    bool lowStamina = false;
+
 
     //----------------------------------------------------------------
     //  METODOS
@@ -40,6 +42,18 @@ public class PetGlobalFSM : BehaviourSystem
             { GlobalStates.IndependentUS, new IndependentPetUS(systemOwner, this) },
             { GlobalStates.CombatModeFSM, new PetAttackModeFSM(systemOwner, this) },
             { GlobalStates.CollectModeFSM, new PetCollectModeFSM(systemOwner, this) }
+        };
+
+        systemOwner.statusVariables.StaminaReducedEvent += (stamina) =>
+        {
+            if(!lowStamina && stamina < systemOwner.statusVariables.MAX_STAMINA / 2)
+            {
+                lowStamina = true;
+                currentState = GlobalStates.IndependentUS;
+                OnEnter();
+            }
+            else if (lowStamina && stamina >= systemOwner.statusVariables.MAX_STAMINA / 2)
+                lowStamina = false;
         };
     }
 

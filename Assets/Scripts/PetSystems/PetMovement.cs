@@ -18,6 +18,7 @@ public class PetMovement : MonoBehaviour
     public float umbralLlegadaObjetivo = 0.05f;
 
     bool persecucion = false;
+    bool emergencia = false;    // no se gasta estamina
 
 
     //----------------------------------------------------------------
@@ -29,7 +30,9 @@ public class PetMovement : MonoBehaviour
         petVariables = GetComponent<PetVariablesManager>();
     }
 
-    public void DefinirCamino(Transform objetivo, bool persecucion)
+    public void DefinirCamino(Transform objetivo) => DefinirCamino(objetivo, persecucion: false);
+    public void DefinirCamino(Transform objetivo, bool persecucion) => DefinirCamino(objetivo, persecucion, emergencia: false);
+    public void DefinirCamino(Transform objetivo, bool persecucion, bool emergencia)
     {
         ojetivoFinalTransform = objetivo;
 
@@ -40,6 +43,7 @@ public class PetMovement : MonoBehaviour
             camino = Pathfinding.Instance.HacerPathFinding(transform.position, ultimoNodoDeObjetivo.posicionGlobal);
 
         this.persecucion = persecucion;
+        this.emergencia = emergencia;
 
         Utils.Log($"{objetivo.gameObject.name}, {camino == null}");
 
@@ -60,7 +64,7 @@ public class PetMovement : MonoBehaviour
         if (Vector3.Distance(posicion, transform.position) < umbralLlegadaObjetivo)
         {
             // REDUCIR ESTAMINA
-            petVariables.ChangeStamina(-petVariables.movementCost);
+            if(!emergencia) petVariables.AddStamina(-petVariables.movementCost);
 
             // Actualizar siguiente nodo -------
 

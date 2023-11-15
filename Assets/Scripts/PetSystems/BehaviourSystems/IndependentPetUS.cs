@@ -32,6 +32,7 @@ public class IndependentPetUS : BehaviourSystem
 
         finalActions[FinalAction.CombatMode].CurrentSystemFinishedEvent += ChooseDecisionSystem;
         finalActions[FinalAction.CollectMode].CurrentSystemFinishedEvent += ChooseDecisionSystem;
+        finalActions[FinalAction.RestMode].CurrentSystemFinishedEvent += ChooseDecisionSystem;
     }
 
     public override void OnEnter()
@@ -55,10 +56,9 @@ public class IndependentPetUS : BehaviourSystem
         ComputeDecisionFactors();
 
         // BUSCAR FACTOR MAYOR
-        DecisionFactor maxFactor;
+        Factor maxFactor;
         float maxFactorValue = 0f;
-
-        foreach (DecisionFactor factor in decisionFactors.Keys)
+        foreach (Factor factor in decisionFactors.Keys)
         {
             if (decisionFactors[factor] > maxFactorValue)
                 maxFactor = factor;
@@ -67,18 +67,18 @@ public class IndependentPetUS : BehaviourSystem
 
         // DETERMINAR SISTEMA DE DECISION DESTINO
         FinalAction newAction;
-        //  modo descanso
-        if (decisionFactors[DecisionFactor.DesireToRest] >= decisionFactors[DecisionFactor.DesireToPatrol] &&
-            decisionFactors[DecisionFactor.DesireToRest] >= decisionFactors[DecisionFactor.DesireToCollect])
+        //  MODO DESCANSO
+        if (decisionFactors[Factor.DesireToRest] >= decisionFactors[Factor.DesireToPatrol] &&
+            decisionFactors[Factor.DesireToRest] >= decisionFactors[Factor.DesireToCollect])
         {
             newAction = FinalAction.RestMode;
         }
-        //  modo ataque
-        else if (decisionFactors[DecisionFactor.DesireToPatrol] >= decisionFactors[DecisionFactor.DesireToCollect])
+        //  MODO ATAQUE
+        else if (decisionFactors[Factor.DesireToPatrol] >= decisionFactors[Factor.DesireToCollect])
         {
             newAction = FinalAction.CombatMode;
         }
-        //  modo recoleccion
+        //  MODO RECOLECCION
         else
         {
             newAction = FinalAction.CollectMode;
@@ -91,13 +91,13 @@ public class IndependentPetUS : BehaviourSystem
 
     //--------------------------------------------------------------------
     // FUNCIONES MATEMATICAS PARA FACTORES DE DECISION
-    enum DecisionFactor
+    enum Factor
     {
         DesireToRest,
         DesireToPatrol,
         DesireToCollect
     }
-    Dictionary<DecisionFactor, float> decisionFactors = new();
+    Dictionary<Factor, float> decisionFactors = new();
     private void ComputeDecisionFactors()
     {
         // FACTORES INTERMEDIOS
@@ -118,21 +118,23 @@ public class IndependentPetUS : BehaviourSystem
         // GANAS DE DESCANSAR
         // 1 / (1 + e^(0.75 * (x-6)))
         float desireToRest = 1f;
-        desireToRest /= 1 + Mathf.Pow((float)Math.E, 0.75f * (systemOwner.statusVariables.stamina - 6));
+        desireToRest /= 1 + Mathf.Pow((float)Math.E, 0.75f * (systemOwner.statusVariables.stamina/10 - 6));
         desireToRest = (float)Math.Round(desireToRest, 2);
-        decisionFactors[DecisionFactor.DesireToRest] = desireToRest;
+        decisionFactors[Factor.DesireToRest] = desireToRest;
 
         // GANAS DE PATRULLAR
-        float desireToPatrol = protectiveInstinct * 0.7f +
-            (1 - decisionFactors[DecisionFactor.DesireToRest]) * 0.3f;
+        float desireToPatrol =
+            protectiveInstinct * 0.5f +
+            (1 - desireToRest) * 0.5f;
         desireToPatrol = (float)Math.Round(desireToPatrol, 2);
-        decisionFactors[DecisionFactor.DesireToPatrol] = desireToPatrol;
+        decisionFactors[Factor.DesireToPatrol] = desireToPatrol;
 
         // GANAS DE RECOLECTAR
-        float desireToCollect = (1 - decisionFactors[DecisionFactor.DesireToRest]) * 0.3f +
-            desireToShowAffection * 0.3f +
-            playerCardShortage * 0.4f;
+        float desireToCollect =
+            (1 - desireToRest) * 0.5f +
+            desireToShowAffection * 0.2f +
+            playerCardShortage * 0.3f;
         desireToCollect = (float)Math.Round(desireToCollect, 2);
-        decisionFactors[DecisionFactor.DesireToCollect] = desireToCollect;
+        decisionFactors[Factor.DesireToCollect] = desireToCollect;
     }
 }

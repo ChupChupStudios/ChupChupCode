@@ -15,6 +15,7 @@ public class PetVariablesManager : MonoBehaviour
     public float attackCost = 10f;
 
     public float timeBetweenAttacks = 2f;
+    public float staminaRecoveredPerSecond = 1f;
 
     public event Action<float> StaminaReducedEvent;
 
@@ -24,7 +25,7 @@ public class PetVariablesManager : MonoBehaviour
         timeWithoutSupport += Time.deltaTime;
     }
 
-    public void ChangeStamina(float amount)
+    public void AddStamina(float amount)
     {
         stamina = Mathf.Clamp(stamina + amount, 0f, MAX_STAMINA);
         StaminaReducedEvent.Invoke(stamina);
