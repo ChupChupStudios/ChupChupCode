@@ -6,7 +6,6 @@ public class PickedBehaviour : MonoBehaviour
 {
     // carta que se otorga al recoger el item
     [SerializeField] ACard cardPrefab;
-    public DeckManager deckManager;
 
     void OnTriggerEnter(Collider collision)
     {
@@ -15,7 +14,7 @@ public class PickedBehaviour : MonoBehaviour
 
     public void PickUpItem()
     {
-         if (deckManager.cards.Count == 7) return;
+         if (DeckManager.Instance.cards.Count == 7) return;
         DeckManager.Instance.CreateCard(cardPrefab);
         Destroy(gameObject);
     }

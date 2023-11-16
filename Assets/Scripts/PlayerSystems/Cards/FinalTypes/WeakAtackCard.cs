@@ -9,21 +9,6 @@ public class WeakAtackCard : AtackCard
         /*|o x o|
          *|o x o|
          *|o j o|*/
-        //Debug.Log("Weak attack card selected");
-
-        //GameObject tile;
-        //if (CasillaDebajoDeUsuario(deckManager.deckUserTransform.forward, out tile))
-        //{
-        //    affectedTiles.Add(tile);
-        //    tile.GetComponent<Renderer>().material.color = baseColor;
-        //}
-
-        //if (CasillaDebajoDeUsuario(deckManager.deckUserTransform.forward * 2, out tile))
-        //{
-        //    affectedTiles.Add(tile);
-        //    tile.GetComponent<Renderer>().material.color = baseColor;
-        //}
-
 
         GameObject tile;
         if (deckManager.BloqueUsuarioDelMazo(deckManager.ownerTransform.forward, out tile))

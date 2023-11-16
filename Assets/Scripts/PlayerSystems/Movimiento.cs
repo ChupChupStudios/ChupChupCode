@@ -17,7 +17,6 @@ public class Movimiento : MonoBehaviour
 
     public EventHandler<float> CasillaMovida;
 
-    public DeckManager deckManager;
 
     //----------------------------------------------------------------
     //  METODOS
@@ -38,8 +37,10 @@ public class Movimiento : MonoBehaviour
 
     public void DefinirCamino(Nodo destino)
     {
-        camino = Pathfinding.Instance.HacerPathFinding(transform.position, destino.posicionGlobal);
-        if(nodoObjetivo == null && camino != null) nodoObjetivo = camino.Pop();
+        //camino = Pathfinding.Instance.HacerPathFinding(transform.position, destino.posicionGlobal);
+        Vector3 origen = (nodoObjetivo == null) ? transform.position : nodoObjetivo.posicionGlobal;
+        camino = Pathfinding.Instance.HacerPathFinding(origen, destino.posicionGlobal);
+        if (nodoObjetivo == null && camino != null) nodoObjetivo = camino.Pop();
 
         // NOTIFICAR CAMBIO DE ESTADO (a moviendose)
         PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.Movement;
@@ -49,7 +50,7 @@ public class Movimiento : MonoBehaviour
     {
         if (nodoObjetivo == null) return;
 
-        Debug.Log("Direccion " + direccion);
+        //Debug.Log("Direccion " + direccion);
         // SEGUIR CAMINO
         //transform.position = transform.position + velocidad * Time.deltaTime * direccion;
         Vector3 posicion = nodoObjetivo.transform.GetChild(0).position;
@@ -119,12 +120,12 @@ public class Movimiento : MonoBehaviour
     public void CambiarDireccionAbajoIzquierda()
     {
         if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
-        if (deckManager.SelectedCard != null)
+        if (DeckManager.Instance.SelectedCard != null)
         {
-            ACard cardAux = deckManager.SelectedCard;
-            deckManager.SelectedCard.CardDeselected();
+            ACard cardAux = DeckManager.Instance.SelectedCard;
+            DeckManager.Instance.SelectedCard.CardDeselected();
             transform.rotation = Quaternion.Euler(0f, -90f, 0f);
-            //deckManager.SelectedCard = cardAux;
+            //DeckManager.Instance.SelectedCard = cardAux;
             cardAux.CardSelected();
 
         }
@@ -136,12 +137,12 @@ public class Movimiento : MonoBehaviour
     public void CambiarDireccionAbajoDerecha()
     {
         if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
-        if (deckManager.SelectedCard!=null)
+        if (DeckManager.Instance.SelectedCard!=null)
         {
-            ACard cardAux = deckManager.SelectedCard;
-            deckManager.SelectedCard.CardDeselected();
+            ACard cardAux = DeckManager.Instance.SelectedCard;
+            DeckManager.Instance.SelectedCard.CardDeselected();
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-            //deckManager.SelectedCard = cardAux;
+            //DeckManager.Instance.SelectedCard = cardAux;
             cardAux.CardSelected();
 
         }
@@ -152,12 +153,12 @@ public class Movimiento : MonoBehaviour
     public void CambiarDireccionArribaIzquierda()
     {
         if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
-        if (deckManager.SelectedCard != null)
+        if (DeckManager.Instance.SelectedCard != null)
         {
-            ACard cardAux = deckManager.SelectedCard;
-            deckManager.SelectedCard.CardDeselected();
+            ACard cardAux = DeckManager.Instance.SelectedCard;
+            DeckManager.Instance.SelectedCard.CardDeselected();
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-            //deckManager.SelectedCard = cardAux;
+            //DeckManager.Instance.SelectedCard = cardAux;
             cardAux.CardSelected();
 
         }
@@ -169,12 +170,12 @@ public class Movimiento : MonoBehaviour
     {
 
         if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
-        if (deckManager.SelectedCard != null)
+        if (DeckManager.Instance.SelectedCard != null)
         {
-            ACard cardAux = deckManager.SelectedCard;
-            deckManager.SelectedCard.CardDeselected();
+            ACard cardAux = DeckManager.Instance.SelectedCard;
+            DeckManager.Instance.SelectedCard.CardDeselected();
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);
-            //deckManager.SelectedCard = cardAux;
+            //DeckManager.Instance.SelectedCard = cardAux;
             cardAux.CardSelected();
 
         }

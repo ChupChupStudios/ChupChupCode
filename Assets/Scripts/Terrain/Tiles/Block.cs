@@ -45,7 +45,6 @@ public class Block : MonoBehaviour
     // RATON ENCIMA DE CASILLA:
     private void OnMouseEnter()
     {
-        if (!enabled) return;
         if (type == Type.Ground && gameObject.GetComponent<Nodo>().caminable)
             myRenderer.material.color = selectedTileColor;
     }
@@ -82,10 +81,5 @@ public class Block : MonoBehaviour
     {
         myRenderer.material.color = baseColor;
         currentColor = baseColor;
-    }
-
-    public bool CheckFogType()
-    {
-        return type == Type.Fog;
     }
 }

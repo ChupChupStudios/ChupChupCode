@@ -13,7 +13,6 @@ public class Tutorial : MonoBehaviour
     public LayerMask Ground;
     public Slider stamina;
     public Slider exploration;
-    public DeckManager deckManager;
     public ACard cardPrefab;
     public Button sliderButton;
     public Button tutorialSliderButton;
@@ -184,7 +183,7 @@ public class Tutorial : MonoBehaviour
     {
         if (explorationPressed) return;
         explorationPressed = true;
-        deckManager.CreateCard(cardPrefab);
+        DeckManager.Instance.CreateCard(cardPrefab);
         exploration.value = 0;
         tutorialSliderButton.gameObject.SetActive(false);
         sliderButton.gameObject.SetActive(true);

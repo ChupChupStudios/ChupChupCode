@@ -18,7 +18,6 @@ public class SelectorCasillaRaton : MonoBehaviour
     private void Update()
     {
         if (!Input.GetMouseButtonDown(0)) return;
-        //Debug.Log("Click izquierdo");
 
         Vector3 posicionRaton = new(Input.mousePosition.x, Input.mousePosition.y, camaraPrincipal.nearClipPlane);
         Vector3 origen = camaraPrincipal.ScreenToWorldPoint(posicionRaton);
@@ -32,9 +31,11 @@ public class SelectorCasillaRaton : MonoBehaviour
 
             if (DeckManager.Instance.SelectedCard == null)
             {
-                if (casilla.GetComponent<Block>().type == Block.Type.Fog || !casilla.GetComponent<Block>().enabled) return;
+                //if (casilla.GetComponent<Block>().type == Block.Type.Fog || !casilla.GetComponent<Block>().enabled) return;
+                if (casilla.GetComponent<Block>().type != Block.Type.Ground || !casilla.GetComponent<Nodo>().caminable) return;
 
                 // DEFINIR NUEVA RUTA DEL PERSONAJE
+                Utils.Log($"casilla caminable: {casilla.GetComponent<Nodo>().caminable}");
                 movimientoPersonaje.DefinirCamino(casilla.GetComponent<Nodo>());
             }
             else

@@ -7,7 +7,6 @@ public class SliderExploration : MonoBehaviour
 {
     public Slider slider;
     public ACard[] cardPrefab;
-    public DeckManager deckManager;
 
     public int maxExploration = 100;
 
@@ -37,10 +36,10 @@ public class SliderExploration : MonoBehaviour
     {
         if (slider.value >= 100)
         {
-            if (deckManager.cards.Count == 7) return;
+            if (DeckManager.Instance.cards.Count == 7) return;
             int cardType;
             cardType = Random.Range(0, 5);
-            deckManager.CreateCard(cardPrefab[cardType]);
+            DeckManager.Instance.CreateCard(cardPrefab[cardType]);
             slider.value = 0;
         }
     }
