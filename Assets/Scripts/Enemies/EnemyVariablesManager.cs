@@ -41,7 +41,8 @@ public class EnemyVariablesManager : MonoBehaviour
     public void GetDamage()
     {
         lifePoints--;
-        if (lifePoints <= 0) gameObject.SetActive(false);
+        //if (lifePoints <= 0) gameObject.SetActive(false);
+        if (lifePoints <= 0) Destroy(gameObject);
         Golpeado?.Invoke(this, lifePoints);
     }
 }

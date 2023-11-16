@@ -8,22 +8,28 @@ EditorBuildSettings:
   - enabled: 0
     path: "Assets/Scenes/Men\xFA.unity"
     guid: 0b8105674f4180342afe87a3e4b17308
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tutorial.unity
     guid: cc8847420fc8e6740a7d70320e17ab4c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: cd3febb6703445a44bf013f43c2500d5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CreditsScene.unity
     guid: 0f82c5638dae1f34ab05765330767ae2
   - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: 500f09daac08d1b4e93d525e76e48922
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 907e951a67a4a3844b191bb411a1c95e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Creditos.unity
     guid: 3718643f5627a594696a787b687e9a8d
+  - enabled: 0
+    path: Assets/Scenes/PruebaPort.unity
+    guid: 5f600ea1a98512f48be0bf1393f029b6
+  - enabled: 1
+    path: Assets/Scenes/PruebaResolucion.unity
+    guid: ad999975026dda448ac9dd2a3e49c612
   m_configObjects: {}

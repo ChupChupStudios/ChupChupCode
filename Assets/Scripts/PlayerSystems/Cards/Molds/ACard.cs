@@ -22,7 +22,7 @@ public abstract class ACard : MonoBehaviour
 
     [HideInInspector] public List<GameObject> affectedBlocks = new();
 
-    protected DeckManager deckManager;
+    public DeckManager deckManager;
 
 
     //----------------------------------------------------------------
@@ -62,8 +62,8 @@ public abstract class ACard : MonoBehaviour
     }
 
     public void OnDestroy()
-    {
-        DeckManager.Instance.cards.Remove(this);
+    {    
+        deckManager.cards.Remove(this.gameObject);
         deckManager.UpdateCardsPositions();
     }
 }

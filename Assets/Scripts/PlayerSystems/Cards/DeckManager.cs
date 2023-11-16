@@ -33,7 +33,7 @@ public class DeckManager : MonoBehaviour
     [SerializeField] List<ACard> cardPrefabs = new();
 
     // LISTA DE CARTAS EN MANO
-    public List<ACard> cards = new();
+    public List<GameObject> cards = new();
 
     // POSICION DEL DUEŃO DEL MAZO
     [HideInInspector] public Transform ownerTransform;
@@ -116,13 +116,12 @@ public class DeckManager : MonoBehaviour
         //if (cards.Count == 7) return;
 
         GameObject cardToInstantiate = card.gameObject;
-        cards.Add(card);
 
         // Instantiate the card
-        Instantiate(cardToInstantiate, cardPositions[currentPositionIndex], CARD_ROTATION);
+        cards.Add(Instantiate(cardToInstantiate, cardPositions[cards.Count], CARD_ROTATION));
 
         // Update the index for the next card position
-        currentPositionIndex = (currentPositionIndex + 1) % cardPositions.Length;
+        //currentPositionIndex = (currentPositionIndex + 1) % cardPositions.Length;
     }
 
     // si el jugador puede usar cartas se notifica a la carta seleccionada
@@ -160,7 +159,7 @@ public class DeckManager : MonoBehaviour
     public void UpdateCardsPositions()
     {
         int cont = 0;
-        foreach(ACard card in cards)
+        foreach(GameObject card in cards)
         {
             //Debug.Log(cardPositions[cont]);
             card.transform.position = cardPositions[cont];
