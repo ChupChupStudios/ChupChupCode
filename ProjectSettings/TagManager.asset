@@ -7,6 +7,7 @@ TagManager:
   - Deck
   - Card
   - Item
+  - Enemy
   - Topo
   layers:
   - Default
@@ -19,9 +20,9 @@ TagManager:
   - Fog
   - Player
   - Enemy
-  - 
-  - 
-  - 
+  - Plane
+  - Flashable
+  - Item
   - 
   - 
   - 

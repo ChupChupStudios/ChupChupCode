@@ -13,5 +13,4 @@ public abstract class FogCard : ACard
 
 
     public override abstract void CheckAndExecute(Block tile);
-
 }

@@ -13,6 +13,7 @@ public class TutorialItem : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             if (deckManager.cards.Count == 7) return;
+            
             deckManager.CreateCard(cardPrefab);
             tutorial.TutorialEnemigo();
             Destroy(gameObject);

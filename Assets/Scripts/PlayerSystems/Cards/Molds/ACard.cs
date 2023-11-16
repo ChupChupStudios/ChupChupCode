@@ -62,13 +62,8 @@ public abstract class ACard : MonoBehaviour
     }
 
     public void OnDestroy()
-    {
-        
-        Debug.Log("ANTES: " + deckManager.cards.Count);
-        Debug.Log("OBJETO LISTA " + deckManager.cards[0] + " OBJETO DEL SCRIPT " + gameObject);
+    {    
         deckManager.cards.Remove(this.gameObject);
-        Debug.Log("DESPUES: " + deckManager.cards.Count);
         deckManager.UpdateCardsPositions();
-        
     }
 }

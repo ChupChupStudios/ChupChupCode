@@ -35,10 +35,8 @@ public abstract class AtackCard : ACard
             }
 
         }
-
         deckManager.Deselect();
         Destroy(gameObject);
-
     }
 }
 

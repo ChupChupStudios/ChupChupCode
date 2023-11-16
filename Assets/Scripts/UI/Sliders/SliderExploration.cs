@@ -24,7 +24,7 @@ public class SliderExploration : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No se encontró un objeto con el script Movimiento en la escena.");
+            Debug.LogWarning("No se encontrÃ³ un objeto con el script Movimiento en la escena.");
         }
     }
 

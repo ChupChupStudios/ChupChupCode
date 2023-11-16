@@ -13,6 +13,7 @@ public class Movimiento : MonoBehaviour
     Nodo nodoObjetivo;
     public float umbralLlegadaObjetivo = 0.1f;
 
+    public ParticleSystem particulasAndar;
 
     public EventHandler<float> CasillaMovida;
 
@@ -25,6 +26,9 @@ public class Movimiento : MonoBehaviour
     private void Start()
     {
         PlayerStateManager.Instance.StateChangeRequestedEvent += PeticionCambioDeEstado;
+
+        // Detener las partículas al inicio
+        if (particulasAndar != null) particulasAndar.Stop();
     }
 
     private void Update()
@@ -51,6 +55,9 @@ public class Movimiento : MonoBehaviour
         Vector3 posicion = nodoObjetivo.transform.GetChild(0).position;
         transform.position = Vector3.MoveTowards(transform.position, posicion, velocidad * Time.deltaTime);
 
+        // Activar partículas andar
+        if (particulasAndar != null && !particulasAndar.isPlaying) particulasAndar.Play();
+
         // AVANZAR NODO
         if (Vector3.Distance(nodoObjetivo.posicionGlobal, transform.position) < umbralLlegadaObjetivo)
         {
@@ -73,6 +80,9 @@ public class Movimiento : MonoBehaviour
 
                 // NOTIFICAR CAMBIO DE ESTADO (a idle)
                 PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.Idle;
+
+                // Desactivar partículas andar
+                if (particulasAndar != null)particulasAndar.Stop();
 
                 return;
             }
