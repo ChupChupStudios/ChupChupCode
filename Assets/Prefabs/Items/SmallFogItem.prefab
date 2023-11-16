@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 06985eda8fa4d2b46a2cbca69ad698fb, type: 2}
+  - {fileID: 2100000, guid: 1bcc3588f94c0794797be0d7dd3fdc85, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,3 +147,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}

@@ -261,7 +261,7 @@ Transform:
   - {fileID: 83139808}
   - {fileID: 2099226990}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &83139807
 PrefabInstance:
@@ -4755,7 +4755,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1560528547
 MonoBehaviour:
@@ -4845,6 +4845,7 @@ MonoBehaviour:
   velocidad: 3
   umbralLlegadaObjetivo: 0.1
   particulasAndar: {fileID: 0}
+  deckManager: {fileID: 356730963}
 --- !u!114 &1563552575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4860,6 +4861,9 @@ MonoBehaviour:
   capaBloques:
     serializedVersion: 2
     m_Bits: 136
+  capaNiebla:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1563552576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5186,6 +5190,7 @@ MonoBehaviour:
   - {fileID: 8202897806516960598, guid: 66a452098d06a584ea0901abc178daf1, type: 3}
   - {fileID: -674362227906625609, guid: 00707527cfdfe7045b08d7770947ae64, type: 3}
   - {fileID: 6851903375823060754, guid: bffd45f0ba82ae4489e40545a93006be, type: 3}
+  deckManager: {fileID: 0}
   maxExploration: 100
 --- !u!1 &1690135222
 GameObject:
@@ -5327,7 +5332,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1705505903
 PrefabInstance:
@@ -5748,6 +5753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 356730963}
 --- !u!135 &1789715591
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5832,7 +5838,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1789715595
 Rigidbody:
@@ -6161,7 +6167,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 2
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -6228,7 +6234,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1913475744
 MonoBehaviour:
@@ -6264,7 +6270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2ef5ec497c071d49bcd8e325f307b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifePoints: 0
+  lifePoints: 2
   Ground:
     serializedVersion: 2
     m_Bits: 8
@@ -7116,7 +7122,7 @@ Transform:
   - {fileID: 1604139137}
   - {fileID: 1916101531}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &815662662508027547
 PrefabInstance:
