@@ -22,7 +22,7 @@ public class GestorCuadricula : MonoBehaviour
     // METODOS DE UNITY
     //--------------------------------------------------------------------
 
-    private void Start()
+    private void Awake()
     {
         if (Instance != null) Destroy(gameObject);
         Instance = this;
