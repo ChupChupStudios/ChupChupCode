@@ -29,6 +29,7 @@ public class Tutorial : MonoBehaviour
 
     public GameObject[] tilesSlider;
 
+    public GameObject hand;
 
 
     public GameObject WalkImage;
@@ -76,6 +77,7 @@ public class Tutorial : MonoBehaviour
     public void TutorialSliders()
     {
         tutorialArrow.gameObject.SetActive(false);
+        hand.gameObject.SetActive(true);
 
         GameObject[] foundObjects = GameObject.FindObjectsOfType<GameObject>();
 
