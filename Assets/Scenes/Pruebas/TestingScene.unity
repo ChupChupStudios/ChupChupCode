@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -292,6 +292,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (99)
@@ -431,6 +439,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (112)
@@ -683,6 +699,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (114)
@@ -770,6 +794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &51181233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -881,7 +906,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &51865413
 PrefabInstance:
@@ -969,6 +994,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (139)
@@ -1030,6 +1063,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (86)
@@ -1091,6 +1132,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (146)
@@ -1552,6 +1601,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (147)
@@ -1805,7 +1862,7 @@ Transform:
   - {fileID: 1841027392}
   - {fileID: 1705959953}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &82831830 stripped
 Transform:
@@ -2142,6 +2199,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (34)
@@ -2203,6 +2268,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (56)
@@ -2352,6 +2425,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (104)
@@ -2413,6 +2494,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (4)
@@ -2899,6 +2988,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (2)
@@ -3063,6 +3160,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (5)
@@ -3161,6 +3266,8 @@ MonoBehaviour:
     m_Bits: 8
   dimensionesCuadricula: {x: 15, y: 15}
   margenDePintado: 0
+  jugador: {fileID: 0}
+  destino: {fileID: 0}
 --- !u!4 &184528806
 Transform:
   m_ObjectHideFlags: 0
@@ -3174,7 +3281,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &184528807
 MonoBehaviour:
@@ -3274,6 +3381,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (133)
@@ -3418,6 +3533,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (143)
@@ -3479,6 +3602,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (97)
@@ -3576,6 +3707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: -2487345191916463304, guid: e434ced34e2c86a41a6705ec6c8b35fd, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &219599257
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3687,7 +3819,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &220934418 stripped
 Transform:
@@ -3717,6 +3849,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (32)
@@ -3856,6 +3996,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (121)
@@ -3917,6 +4065,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (100)
@@ -4008,6 +4164,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (63)
@@ -4152,6 +4316,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (43)
@@ -4218,6 +4390,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (6)
@@ -4284,6 +4464,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (1)
@@ -4672,6 +4860,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (73)
@@ -4733,6 +4929,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (55)
@@ -4872,6 +5076,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (58)
@@ -5011,6 +5223,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (117)
@@ -5243,6 +5463,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (65)
@@ -5382,6 +5610,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (79)
@@ -5448,6 +5684,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (69)
@@ -5509,6 +5753,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box
@@ -5575,6 +5827,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (35)
@@ -5812,6 +6072,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (5)
@@ -5961,6 +6229,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (6)
@@ -6053,7 +6329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d02d5b37189fa14f859f34183545abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sFXManager: {fileID: 0}
+  sFXManager: {fileID: 1842101136}
   tileMask:
     serializedVersion: 2
     m_Bits: 136
@@ -6063,6 +6339,7 @@ MonoBehaviour:
   - {fileID: -674362227906625609, guid: 00707527cfdfe7045b08d7770947ae64, type: 3}
   - {fileID: -2487345191916463304, guid: e434ced34e2c86a41a6705ec6c8b35fd, type: 3}
   - {fileID: 6851903375823060754, guid: bffd45f0ba82ae4489e40545a93006be, type: 3}
+  cards: []
   ownerTransform: {fileID: 0}
 --- !u!4 &356730964
 Transform:
@@ -6077,7 +6354,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &357888680 stripped
 Transform:
@@ -6253,6 +6530,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (3)
@@ -6324,6 +6609,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (51)
@@ -6395,6 +6688,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (59)
@@ -6539,6 +6840,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (152)
@@ -6832,6 +7141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &436703197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6943,7 +7253,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &441844665
 PrefabInstance:
@@ -7114,6 +7424,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (64)
@@ -7175,6 +7493,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (50)
@@ -7236,6 +7562,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (3)
@@ -7302,6 +7636,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (28)
@@ -7368,6 +7710,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (11)
@@ -7434,6 +7784,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box
@@ -7588,6 +7946,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (31)
@@ -7737,6 +8103,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (33)
@@ -7798,6 +8172,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (123)
@@ -7957,6 +8339,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (116)
@@ -8043,6 +8433,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (91)
@@ -8275,6 +8673,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (109)
@@ -8328,6 +8734,79 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+--- !u!1001 &540513646
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2163572945512412779, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163572945512412779, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163572945512412779, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163572945512412779, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163572945512412779, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163572945512412779, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163572945512412779, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163572945512412779, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163572945512412779, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163572945512412779, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163572945512412779, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462853744547630331, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399595949064615614, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: m_Name
+      value: Bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200112728592405029, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: velocidad
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7669851506703717566, guid: c11436029a422984692671c6acc1a32c, type: 3}
+      propertyPath: sliderStamina
+      value: 
+      objectReference: {fileID: 2004130862}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c11436029a422984692671c6acc1a32c, type: 3}
 --- !u!4 &542868652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8056449015173434616, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
@@ -8512,6 +8991,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (12)
@@ -8666,6 +9153,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box
@@ -8747,6 +9242,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (10)
@@ -8964,6 +9467,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (1)
@@ -9244,7 +9755,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &595781115
 PrefabInstance:
@@ -9488,6 +9999,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (5)
@@ -9559,6 +10078,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (77)
@@ -9703,6 +10230,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (19)
@@ -9764,6 +10299,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (21)
@@ -9856,6 +10399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &622839002
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9967,7 +10511,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &635172680
 PrefabInstance:
@@ -10173,6 +10717,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (88)
@@ -10234,6 +10786,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (22)
@@ -10456,6 +11016,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (126)
@@ -10522,6 +11090,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (6)
@@ -10598,6 +11174,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (107)
@@ -10685,6 +11269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &683615546
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10796,7 +11381,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &689486731 stripped
 Transform:
@@ -11144,7 +11729,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &706469479
 PrefabInstance:
@@ -11154,6 +11739,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (101)
@@ -11381,6 +11974,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (38)
@@ -11442,6 +12043,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (60)
@@ -11593,7 +12202,7 @@ RectTransform:
   - {fileID: 2004130859}
   - {fileID: 824071954}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11613,6 +12222,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (130)
@@ -11710,6 +12327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &746167083
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11821,7 +12439,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &747750460
 PrefabInstance:
@@ -11909,6 +12527,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (2)
@@ -11980,6 +12606,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (153)
@@ -12119,6 +12753,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (52)
@@ -12424,6 +13066,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (142)
@@ -12671,6 +13321,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (9)
@@ -12737,6 +13395,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (125)
@@ -12803,6 +13469,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (71)
@@ -12869,6 +13543,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (120)
@@ -13230,6 +13912,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (4)
@@ -13296,6 +13986,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (42)
@@ -13357,6 +14055,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (119)
@@ -13423,6 +14129,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (6)
@@ -13489,6 +14203,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (45)
@@ -13726,6 +14448,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (154)
@@ -14243,6 +14973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: -2487345191916463304, guid: e434ced34e2c86a41a6705ec6c8b35fd, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &913895660
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14354,7 +15085,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &918433552 stripped
 Transform:
@@ -14384,6 +15115,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (94)
@@ -14559,6 +15298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: -2487345191916463304, guid: e434ced34e2c86a41a6705ec6c8b35fd, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &940161538
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14670,7 +15410,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &941577371
 PrefabInstance:
@@ -14680,6 +15420,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (40)
@@ -14980,6 +15728,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (66)
@@ -15138,6 +15894,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (111)
@@ -15204,6 +15968,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (92)
@@ -15353,6 +16125,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (83)
@@ -15414,6 +16194,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (129)
@@ -15475,6 +16263,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (37)
@@ -15572,6 +16368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &989543397
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15683,7 +16480,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &989648958
 PrefabInstance:
@@ -15776,6 +16573,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (85)
@@ -15925,6 +16730,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (137)
@@ -16329,6 +17142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: -2487345191916463304, guid: e434ced34e2c86a41a6705ec6c8b35fd, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &1012374477
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16440,7 +17254,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1014305936 stripped
 Transform:
@@ -16724,6 +17538,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (115)
@@ -16946,6 +17768,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (23)
@@ -17004,89 +17834,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8056449015173434616, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
   m_PrefabInstance: {fileID: 1185998778}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1056832170
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1056832174}
-  - component: {fileID: 1056832173}
-  - component: {fileID: 1056832172}
-  m_Layer: 0
-  m_Name: PlayerBody
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &1056832172
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056832170}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 2f9bf749a3a2de3418ffa6eebe15fd82, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1056832173
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056832170}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1056832174
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1056832170}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.65, z: 0}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1563552572}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1058718199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17095,6 +17842,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (48)
@@ -17156,6 +17911,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (47)
@@ -17217,6 +17980,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (110)
@@ -17278,6 +18049,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (8)
@@ -17422,6 +18201,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (4)
@@ -17488,6 +18275,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (75)
@@ -17554,6 +18349,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (2)
@@ -17698,6 +18501,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (18)
@@ -17764,6 +18575,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (93)
@@ -17923,6 +18742,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (87)
@@ -18082,6 +18909,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (16)
@@ -18246,6 +19081,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (74)
@@ -18307,6 +19150,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (6)
@@ -18377,6 +19228,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (144)
@@ -18526,6 +19385,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (96)
@@ -18587,6 +19454,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box
@@ -18736,6 +19611,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (61)
@@ -18797,6 +19680,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (90)
@@ -18997,6 +19888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &1216299991
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19108,7 +20000,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1217177413 stripped
 Transform:
@@ -19320,7 +20212,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1236649810
 PrefabInstance:
@@ -19408,6 +20300,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (70)
@@ -19552,6 +20452,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (132)
@@ -19706,6 +20614,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (68)
@@ -19767,6 +20683,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (124)
@@ -19859,6 +20783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: -2487345191916463304, guid: e434ced34e2c86a41a6705ec6c8b35fd, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &1285739079
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19970,7 +20895,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1287489315
 PrefabInstance:
@@ -19980,6 +20905,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box
@@ -20139,6 +21072,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (2)
@@ -20500,6 +21441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &1345561539
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20611,7 +21553,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1350767099
 PrefabInstance:
@@ -20709,6 +21651,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (102)
@@ -20879,6 +21829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: -2487345191916463304, guid: e434ced34e2c86a41a6705ec6c8b35fd, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &1365243176
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20990,7 +21941,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1373448150
 PrefabInstance:
@@ -21000,6 +21951,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (89)
@@ -21071,6 +22030,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (20)
@@ -21137,6 +22104,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (1)
@@ -21515,6 +22490,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (135)
@@ -21598,6 +22581,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (113)
@@ -21659,6 +22650,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (95)
@@ -21881,6 +22880,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (136)
@@ -21947,6 +22954,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (1)
@@ -22023,6 +23038,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (149)
@@ -22084,6 +23107,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (5)
@@ -22381,113 +23412,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
---- !u!1 &1469693136
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1469693137}
-  - component: {fileID: 1469693140}
-  - component: {fileID: 1469693139}
-  - component: {fileID: 1469693138}
-  m_Layer: 0
-  m_Name: Hocico
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1469693137
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469693136}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1, z: 0.25}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1563552572}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!136 &1469693138
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469693136}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1469693139
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469693136}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1469693140
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1469693136}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1471441209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8056449015173434616, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
@@ -22672,6 +23596,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (27)
@@ -22852,6 +23784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: -2487345191916463304, guid: e434ced34e2c86a41a6705ec6c8b35fd, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &1497270811
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22963,7 +23896,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1497866768
 PrefabInstance:
@@ -22973,6 +23906,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (2)
@@ -23117,6 +24058,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (118)
@@ -23183,6 +24132,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (81)
@@ -23342,6 +24299,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (26)
@@ -23403,6 +24368,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (44)
@@ -23671,6 +24644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &1545653748
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23782,7 +24756,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1553704698 stripped
 Transform:
@@ -23797,6 +24771,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (141)
@@ -23967,6 +24949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &1562601547
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24078,127 +25061,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1563552571
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1563552572}
-  - component: {fileID: 1563552573}
-  - component: {fileID: 1563552574}
-  - component: {fileID: 1563552575}
-  - component: {fileID: 1563552576}
-  - component: {fileID: 1563552577}
-  m_Layer: 8
-  m_Name: Player
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1563552572
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563552571}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 0.5, z: 7.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1469693137}
-  - {fileID: 1056832174}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1563552573
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563552571}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.33
-  m_Height: 1.3
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.65, z: 0}
---- !u!114 &1563552574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563552571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00073eba9cb32341896f794618e8f8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidad: 2
-  umbralLlegadaObjetivo: 0.1
---- !u!114 &1563552575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563552571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e1baa1ca2298904195a0ce2a20cc917, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  capaBloques:
-    serializedVersion: 2
-    m_Bits: 8
---- !u!114 &1563552576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563552571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d16bd15dcca93a347965f88f0da2728f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1563552577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563552571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fbf40cd6ba239c4899d4404154e3317, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentNode: {fileID: 0}
-  Ground:
-    serializedVersion: 2
-    m_Bits: 8
-  wolfMovement: {fileID: 0}
 --- !u!4 &1564621704 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8056449015173434616, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
@@ -24212,6 +25076,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (82)
@@ -24436,6 +25308,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8056449015173434616, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
   m_PrefabInstance: {fileID: 538304560}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1598979327
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5855500014340905941, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: m_Name
+      value: Mole
+      objectReference: {fileID: 0}
+    - target: {fileID: 5855500014340905941, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152641258714846508, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: sliderStamina
+      value: 
+      objectReference: {fileID: 2004130862}
+    - target: {fileID: 6603262489608073772, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603262489608073772, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603262489608073772, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603262489608073772, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603262489608073772, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603262489608073772, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603262489608073772, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603262489608073772, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603262489608073772, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603262489608073772, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603262489608073772, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cba03605a122ccd4faff96ac9e36c0df, type: 3}
 --- !u!1001 &1599656867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24527,6 +25468,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (6)
@@ -24935,6 +25884,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (46)
@@ -25011,6 +25968,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (134)
@@ -25072,6 +26037,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (5)
@@ -25138,6 +26111,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (39)
@@ -25348,6 +26329,7 @@ MonoBehaviour:
   - {fileID: 8202897806516960598, guid: 66a452098d06a584ea0901abc178daf1, type: 3}
   - {fileID: -674362227906625609, guid: 00707527cfdfe7045b08d7770947ae64, type: 3}
   - {fileID: 6851903375823060754, guid: bffd45f0ba82ae4489e40545a93006be, type: 3}
+  deckManager: {fileID: 0}
   maxExploration: 100
 --- !u!1001 &1686575273
 PrefabInstance:
@@ -25357,6 +26339,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (80)
@@ -25423,6 +26413,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (1)
@@ -25572,6 +26570,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (131)
@@ -25633,6 +26639,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (5)
@@ -25699,6 +26713,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (54)
@@ -25875,7 +26897,7 @@ Transform:
   - {fileID: 1116322291}
   - {fileID: 1869329471}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1715903547 stripped
 Transform:
@@ -25983,6 +27005,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (105)
@@ -26142,6 +27172,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (106)
@@ -26203,6 +27241,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (5)
@@ -26357,6 +27403,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (2)
@@ -26449,6 +27503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: -2487345191916463304, guid: e434ced34e2c86a41a6705ec6c8b35fd, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &1757824288
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26560,7 +27615,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1765194689
 PrefabInstance:
@@ -26648,6 +27703,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (140)
@@ -26709,6 +27772,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (72)
@@ -26848,6 +27919,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (1)
@@ -27189,6 +28268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: -2487345191916463304, guid: e434ced34e2c86a41a6705ec6c8b35fd, type: 3}
+  deckManager: {fileID: 0}
 --- !u!135 &1789715591
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -27273,7 +28353,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1789715595
 Rigidbody:
@@ -27409,7 +28489,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1804083928 stripped
 Transform:
@@ -27590,6 +28670,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (62)
@@ -27656,6 +28744,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (150)
@@ -27717,6 +28813,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (57)
@@ -27856,6 +28960,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (2)
@@ -28083,6 +29195,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (13)
@@ -28159,6 +29279,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (14)
@@ -28381,6 +29509,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (67)
@@ -28434,6 +29570,148 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+--- !u!1 &1842101135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1842101137}
+  - component: {fileID: 1842101136}
+  - component: {fileID: 1842101138}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1842101136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842101135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fc446a1915a2ed4dbba8ec50036b274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickCard: {fileID: 8300000, guid: 9a40bee93e5102840ad2af6d2eff5907, type: 3}
+--- !u!4 &1842101137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842101135}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.9591494, y: 1.2897105, z: 6.5178275}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1842101138
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842101135}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9a40bee93e5102840ad2af6d2eff5907, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1842567646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8056449015173434616, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
@@ -28447,6 +29725,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (30)
@@ -28669,6 +29955,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (127)
@@ -29135,6 +30429,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (3)
@@ -29279,6 +30581,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (4)
@@ -29345,6 +30655,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (53)
@@ -29416,6 +30734,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (148)
@@ -29477,6 +30803,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (122)
@@ -29564,6 +30898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &1910576364
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29675,7 +31010,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1913734126 stripped
 Transform:
@@ -29695,6 +31030,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (7)
@@ -29839,6 +31182,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (108)
@@ -29998,6 +31349,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (17)
@@ -30064,6 +31423,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (151)
@@ -30135,6 +31502,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (49)
@@ -30279,6 +31654,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (6)
@@ -30469,6 +31852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &1986828109
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30580,7 +31964,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1986858992 stripped
 Transform:
@@ -30781,7 +32165,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355078971}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ea0a6f88085e5e44beefa418c75450b, type: 3}
   m_Name: 
@@ -30822,6 +32206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 6627972727241013787, guid: 5456cdf4da1a7e64da710b908b964e6c, type: 3}
+  deckManager: {fileID: 0}
 --- !u!54 &2006692732
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30933,7 +32318,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2013493860
 PrefabInstance:
@@ -30943,6 +32328,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (98)
@@ -31004,6 +32397,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (36)
@@ -31065,6 +32466,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (76)
@@ -31297,6 +32706,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box
@@ -31524,6 +32941,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (84)
@@ -31585,6 +33010,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (128)
@@ -31646,6 +33079,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (145)
@@ -31968,6 +33409,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (1)
@@ -32205,6 +33654,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (103)
@@ -32471,7 +33928,7 @@ Transform:
   - {fileID: 1988661096}
   - {fileID: 1532455999}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2126872818
 PrefabInstance:
@@ -32559,6 +34016,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126528570}
     m_Modifications:
+    - target: {fileID: -5625704560481432583, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+      propertyPath: capaObstaculosEnemigo.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 5755069236281426507, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
       propertyPath: m_Name
       value: Box (78)
@@ -32908,3 +34373,64 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2004130862}
   m_SourcePrefab: {fileID: 100100000, guid: 0928413a3ad96a04e82096307f790305, type: 3}
+--- !u!1001 &8817149628304195407
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3407627573240584084, guid: a64fb55bf6474c74bb24d8814136481f, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176083593480402961, guid: a64fb55bf6474c74bb24d8814136481f, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176083593480402961, guid: a64fb55bf6474c74bb24d8814136481f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176083593480402961, guid: a64fb55bf6474c74bb24d8814136481f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176083593480402961, guid: a64fb55bf6474c74bb24d8814136481f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176083593480402961, guid: a64fb55bf6474c74bb24d8814136481f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176083593480402961, guid: a64fb55bf6474c74bb24d8814136481f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176083593480402961, guid: a64fb55bf6474c74bb24d8814136481f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176083593480402961, guid: a64fb55bf6474c74bb24d8814136481f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176083593480402961, guid: a64fb55bf6474c74bb24d8814136481f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176083593480402961, guid: a64fb55bf6474c74bb24d8814136481f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176083593480402961, guid: a64fb55bf6474c74bb24d8814136481f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a64fb55bf6474c74bb24d8814136481f, type: 3}

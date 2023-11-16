@@ -18,13 +18,13 @@ public class BatAttack : MonoBehaviour
 
     void Update()
     {
-        Vector3 posicionArana = transform.position + transform.forward;
+        Vector3 posicionMurcielago = transform.position + transform.forward;
 
-        if (DetectarPlayer(posicionArana))
+        if (DetectarPlayer(posicionMurcielago))
         {
             if (!jugadorDetectado) // Verificar si el jugador no ha sido detectado previamente
             {
-                DetectarCasillas(posicionArana);
+                DetectarCasillas(posicionMurcielago);
                 jugadorDetectado = true; // Establecer que el jugador ha sido detectado
                 sliderStamina.ActualizarSlider(this, 2.5f);
             }
@@ -47,12 +47,10 @@ public class BatAttack : MonoBehaviour
             aux = true;
 
             //Debug.Log($"Rayo detectó un jugador");
-            Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.white);
         }
         else
         {
             //Debug.Log($"Rayo NO detectó un jugador");
-            Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.black);
         }
 
         return aux;
@@ -73,12 +71,10 @@ public class BatAttack : MonoBehaviour
             }
 
             Debug.Log($"Rayo detectó una casilla");
-            Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.blue);
         }
         else
         {
             Debug.Log($"Rayo NO detectó una casilla");
-            Debug.DrawLine(inicioRayo, inicioRayo + Vector3.down * raycastDistance, Color.red);
         }
 
     }

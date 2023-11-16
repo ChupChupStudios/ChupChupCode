@@ -40,8 +40,10 @@ public class MoleMovement : MonoBehaviour
         Vector3 posicionTopo = transform.position;
         posicionTopo = new(posicionTopo.x, 0f, posicionTopo.z);
 
-        if (Vector3.Distance(posicionSiguiente, posicionTopo) < 0.01)
+        if (Vector3.Distance(posicionSiguiente, posicionTopo) < 0.1)
         {
+
+            Debug.Log("ENTRA IF");
             camino.Pop();
             //mb.CasillaAlcanzadaCallBack();
 
@@ -78,10 +80,9 @@ public class MoleMovement : MonoBehaviour
 
         foreach (Nodo vecino in vecinos)
         {
-            if (vecino != null && vecino.caminable)
+            if (vecino != null && !vecino.objeto)
             {
                 casillasDisponibles.Add(vecino);
-                //Debug.Log("Vecino:" + vecino.posicionGlobal);
             }
         }
         //Debug.Log("CasillasDisponibles.count:" + casillasDisponibles.Count);
@@ -95,7 +96,7 @@ public class MoleMovement : MonoBehaviour
         casillasDisponibles.Clear();
         foreach (Nodo vecino in vecinos)
         {
-            if (vecino != null && vecino.caminable && vecino != nodoActual)
+            if (vecino != null && !vecino.objeto && vecino != nodoActual)
             {
                 casillasDisponibles.Add(vecino);
             }

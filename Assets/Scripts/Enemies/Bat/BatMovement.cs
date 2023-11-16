@@ -79,7 +79,6 @@ public class BatMovement : MonoBehaviour
 
     void MoverAUnaCasillaAleatoria()
     {
-        Debug.Log("Bat caminando");
 
         Vector3 direccionHuida = transform.forward;
         direccionHuida.Normalize();
@@ -108,22 +107,18 @@ public class BatMovement : MonoBehaviour
         if (mayorMagnitud == magForward)
         {
             ultimoPuntoPartidaDefinitivo = ultimoPuntoPartidaForward;
-            Debug.Log("Forward if: " + ultimoPuntoPartidaForward.position);
         }
         else if (mayorMagnitud == magBackward)
         {
             ultimoPuntoPartidaDefinitivo = ultimoPuntoPartidaBackward;
-            Debug.Log("Backward if: " + ultimoPuntoPartidaBackward.position);
         }
         else if (mayorMagnitud == magLeft)
         {
             ultimoPuntoPartidaDefinitivo = ultimoPuntoPartidaLeft;
-            Debug.Log("Left if: " + ultimoPuntoPartidaLeft.position);
         }
         else if (mayorMagnitud == magRight)
         {
             ultimoPuntoPartidaDefinitivo = ultimoPuntoPartidaRight;
-            Debug.Log("Right if: " + ultimoPuntoPartidaRight.position);
         }
 
         if (mayorMagnitud == 0)
@@ -131,7 +126,6 @@ public class BatMovement : MonoBehaviour
             ultimoPuntoPartidaDefinitivo = transform;
         }
 
-        Debug.Log("ultimoPuntoPartidaDefinitivo: " + ultimoPuntoPartidaDefinitivo.position);
 
         casillaAlcanzada = false;
         Nodo nodoAux = null;
@@ -139,7 +133,7 @@ public class BatMovement : MonoBehaviour
         {
             nodoAux = camino.Peek();
         }
-        camino = Pathfinding.Instance.HacerPathFinding(transform.position, ultimoPuntoPartidaDefinitivo.position);
+        camino = Pathfinding.Instance.HacerPathFindingEnemigo(transform.position, ultimoPuntoPartidaDefinitivo.position);
         if (nodoAux != null)
         {
             camino.Push(nodoAux);
@@ -155,11 +149,9 @@ public class BatMovement : MonoBehaviour
         {
             if (IntentarMover(direccionHuida, debugLog)) // Intentar ir hacia adelante
             {
-                Debug.Log("se mueve");
             }
             else
             {
-                Debug.Log("no hay salida");
                 break;
             }
         }
@@ -168,13 +160,12 @@ public class BatMovement : MonoBehaviour
         {
             Vector3 rayStart = (ultimoPuntoPartida.position + direction) + Vector3.up * 3.0f;
             RaycastHit hit;
-            Debug.DrawLine(rayStart, rayStart + Vector3.down * 1.0f, Color.cyan);
             if (Physics.Raycast(rayStart, Vector3.down, out hit, 10.0f, casillaLayer))
             {
                 Nodo nodoCasilla = hit.collider.GetComponent<Nodo>();
-                if (nodoCasilla != null && nodoCasilla.caminable)
+                if (nodoCasilla != null && !nodoCasilla.objeto)
                 {
-                    Debug.Log(debugLog);
+                    //Debug.Log(debugLog);
                     ultimoPuntoPartida = nodoCasilla.transform;
                     pasosDados++;
                     return true; // Se ha movido exitosamente
@@ -195,7 +186,10 @@ public class BatMovement : MonoBehaviour
         nuevoMurcielago1.transform.localScale = nuevoMurcielago1.transform.localScale * 0.6f;
         nuevoMurcielago1.SetActive(true);
         nuevoMurcielago1.GetComponent<BatMovement>().spawner = false;
-        
+        nuevoMurcielago1.GetComponent<BatMovement>().enabled = true;
+        nuevoMurcielago1.GetComponent<BatAttack>().enabled = true;
+        nuevoMurcielago1.GetComponent<EnemyVariablesManager>().enabled = true;
+
 
         Transform posicionAleatoria = EncontrarCasillaAdyacenteCaminable();
 
@@ -203,6 +197,9 @@ public class BatMovement : MonoBehaviour
         nuevoMurcielago2.transform.localScale = nuevoMurcielago2.transform.localScale * 0.6f;
         nuevoMurcielago2.SetActive(true);
         nuevoMurcielago2.GetComponent<BatMovement>().spawner = false;
+        nuevoMurcielago2.GetComponent<BatMovement>().enabled = true;
+        nuevoMurcielago2.GetComponent<BatAttack>().enabled = true;
+        nuevoMurcielago2.GetComponent<EnemyVariablesManager>().enabled = true;
     }
 
     private Transform EncontrarCasillaAdyacenteCaminable()
@@ -213,7 +210,7 @@ public class BatMovement : MonoBehaviour
 
         foreach (Nodo vecino in vecinos)
         {
-            if (vecino != null && vecino.caminable)
+            if (vecino != null && !vecino.objeto)
             {
                 casillasDisponibles.Add(vecino);
                 //Debug.Log("Vecino:" + vecino.posicionGlobal);
