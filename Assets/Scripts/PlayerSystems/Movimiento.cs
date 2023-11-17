@@ -168,7 +168,7 @@ public class Movimiento : MonoBehaviour
 
     public void CambiarDireccionArribaDerecha()
     {
-
+        Debug.Log("ENTRA BOTON");
         if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
         if (DeckManager.Instance.SelectedCard != null)
         {

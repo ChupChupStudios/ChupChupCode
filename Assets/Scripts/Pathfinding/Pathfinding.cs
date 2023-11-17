@@ -136,8 +136,11 @@ public class Pathfinding : MonoBehaviour
             // REVISAR VECINOS -------------------
             foreach (Nodo vecino in gestorCuadricula.ListaDeVecinos(nodoActual))
             {
+                if (vecino != nodoDestino)
+                { 
                 if (vecino == null) continue;
                 if (vecino.objeto || nodosRevisados.Contains(vecino)) continue;
+                }
 
                 int costeHastaVecino = nodoActual.costeG + Pathfinding.DISTANCIA_ENTRE_NODOS;
                 if (costeHastaVecino < vecino.costeG || !nodosRevisados.Contains(vecino))

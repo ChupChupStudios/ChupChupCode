@@ -30,7 +30,7 @@ public class StaminaCard : ACard
     {
         if (!affectedBlocks.Contains(tile.gameObject)) return;
 
-        SliderEvent?.Invoke(25);
+        SliderEvent?.Invoke(75);
 
         deckManager.Deselect();
         Destroy(gameObject);

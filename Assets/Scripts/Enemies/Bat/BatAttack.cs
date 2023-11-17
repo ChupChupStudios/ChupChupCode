@@ -70,11 +70,9 @@ public class BatAttack : MonoBehaviour
                 renderer.material.color = nuevoColor;
             }
 
-            Debug.Log($"Rayo detectó una casilla");
         }
         else
         {
-            Debug.Log($"Rayo NO detectó una casilla");
         }
 
     }
