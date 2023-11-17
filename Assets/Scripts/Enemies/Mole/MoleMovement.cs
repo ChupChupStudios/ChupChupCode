@@ -43,7 +43,6 @@ public class MoleMovement : MonoBehaviour
         if (Vector3.Distance(posicionSiguiente, posicionTopo) < 0.1)
         {
 
-            Debug.Log("ENTRA IF");
             camino.Pop();
             //mb.CasillaAlcanzadaCallBack();
 

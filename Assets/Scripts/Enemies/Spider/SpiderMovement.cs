@@ -25,7 +25,7 @@ public class SpiderMovement : MonoBehaviour
         // Crear el Object Pool de telarañas
         for (int i = 0; i < 2; i++)
         {
-            GameObject nuevaTelaraña = Instantiate(prefabSpiderWeb, Vector3.zero, Quaternion.identity);
+            GameObject nuevaTelaraña = Instantiate(prefabSpiderWeb, new Vector3(3.5f,0.5f,1.5f), prefabSpiderWeb.transform.rotation);
             nuevaTelaraña.SetActive(false);
             nuevaTelaraña.GetComponent<SpiderWeb>().spider = this.gameObject;
             telarañasPool.Add(nuevaTelaraña);
@@ -68,16 +68,17 @@ public class SpiderMovement : MonoBehaviour
         Vector3 posicionArana = transform.position;
         posicionArana = new(posicionArana.x, 0f, posicionArana.z);
 
-        if (Vector3.Distance(posicionSiguiente, posicionArana) < 0.01)
+        if (Vector3.Distance(posicionSiguiente, posicionArana) < 0.2)
         {
+            Debug.Log("IF");
             if (contadorTrampasActivas < telarañasPool.Count)
             {
                 // Obtener la telaraña del Object Pool
                 GameObject telaraña = ObtenerTelaraña(this.transform.position);
                 if (telaraña != null)
                 {
-                    // Configurar posición y activar la telaraña
-                    telaraña.transform.position = this.transform.position;
+                    // Configurar posición y activar la telaraña 
+                    telaraña.transform.position = new Vector3(transform.position.x, 0.5f,transform.position.z);
                     telaraña.SetActive(true);
                     telaraña.GetComponent<SpiderWeb>().trampaActiva = true;
 
@@ -124,7 +125,6 @@ public class SpiderMovement : MonoBehaviour
 
     void MoverAUnaCasillaAleatoria()
     {
-        Debug.Log("Spider caminando");
         Nodo nodoActual = gestorCuadricula.NodoCoincidente(transform.position);
         List<Nodo> vecinos = gestorCuadricula.ListaDeVecinos(nodoActual);
         List<Nodo> casillasDisponibles = new List<Nodo>();
@@ -134,10 +134,9 @@ public class SpiderMovement : MonoBehaviour
             if (vecino != null && vecino.caminable)
             {
                 casillasDisponibles.Add(vecino);
-                //Debug.Log("Vecino:" + vecino.posicionGlobal);
             }
         }
-        //Debug.Log("CasillasDisponibles.count:" + casillasDisponibles.Count);
+        Debug.Log("CasillasDisponibles.count:" + casillasDisponibles.Count);
 
         if (casillasDisponibles.Count > 0)
         {
@@ -345,7 +344,7 @@ public class SpiderMovement : MonoBehaviour
         {
             nodoAux = camino.Peek();
         }
-        camino = Pathfinding.Instance.HacerPathFinding(transform.position, ultimoPuntoPartidaDefinitivo.position);
+        camino = Pathfinding.Instance.HacerPathFindingEnemigo(transform.position, ultimoPuntoPartidaDefinitivo.position);
         if (nodoAux != null)
         {
             camino.Push(nodoAux);

@@ -113,7 +113,7 @@ public class DeckManager : MonoBehaviour
     public void CreateCard(ACard card)
     {
         if (card == null || !cardPrefabs.Contains(card)) return;
-        //if (cards.Count == 7) return;
+        if (cards.Count == 7) return;
 
         GameObject cardToInstantiate = card.gameObject;
 

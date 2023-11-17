@@ -49,7 +49,6 @@ public class Movimiento : MonoBehaviour
     {
         if (nodoObjetivo == null) return;
 
-        Debug.Log("Direccion " + direccion);
         // SEGUIR CAMINO
         //transform.position = transform.position + velocidad * Time.deltaTime * direccion;
         Vector3 posicion = nodoObjetivo.transform.GetChild(0).position;
@@ -167,7 +166,7 @@ public class Movimiento : MonoBehaviour
 
     public void CambiarDireccionArribaDerecha()
     {
-
+        Debug.Log("ENTRA BOTON");
         if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
         if (deckManager.SelectedCard != null)
         {
