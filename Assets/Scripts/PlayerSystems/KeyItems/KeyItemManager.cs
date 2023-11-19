@@ -14,7 +14,6 @@ public class KeyItemManager : MonoBehaviour
 
     void Start()
     {
-        // Establecer el texto inicial
         ActualizarContador();
     }
 

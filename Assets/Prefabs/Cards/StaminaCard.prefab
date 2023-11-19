@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -60, y: 45, z: 0}
 --- !u!33 &8421418784331918344
 MeshFilter:
@@ -123,3 +123,5 @@ MonoBehaviour:
   baseColor: {r: 0.29411766, g: 1, b: 0.29411766, a: 1}
   cardIndex: 0
   affectedBlocks: []
+  deckManager: {fileID: 0}
+  heal: {fileID: 8300000, guid: 6dc1e9cca5424cf4c9e5439e3007d0dd, type: 3}

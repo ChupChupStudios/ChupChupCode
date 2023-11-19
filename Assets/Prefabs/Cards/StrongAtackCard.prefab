@@ -123,6 +123,9 @@ MonoBehaviour:
   baseColor: {r: 1, g: 0.09803922, b: 0.09803922, a: 1}
   cardIndex: 2
   affectedBlocks: []
+  deckManager: {fileID: 0}
   EnemyLayer:
     serializedVersion: 2
     m_Bits: 512
+  caveHit: {fileID: 8300000, guid: 760dbfff55e390e46bb395c6d45540bd, type: 3}
+  grassHit: {fileID: 8300000, guid: 7481b18dbd2895244bce0206c7aef18e, type: 3}

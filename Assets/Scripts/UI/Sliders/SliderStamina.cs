@@ -13,6 +13,8 @@ public class SliderStamina : MonoBehaviour
 
     public static event Action<float> WolfSpeedEvent;
 
+    [SerializeField] private AudioClip die;
+
     void Start()
     {
         StaminaCard.SliderEvent += CartaUsada;
@@ -35,6 +37,7 @@ public class SliderStamina : MonoBehaviour
     {
         if (slider.value <= 0)
         {
+            SFXManager.Instance.CambiarMúsica(die, false);
             SceneManager.LoadScene("FinalScene");
         }
     }

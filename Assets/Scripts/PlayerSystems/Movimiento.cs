@@ -21,6 +21,11 @@ public class Movimiento : MonoBehaviour
 
     public Animator animator;
 
+    int actualScene;
+
+    [SerializeField] private AudioClip grassSteps;
+    [SerializeField] private AudioClip caveSteps;
+
     //----------------------------------------------------------------
     //  METODOS
     //----------------------------------------------------------------
@@ -29,8 +34,9 @@ public class Movimiento : MonoBehaviour
     {
         PlayerStateManager.Instance.StateChangeRequestedEvent += PeticionCambioDeEstado;
 
-        // Detener las partículas al inicio
+        // Detener las partÃ­culas al inicio
         if (particulasAndar != null) particulasAndar.Stop();
+        actualScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     private void Update()
@@ -60,23 +66,45 @@ public class Movimiento : MonoBehaviour
         Vector3 posicion = nodoObjetivo.transform.GetChild(0).position;
         transform.position = Vector3.MoveTowards(transform.position, posicion, velocidad * Time.deltaTime);
 
-        // Activar partículas andar
+        // Activar partÃ­culas andar
         if (particulasAndar != null && !particulasAndar.isPlaying) particulasAndar.Play();
+
+        if (!SFXManager.Instance.soundsAudioSource.isPlaying)
+        {
+            if (actualScene == 4 || actualScene == 5 || actualScene == 6)
+            {
+                SFXManager.Instance.EjecutarSonido(caveSteps);
+            }
+            else
+            {
+                SFXManager.Instance.EjecutarSonido(grassSteps);
+            }
+
+
+        }
 
         // AVANZAR NODO
         if (Vector3.Distance(nodoObjetivo.posicionGlobal, transform.position) < umbralLlegadaObjetivo)
         {
             // Emitir el evento cuando se mueve una casilla
             CasillaMovida?.Invoke(this, 5.0f);
-            
+
             // Actualizar siguiente nodo -------
-            
+
             // FINAL DE CAMINO
             if (camino.Count == 0)
             {
+                // COMPROBAR SI ESTA EN CASILLA CON CARTEL
+                Sign sign= nodoObjetivo.gameObject.GetComponent<Sign>();
+                if (sign != null)
+                {
+                    sign.SignText();
+                    Debug.Log("Cartel funciona");
+                }
+
                 // COMPROBAR SI ESTA EN CASILLA OBJETIVO
                 Goal goal = nodoObjetivo.gameObject.GetComponent<Goal>();
-                if (goal!=null)
+                if (goal != null)
                 {
                     int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
                     SceneManager.LoadScene(indiceEscenaActual + 1);
@@ -88,9 +116,9 @@ public class Movimiento : MonoBehaviour
                 animator.SetBool("Moviendo", false);
                 transform.GetChild(0).rotation = Quaternion.Euler(92.09698f, 0f, 0f);
 
-                // Desactivar partículas andar
-                if (particulasAndar != null)particulasAndar.Stop();
-
+                // Desactivar partÃ­culas andar
+                if (particulasAndar != null) particulasAndar.Stop();
+                if (SFXManager.Instance.soundsAudioSource.isPlaying) SFXManager.Instance.soundsAudioSource.Stop();
                 return;
             }
 
@@ -108,6 +136,7 @@ public class Movimiento : MonoBehaviour
     void PeticionCambioDeEstado(PlayerStateManager.State newState)
     {
         if(newState != PlayerStateManager.State.Movement && camino!=null)
+
             camino.Clear();
     }
 
@@ -152,8 +181,7 @@ public class Movimiento : MonoBehaviour
     public void CambiarDireccionAbajoDerecha()
     {
         if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
-
-        if (DeckManager.Instance.SelectedCard!=null)
+        if (DeckManager.Instance.SelectedCard != null)
         {
             ACard cardAux = DeckManager.Instance.SelectedCard;
             DeckManager.Instance.SelectedCard.CardDeselected();
@@ -162,7 +190,7 @@ public class Movimiento : MonoBehaviour
             cardAux.CardSelected();
 
         }
-        else 
+        else
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
 
         if (tutorial == null) return;
