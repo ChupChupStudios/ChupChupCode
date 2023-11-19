@@ -6,6 +6,7 @@ public class PlaneCard : ACard
 {
     public LayerMask plane;
     private GameObject raycastOutput;
+    [SerializeField] private AudioClip repair;
 
     public override void HideEffectArea()
     {
@@ -19,6 +20,7 @@ public class PlaneCard : ACard
 
         if (Utils.CustomRaycast(tile.gameObject.transform.position + Vector3.down, Vector3.up, out raycastOutput, plane))
         {
+            SFXManager.Instance.EjecutarSonido(repair);
             // Cuando la use en el avión cambiar de escena a la pantalla de ganar
             Debug.Log("Plane repaired successfully");
             // Eliminar la carta

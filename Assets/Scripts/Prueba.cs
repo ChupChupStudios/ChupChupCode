@@ -16,6 +16,8 @@ public class Prueba : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+
+            SFXManager.Instance.musicAudioSource.loop = true;
             SceneManager.LoadScene("MenuPrincipal");
         }
     }

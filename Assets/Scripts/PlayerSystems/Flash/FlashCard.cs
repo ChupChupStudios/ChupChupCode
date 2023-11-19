@@ -7,6 +7,7 @@ public class FlashCard : ACard
     public LayerMask flash;
     private GameObject raycastOutput;
     private GameObject player;
+    [SerializeField] private AudioClip tp;
 
     public override void HideEffectArea()
     {
@@ -19,7 +20,8 @@ public class FlashCard : ACard
         if (!affectedBlocks.Contains(tile.gameObject)) return;
 
         if (Utils.CustomRaycast(tile.gameObject.transform.position + Vector3.down, Vector3.up, out raycastOutput, flash))
-        {            
+        {
+            SFXManager.Instance.EjecutarSonido(tp);
             player = GameObject.FindWithTag("Player");
             player.transform.position = new Vector3(raycastOutput.transform.position.x, player.transform.position.y, raycastOutput.transform.position.z);
 

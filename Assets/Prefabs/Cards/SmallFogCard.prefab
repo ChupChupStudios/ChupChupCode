@@ -124,3 +124,4 @@ MonoBehaviour:
   cardIndex: 1
   affectedBlocks: []
   deckManager: {fileID: 0}
+  wind: {fileID: 8300000, guid: b3569249e1ce57c49b024eff80bf8a93, type: 3}

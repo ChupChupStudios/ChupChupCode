@@ -17,6 +17,10 @@ public class Movimiento : MonoBehaviour
 
     public EventHandler<float> CasillaMovida;
 
+    int actualScene;
+
+    [SerializeField] private AudioClip grassSteps;
+    [SerializeField] private AudioClip caveSteps;
 
     //----------------------------------------------------------------
     //  METODOS
@@ -28,6 +32,7 @@ public class Movimiento : MonoBehaviour
 
         // Detener las partículas al inicio
         if (particulasAndar != null) particulasAndar.Stop();
+        actualScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     private void Update()
@@ -59,20 +64,34 @@ public class Movimiento : MonoBehaviour
         // Activar partículas andar
         if (particulasAndar != null && !particulasAndar.isPlaying) particulasAndar.Play();
 
+        if (!SFXManager.Instance.soundsAudioSource.isPlaying)
+        {
+            if (actualScene == 4 || actualScene == 5 || actualScene == 6)
+            {
+                SFXManager.Instance.EjecutarSonido(caveSteps);
+            }
+            else
+            {
+                SFXManager.Instance.EjecutarSonido(grassSteps);
+            }
+
+
+        }
+
         // AVANZAR NODO
         if (Vector3.Distance(nodoObjetivo.posicionGlobal, transform.position) < umbralLlegadaObjetivo)
         {
             // Emitir el evento cuando se mueve una casilla
             CasillaMovida?.Invoke(this, 5.0f);
-            
+
             // Actualizar siguiente nodo -------
-            
+
             // FINAL DE CAMINO
             if (camino.Count == 0)
             {
                 // COMPROBAR SI ESTA EN CASILLA OBJETIVO
                 Goal goal = nodoObjetivo.gameObject.GetComponent<Goal>();
-                if (goal!=null)
+                if (goal != null)
                 {
                     int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
                     SceneManager.LoadScene(indiceEscenaActual + 1);
@@ -83,8 +102,8 @@ public class Movimiento : MonoBehaviour
                 PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.Idle;
 
                 // Desactivar partículas andar
-                if (particulasAndar != null)particulasAndar.Stop();
-
+                if (particulasAndar != null) particulasAndar.Stop();
+                if (SFXManager.Instance.soundsAudioSource.isPlaying) SFXManager.Instance.soundsAudioSource.Stop();
                 return;
             }
 
@@ -101,7 +120,7 @@ public class Movimiento : MonoBehaviour
 
     void PeticionCambioDeEstado(PlayerStateManager.State newState)
     {
-        if(newState != PlayerStateManager.State.Movement)
+        if (newState != PlayerStateManager.State.Movement)
             camino.Clear();
     }
 
@@ -137,7 +156,7 @@ public class Movimiento : MonoBehaviour
     public void CambiarDireccionAbajoDerecha()
     {
         if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
-        if (DeckManager.Instance.SelectedCard!=null)
+        if (DeckManager.Instance.SelectedCard != null)
         {
             ACard cardAux = DeckManager.Instance.SelectedCard;
             DeckManager.Instance.SelectedCard.CardDeselected();
@@ -146,7 +165,7 @@ public class Movimiento : MonoBehaviour
             cardAux.CardSelected();
 
         }
-        else 
+        else
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
     }
 
