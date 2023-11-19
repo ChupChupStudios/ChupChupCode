@@ -1850,7 +1850,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 67f2290f9c2de0f4b9e3118eb7a05c55, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bbbdc98bafc9b82428acbeef5057408d, type: 2}
+      objectReference: {fileID: 2100000, guid: 686659e749a8e3c429ac8e5b61458acc, type: 2}
     - target: {fileID: 919132149155446097, guid: 67f2290f9c2de0f4b9e3118eb7a05c55, type: 3}
       propertyPath: m_Name
       value: Carta
@@ -9906,17 +9906,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481915394}
-  m_LocalRotation: {x: -0, y: -0, z: -0.5687082, w: 0.8225394}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.46495557, y: 0.57062733, z: 0.5635825}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 29722231}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -69.32}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -13}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1481915396
@@ -9939,7 +9939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6b88c96b2cb8a89498d63b217d1b9872, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32880777e39210b4382768535b153acc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10192,7 +10192,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587386694}
-  m_LocalRotation: {x: -0, y: -0, z: -0.5612618, w: 0.8276384}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10200,10 +10200,10 @@ RectTransform:
   - {fileID: 1164163443}
   m_Father: {fileID: 29722231}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -68.286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 280, y: -220}
+  m_AnchoredPosition: {x: 324, y: -267}
   m_SizeDelta: {x: 150, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1587386696
@@ -11544,7 +11544,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -13}
   m_SizeDelta: {x: 640, y: 410}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1963973328
@@ -12314,7 +12314,7 @@ PrefabInstance:
       objectReference: {fileID: 1502635913}
     - target: {fileID: 6823018932758887524, guid: 1d177cb7fa86112419041751d722aca4, type: 3}
       propertyPath: textoDelCartel
-      value: asdasd
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7790776960847048735, guid: 1d177cb7fa86112419041751d722aca4, type: 3}
       propertyPath: m_RootOrder
