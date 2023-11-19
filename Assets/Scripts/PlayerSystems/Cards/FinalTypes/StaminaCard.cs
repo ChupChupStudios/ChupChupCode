@@ -6,6 +6,7 @@ using UnityEngine;
 public class StaminaCard : ACard
 {
     public static event Action<int> SliderEvent;
+
     public override void ShowEffectArea()
     {
         /*|o  o  o|
@@ -29,9 +30,7 @@ public class StaminaCard : ACard
     public override void CheckAndExecute(Block tile)
     {
         if (!affectedBlocks.Contains(tile.gameObject)) return;
-
         SliderEvent?.Invoke(75);
-
         deckManager.Deselect();
         Destroy(gameObject);
     }

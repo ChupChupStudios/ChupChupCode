@@ -17,6 +17,8 @@ public class BatMovement : MonoBehaviour
     private Vector3 direccion = Vector3.forward;
     private bool casillaAlcanzada = true;
 
+    public Animator animator;
+
     void Start()
     {
         enemyVariableManager = this.gameObject.GetComponent<EnemyVariablesManager>();
@@ -36,8 +38,13 @@ public class BatMovement : MonoBehaviour
 
     void SeguirCamino()
     {
-        if (camino == null || camino.Count == 0) return;
+        if (camino == null || camino.Count == 0)
+        {
+            animator.SetBool("Moviendo", false);
+            return;
+        }
 
+        animator.SetBool("Moviendo", true);
         transform.position += velocidad * Time.deltaTime * direccion;
 
         Vector3 posicionSiguiente = camino.Peek().posicionGlobal;

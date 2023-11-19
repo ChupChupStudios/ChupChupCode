@@ -20,6 +20,6 @@ public class TutorialFog : MonoBehaviour
     public void OnDestroy()
     {
         tutorial.defoged++;
-        if (tutorial.defoged == 4) tutorial.TutorialGoal();
+        if (tutorial.defoged == 4) tutorial.TutorialMascota();
     }
 }

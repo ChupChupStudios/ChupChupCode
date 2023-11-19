@@ -67,7 +67,7 @@ public class Pathfinding : MonoBehaviour
             nodosRevisados.Add(nodoActual);
 
             // NODO DESTINO ENCONTRADO -----------
-            if (nodoActual == nodoDestino)
+            if (nodoActual == nodoDestino && nodoDestino.enabled)
                 return TrazarCamino(nodoActual, nodoInicial);
 
             // REVISAR VECINOS -------------------

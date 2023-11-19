@@ -20,6 +20,8 @@ public class SpiderMovement : MonoBehaviour
     public GameObject Player;
     private bool calcularHuida = false;
 
+
+    public Animator animator;
     private void Awake()
     {
         // Crear el Object Pool de telarañas
@@ -56,11 +58,16 @@ public class SpiderMovement : MonoBehaviour
     {
         if (camino == null || camino.Count == 0)
         {
-            if (!calcularHuida) return;
+            if (!calcularHuida)
+            {
+                animator.SetBool("Moviendo", false);
+                return;
+            }
             Huir();
             calcularHuida = false;
         }
 
+        animator.SetBool("Moviendo", true);
         transform.position += velocidad * Time.deltaTime * direccion;
 
         Vector3 posicionSiguiente = camino.Peek().posicionGlobal;

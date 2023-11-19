@@ -14,7 +14,8 @@ public class TutorialItem : MonoBehaviour
             if (DeckManager.Instance.cards.Count == 7) return;
             
             DeckManager.Instance.CreateCard(cardPrefab);
-            tutorial.TutorialEnemigo();
+            tutorial.tutorialTileObject.GetComponent<Block>().ChangeColor(new Color32(0, 159, 8, 255));
+            tutorial.TutorialGiro();
             Destroy(gameObject);
         }
     }

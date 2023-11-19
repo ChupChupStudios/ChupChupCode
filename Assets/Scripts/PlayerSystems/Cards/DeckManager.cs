@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeckManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class DeckManager : MonoBehaviour
 
     // VARIABLES DE INSTANCIACION
     public const int INITIAL_CARDS = 5;
+    public const int INITIAL_CARDS_TUTO = 4;
     //Vector3 CARD_SCALE = new(0.2f, 1.0f, 0.3f);
     Quaternion CARD_ROTATION = Quaternion.Euler(new Vector3(-60.0f, 45.0f, 0.0f));
 
@@ -92,11 +94,23 @@ public class DeckManager : MonoBehaviour
         // PLAYER TRANSFORM
         ownerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
-        // INSTANTIATE INITIAL CARDS
-        for (int i = 0; i < INITIAL_CARDS; i++)
+        if(SceneManager.GetActiveScene().name == "Tutorial")
         {
-            //USE CREATE CARD
-            CreateCard(cardPrefabs[i%cardPrefabs.Count]);
+            // INSTANTIATE INITIAL CARDS
+            for (int i = 0; i < INITIAL_CARDS_TUTO; i++)
+            {
+                //USE CREATE CARD
+                CreateCard(cardPrefabs[i % cardPrefabs.Count]);
+            }
+        }
+        else 
+        {
+            // INSTANTIATE INITIAL CARDS
+            for (int i = 0; i < INITIAL_CARDS; i++)
+            {
+                //USE CREATE CARD
+                CreateCard(cardPrefabs[i % cardPrefabs.Count]);
+            }
         }
     }
 
