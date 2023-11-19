@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PickUpKeyItems : MonoBehaviour
+public class Sign : MonoBehaviour
 {
     public string textoDelCartel;
     public Canvas cartelCanvas;
@@ -16,7 +16,8 @@ public class PickUpKeyItems : MonoBehaviour
         textoUI = cartelCanvas.GetComponentInChildren<TextMeshProUGUI>();
         auxiliarPlane.SetActive(false);
     }
-    public void LoreText()
+
+    public void SignText()
     {
         textoUI.text = textoDelCartel;
         cartelCanvas.gameObject.SetActive(true);
@@ -29,27 +30,5 @@ public class PickUpKeyItems : MonoBehaviour
         cartelCanvas.gameObject.SetActive(false);
         auxiliarPlane.SetActive(false);
         Time.timeScale = 1;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            // Obtener el script del contador
-            KeyItemManager keyItemManager = FindObjectOfType<KeyItemManager>();
-
-            // Comprobar si se encontró el script
-            if (keyItemManager != null)
-            {
-                // Incrementar el contador y destruir el objeto recolectable
-                keyItemManager.RecogerObjeto();
-                LoreText();
-                gameObject.SetActive(false);
-            }
-            else
-            {
-                Debug.LogError("No se encontró el script del contador.");
-            }
-        }
     }
 }

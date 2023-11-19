@@ -89,6 +89,14 @@ public class Movimiento : MonoBehaviour
             // FINAL DE CAMINO
             if (camino.Count == 0)
             {
+                // COMPROBAR SI ESTA EN CASILLA CON CARTEL
+                Sign sign= nodoObjetivo.gameObject.GetComponent<Sign>();
+                if (sign != null)
+                {
+                    sign.SignText();
+                    Debug.Log("Cartel funciona");
+                }
+
                 // COMPROBAR SI ESTA EN CASILLA OBJETIVO
                 Goal goal = nodoObjetivo.gameObject.GetComponent<Goal>();
                 if (goal != null)
