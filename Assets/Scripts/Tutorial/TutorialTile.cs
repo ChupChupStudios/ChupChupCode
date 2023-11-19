@@ -19,6 +19,7 @@ public class TutorialTile : MonoBehaviour
         if (Utils.CustomRaycast(transform.position + Vector3.down, Vector3.up, out player, Player))
         {
             this.GetComponent<Block>().ChangeColor(new Color32(0, 159, 8, 255));
+            tutorial.messageButton.SetActive(true);
             tutorial.TutorialSliders();
 
 

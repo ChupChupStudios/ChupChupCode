@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlaneCard : ACard
 {
@@ -24,6 +25,8 @@ public class PlaneCard : ACard
             // Cuando la use en el avión cambiar de escena a la pantalla de ganar
             Debug.Log("Plane repaired successfully");
             // Eliminar la carta
+            raycastOutput.gameObject.GetComponent<TutorialPlane>().Goal();
+
             deckManager.Deselect();
             Destroy(gameObject);
         }

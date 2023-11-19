@@ -17,6 +17,10 @@ public class Movimiento : MonoBehaviour
 
     public EventHandler<float> CasillaMovida;
 
+    public Tutorial tutorial;
+
+    public Animator animator;
+
     int actualScene;
 
     [SerializeField] private AudioClip grassSteps;
@@ -30,7 +34,7 @@ public class Movimiento : MonoBehaviour
     {
         PlayerStateManager.Instance.StateChangeRequestedEvent += PeticionCambioDeEstado;
 
-        // Detener las partículas al inicio
+        // Detener las partÃ­culas al inicio
         if (particulasAndar != null) particulasAndar.Stop();
         actualScene = SceneManager.GetActiveScene().buildIndex;
     }
@@ -49,19 +53,20 @@ public class Movimiento : MonoBehaviour
 
         // NOTIFICAR CAMBIO DE ESTADO (a moviendose)
         PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.Movement;
+        animator.SetBool("Moviendo", true);
     }
 
     void SeguirCamino()
     {
         if (nodoObjetivo == null) return;
-
+    
         //Debug.Log("Direccion " + direccion);
         // SEGUIR CAMINO
         //transform.position = transform.position + velocidad * Time.deltaTime * direccion;
         Vector3 posicion = nodoObjetivo.transform.GetChild(0).position;
         transform.position = Vector3.MoveTowards(transform.position, posicion, velocidad * Time.deltaTime);
 
-        // Activar partículas andar
+        // Activar partÃ­culas andar
         if (particulasAndar != null && !particulasAndar.isPlaying) particulasAndar.Play();
 
         if (!SFXManager.Instance.soundsAudioSource.isPlaying)
@@ -108,8 +113,10 @@ public class Movimiento : MonoBehaviour
 
                 // NOTIFICAR CAMBIO DE ESTADO (a idle)
                 PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.Idle;
+                animator.SetBool("Moviendo", false);
+                transform.GetChild(0).rotation = Quaternion.Euler(92.09698f, 0f, 0f);
 
-                // Desactivar partículas andar
+                // Desactivar partÃ­culas andar
                 if (particulasAndar != null) particulasAndar.Stop();
                 if (SFXManager.Instance.soundsAudioSource.isPlaying) SFXManager.Instance.soundsAudioSource.Stop();
                 return;
@@ -128,7 +135,8 @@ public class Movimiento : MonoBehaviour
 
     void PeticionCambioDeEstado(PlayerStateManager.State newState)
     {
-        if (newState != PlayerStateManager.State.Movement)
+        if(newState != PlayerStateManager.State.Movement && camino!=null)
+
             camino.Clear();
     }
 
@@ -147,6 +155,7 @@ public class Movimiento : MonoBehaviour
     public void CambiarDireccionAbajoIzquierda()
     {
         if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
+
         if (DeckManager.Instance.SelectedCard != null)
         {
             ACard cardAux = DeckManager.Instance.SelectedCard;
@@ -158,6 +167,14 @@ public class Movimiento : MonoBehaviour
         }
         else
             transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+
+        if (tutorial == null) return;
+        if (!tutorial.girado)
+        {
+            tutorial.girado = true;
+            DeckManager.Instance.CreateCard(tutorial.cardPrefabAttack);
+            tutorial.TutorialEnemigo();
+        }
 
     }
 
@@ -175,11 +192,20 @@ public class Movimiento : MonoBehaviour
         }
         else
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+
+        if (tutorial == null) return;
+        if (!tutorial.girado)
+        {
+            tutorial.girado = true;
+            DeckManager.Instance.CreateCard(tutorial.cardPrefabAttack);
+            tutorial.TutorialEnemigo();
+        }
     }
 
     public void CambiarDireccionArribaIzquierda()
     {
         if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
+
         if (DeckManager.Instance.SelectedCard != null)
         {
             ACard cardAux = DeckManager.Instance.SelectedCard;
@@ -191,14 +217,24 @@ public class Movimiento : MonoBehaviour
         }
         else
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+
+        if (tutorial == null) return;
+        if (!tutorial.girado)
+        {
+            tutorial.girado = true;
+            DeckManager.Instance.CreateCard(tutorial.cardPrefabAttack);
+            tutorial.TutorialEnemigo();
+        }
+
     }
 
     public void CambiarDireccionArribaDerecha()
     {
-        Debug.Log("ENTRA BOTON");
         if (gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Movement) return;
+        Debug.Log("ENTRA IF");
         if (DeckManager.Instance.SelectedCard != null)
         {
+            Debug.Log("ENTRA BOTON");
             ACard cardAux = DeckManager.Instance.SelectedCard;
             DeckManager.Instance.SelectedCard.CardDeselected();
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);
@@ -208,5 +244,14 @@ public class Movimiento : MonoBehaviour
         }
         else
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+
+        if (tutorial == null) return;
+        if (!tutorial.girado)
+        {
+            Debug.Log("girado");
+            tutorial.girado = true;
+            DeckManager.Instance.CreateCard(tutorial.cardPrefabAttack);
+            tutorial.TutorialEnemigo();
+        }
     }
 }

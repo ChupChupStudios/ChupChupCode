@@ -26,6 +26,7 @@ public class WolfMovement : MonoBehaviour
     private bool descansando = false;
     Nodo nodoObjetivoAux;
 
+    public Animator animator;
 
 
     //public EventHandler<float> CasillaMovida;
@@ -67,17 +68,23 @@ public class WolfMovement : MonoBehaviour
 
         direccion = camino.Peek().posicionGlobal -nodoObjetivo.posicionGlobal;
 
+        animator.SetBool("Moviendo", true);
+
     }
 
     void SeguirCamino()
     {
-        if (nodoObjetivo == null) return;
+        if (nodoObjetivo == null)
+        {
+            animator.SetBool("Moviendo", false);
+            return;
+        }
 
         // SEGUIR CAMINO
 
-        Vector3 posicionSiguiente = new(nodoObjetivo.posicionGlobal.x, 0.7f, nodoObjetivo.posicionGlobal.z);
+        Vector3 posicionSiguiente = new(nodoObjetivo.posicionGlobal.x, 0.45f, nodoObjetivo.posicionGlobal.z);
         Vector3 posicionLobo = transform.position;
-        posicionLobo = new(posicionLobo.x, 0.7f, posicionLobo.z);
+        posicionLobo = new(posicionLobo.x, 0.45f, posicionLobo.z);
 
         Vector3 posicion = nodoObjetivo.transform.GetChild(0).position;
         transform.position = Vector3.MoveTowards(transform.position, posicionSiguiente, velocidad * Time.deltaTime);
@@ -91,6 +98,7 @@ public class WolfMovement : MonoBehaviour
             if (camino.Count == 0)
             {
                 direccion = Vector3.zero;
+                animator.SetBool("Moviendo", false);
                 return;
             }
 
@@ -98,6 +106,7 @@ public class WolfMovement : MonoBehaviour
             {
                 nodoObjetivo = null;
                 camino = null;
+                animator.SetBool("Moviendo", false);
                 StartCoroutine(EsperarYMover());
                 return;
             }

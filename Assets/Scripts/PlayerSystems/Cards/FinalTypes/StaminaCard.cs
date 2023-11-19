@@ -7,6 +7,7 @@ public class StaminaCard : ACard
 {
     public static event Action<int> SliderEvent;
 
+
     [SerializeField] private AudioClip heal;
 
     public override void ShowEffectArea()
@@ -34,9 +35,8 @@ public class StaminaCard : ACard
         if (!affectedBlocks.Contains(tile.gameObject)) return;
 
         SFXManager.Instance.EjecutarSonido(heal);
-
+        
         SliderEvent?.Invoke(75);
-
         deckManager.Deselect();
         Destroy(gameObject);
     }

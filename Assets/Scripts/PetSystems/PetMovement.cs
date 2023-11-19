@@ -20,7 +20,7 @@ public class PetMovement : MonoBehaviour
     bool persecucion = false;
     bool emergencia = false;    // no se gasta estamina
 
-
+    public Animator animator;
     //----------------------------------------------------------------
     //  METODOS
     //----------------------------------------------------------------
@@ -47,13 +47,20 @@ public class PetMovement : MonoBehaviour
 
         Utils.Log($"{objetivo.gameObject.name}, {camino == null}");
 
-        if (nodoObjetivo == null && camino != null) nodoObjetivo = camino.Pop();
+        if(camino.Count>0) animator.SetBool("Moviendo", true);
+        if (nodoObjetivo == null && camino != null) nodoObjetivo = camino.Pop();  
     }
 
     // devuelve true si ha llegado al nodo destino
     public bool SeguirCamino()
     {
-        if (nodoObjetivo == null) return false;
+
+        if (nodoObjetivo == null)
+        {
+            animator.SetBool("Moviendo", false);
+            return false;
+        }
+
 
         // SEGUIR CAMINO
         Vector3 posicion = nodoObjetivo.transform.GetChild(0).transform.position;
@@ -82,6 +89,7 @@ public class PetMovement : MonoBehaviour
                 // se ha llegado a casilla adyacente a objetivo
                 else if (camino?.Peek() == nodoObjetivoFinal)
                 {
+                    animator.SetBool("Moviendo", false);
                     direccion = camino.Peek().posicionGlobal - nodoObjetivo.posicionGlobal;
                     transform.forward = direccion.normalized;
                     camino.Clear();
@@ -93,6 +101,7 @@ public class PetMovement : MonoBehaviour
             // FINAL DE CAMINO
             if (camino.Count == 0)
             {
+                animator.SetBool("Moviendo", false);
                 nodoObjetivo = null;
 
                 return true;

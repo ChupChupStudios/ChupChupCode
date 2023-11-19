@@ -19,6 +19,7 @@ public class TutorialEnemyAttack : MonoBehaviour
 
     private void OnDestroy()
     {
+        tutorial.tutorialArrow.SetActive(false);
         tutorial.TutorialNiebla();
     }
 }

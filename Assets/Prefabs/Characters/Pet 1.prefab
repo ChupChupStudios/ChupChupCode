@@ -100,11 +100,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2404267214525246316}
   - {fileID: 4265749648798338195}
   - {fileID: 1353675579992949817}
+  - {fileID: 5966586052918091196}
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &7058796931163458298
 CapsuleCollider:
@@ -144,6 +144,7 @@ MonoBehaviour:
   velocidad: 1
   ojetivoFinalTransform: {fileID: 0}
   umbralLlegadaObjetivo: 0.05
+  animator: {fileID: 0}
 --- !u!114 &6830829466239783351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd20a42befd43114a8fdcc0a22707a69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &2798729016924195975
+--- !u!1001 &6144927608905071191
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -289,24 +290,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95ef38afee00344419c057f9a528ec8f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4.34
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 95ef38afee00344419c057f9a528ec8f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5.58826
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 95ef38afee00344419c057f9a528ec8f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4.784381
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 95ef38afee00344419c057f9a528ec8f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95ef38afee00344419c057f9a528ec8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.46741152
+      value: 0.28258848
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95ef38afee00344419c057f9a528ec8f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -340,10 +329,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 95ef38afee00344419c057f9a528ec8f, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 95ef38afee00344419c057f9a528ec8f, type: 3}
       propertyPath: m_Name
       value: Perky_colores_planos
@@ -353,8 +338,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95ef38afee00344419c057f9a528ec8f, type: 3}
---- !u!4 &2404267214525246316 stripped
+--- !u!4 &5966586052918091196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 95ef38afee00344419c057f9a528ec8f, type: 3}
-  m_PrefabInstance: {fileID: 2798729016924195975}
+  m_PrefabInstance: {fileID: 6144927608905071191}
   m_PrefabAsset: {fileID: 0}
