@@ -17,6 +17,8 @@ public class BestiaryUIManager : MonoBehaviour
 
     Button currentButton = null;
 
+    [SerializeField] private AudioClip clickButton;
+
     //---------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------
 
@@ -71,6 +73,7 @@ public class BestiaryUIManager : MonoBehaviour
 
     void OnClose()
     {
+        SFXManager.Instance.EjecutarSonido(clickButton);
         currentButton = enemyButtons[0];
         ChangeButtonClicked(currentButton);
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ControladorEscena : MonoBehaviour
 {
@@ -9,6 +10,14 @@ public class ControladorEscena : MonoBehaviour
     [SerializeField] private AudioClip clickButton;
     [SerializeField] private AudioClip mainTheme;
     [SerializeField] private SceneSO previousScene;
+
+    public Button bestiario;
+    public GameObject panelBestiario;
+
+    private void Start()
+    {
+        bestiario.onClick.AddListener(() => { SFXManager.Instance.EjecutarSonido(clickButton); panelBestiario.SetActive(true); });
+    }
 
     public void CambiarEscena(string nombre)
     {
@@ -44,4 +53,6 @@ public class ControladorEscena : MonoBehaviour
         SFXManager.Instance.EjecutarSonido(clickButton);
         SceneManager.LoadScene(previousScene.numEscena);
     }
+
+
 }
