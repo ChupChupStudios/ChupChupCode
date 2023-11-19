@@ -43,8 +43,11 @@ public class PickUpKeyItems : MonoBehaviour
             {
                 // Incrementar el contador y destruir el objeto recolectable
                 keyItemManager.RecogerObjeto();
-                LoreText();
-                gameObject.SetActive(false);
+
+                StartCoroutine(EsperarYMostrarTexto());
+
+                //LoreText();
+                
             }
             else
             {
@@ -52,4 +55,15 @@ public class PickUpKeyItems : MonoBehaviour
             }
         }
     }
+
+    IEnumerator EsperarYMostrarTexto()
+    {
+        // Espera durante 3 segundos
+        yield return new WaitForSeconds(0.25f);
+
+        // Llama a la función deseada después de esperar
+        LoreText();
+        gameObject.SetActive(false);
+    }
+
 }

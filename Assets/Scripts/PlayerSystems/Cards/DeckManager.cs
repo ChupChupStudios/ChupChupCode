@@ -17,7 +17,7 @@ public class DeckManager : MonoBehaviour
     public const int INITIAL_CARDS = 5;
     public const int INITIAL_CARDS_TUTO = 4;
     //Vector3 CARD_SCALE = new(0.2f, 1.0f, 0.3f);
-    Quaternion CARD_ROTATION = Quaternion.Euler(new Vector3(-60.0f, 45.0f, 0.0f));
+    Quaternion CARD_ROTATION = Quaternion.Euler(new Vector3(60.0f, 225.0f, 0.0f));
 
     // POSICIONES DE LAS CARTAS
     Vector3[] cardPositions = {

@@ -355,6 +355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorial: {fileID: 0}
+  clickButton: {fileID: 0}
+  mainTheme: {fileID: 0}
 --- !u!4 &913800763
 Transform:
   m_ObjectHideFlags: 0

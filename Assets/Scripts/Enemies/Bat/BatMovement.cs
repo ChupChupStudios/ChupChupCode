@@ -45,14 +45,17 @@ public class BatMovement : MonoBehaviour
         }
 
         animator.SetBool("Moviendo", true);
-        transform.position += velocidad * Time.deltaTime * direccion;
+
+        //transform.position += velocidad * Time.deltaTime * direccion;
+        transform.position = Vector3.MoveTowards(transform.position, camino.Peek().posicionGlobal, velocidad * Time.deltaTime);
 
         Vector3 posicionSiguiente = camino.Peek().posicionGlobal;
         posicionSiguiente = new Vector3(posicionSiguiente.x, 0f, posicionSiguiente.z);
         Vector3 posicioMurcielago = transform.position;
         posicioMurcielago = new Vector3(posicioMurcielago.x, 0f, posicioMurcielago.z);
 
-        if (Vector3.Distance(posicionSiguiente, posicioMurcielago) < 0.15)
+        Debug.Log("Nodo objetivo: " + camino.Peek() + ", Distancia: " + Vector3.Distance(posicionSiguiente, posicioMurcielago));
+        if (Vector3.Distance(posicionSiguiente, posicioMurcielago) < 0.01)
         {
             camino.Pop();
 

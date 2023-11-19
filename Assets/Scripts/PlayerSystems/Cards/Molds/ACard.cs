@@ -32,7 +32,7 @@ public abstract class ACard : MonoBehaviour
     private void Start()
     {
         deckManager = DeckManager.Instance;
-        GetComponent<Renderer>().material.color = baseColor;
+        //GetComponent<Renderer>().material.color = baseColor;
     }
 
     private void OnMouseDown()
