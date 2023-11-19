@@ -523,7 +523,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -85}
-  m_SizeDelta: {x: 354, y: 317.7}
+  m_SizeDelta: {x: 430, y: 317.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220279094
 MonoBehaviour:
@@ -545,7 +545,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enemy description
+  m_text: "El topo es un animal que no tiene mucha vida y tiene un movimiento bastante
+    limitado. A pesar de estas desventajas, no es sencillo de derrotar, ya que tiende
+    a escapar cuando se encuentra en peligro y ataca sin ser detectado f\xE1cilmente.
+    Adem\xE1s, puede recuperar salud si est\xE1 herido y se siente a salvo, o aumentar
+    su capacidad de ataque si se siente amenazado mientras intenta relajarse.\r\n\r\nPor
+    tanto, el topo solo se mover\xE1 por la superficie si no hay criaturas a la vista.
+    Sin embargo, si se cruza con alguna, se enterrar\xE1 para ocultarse. Si ha perdido
+    algo de vida y est\xE1 en la superficie, desenterrar\xE1 una ra\xEDz. La consumir\xE1
+    si no hay nadie cerca, regenerando algo de vida."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -572,8 +580,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -650,7 +658,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 836557236}
   m_RootOrder: -1
@@ -658,7 +666,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -118.2, y: 600}
+  m_SizeDelta: {x: -118.2, y: 369.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255667394
 MonoBehaviour:
@@ -673,14 +681,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6320754, g: 0.07453719, b: 0.07453719, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9aaa5548d94ffba4b94008e20cf762e7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -850,7 +858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &324921822
 RectTransform:
   m_ObjectHideFlags: 0
@@ -871,7 +879,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -118.2, y: 600}
+  m_SizeDelta: {x: -118.2, y: 871.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &324921823
 MonoBehaviour:
@@ -1069,7 +1077,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -85}
-  m_SizeDelta: {x: 354, y: 317.7}
+  m_SizeDelta: {x: 430, y: 317.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405780935
 MonoBehaviour:
@@ -1091,7 +1099,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enemy description
+  m_text: "El murci\xE9lago es un peque\xF1o y veloz enemigo. \n\r\nPor la velocidad
+    que le caracteriza, su movimiento consiste en avanzar 3 casillas seguidas. As\xED,
+    si alguien se encuentra en una de las tres casillas que se encuentran enfrente,
+    el murci\xE9lago atacar\xE1.\r\n\r\nEste peque\xF1o animal tendr\xE1 la capacidad
+    de invocar a otros 2 amigos tras su muerte."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1118,8 +1130,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1845,7 +1857,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 186}
+  m_AnchoredPosition: {x: 0, y: 335}
   m_SizeDelta: {x: -104, y: 129.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1133042183
@@ -2061,7 +2073,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -118.2, y: 600}
+  m_SizeDelta: {x: -118.2, y: 285.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1249226453
 MonoBehaviour:
@@ -2076,14 +2088,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: b1a6df9c494a707498b715928f8b1836, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2118,7 +2130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1304284554
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2139,7 +2151,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -118.2, y: 600}
+  m_SizeDelta: {x: -118.2, y: 871.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1304284555
 MonoBehaviour:
@@ -2215,7 +2227,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -118.2, y: 600}
+  m_SizeDelta: {x: -118.2, y: 324.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1319977459
 MonoBehaviour:
@@ -2230,14 +2242,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5188679, g: 0.41767263, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6005255b4cbc8104e8426c7b6a3121cc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2425,7 +2437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 186}
+  m_AnchoredPosition: {x: 0, y: 335}
   m_SizeDelta: {x: -104, y: 129.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1463028023
@@ -2561,7 +2573,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -118.2, y: 600}
+  m_SizeDelta: {x: -118.2, y: 374.98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1582877795
 MonoBehaviour:
@@ -2576,14 +2588,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19108224, g: 0.26496148, b: 0.3584906, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 30a95b1db33d24e42a041adb41aeadaf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2618,7 +2630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1742577458
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2639,7 +2651,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -118.2, y: 600}
+  m_SizeDelta: {x: -118.2, y: 871.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742577459
 MonoBehaviour:
@@ -2972,7 +2984,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -85}
-  m_SizeDelta: {x: 354, y: 317.7}
+  m_SizeDelta: {x: 430, y: 317.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1982137893
 MonoBehaviour:
@@ -2994,7 +3006,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enemy description
+  m_text: "La ara\xF1a se desplaza en un patr\xF3n impredecible, movi\xE9ndose una
+    casilla cada vez a una velocidad reducida mientras acecha a sus presas. Siempre
+    desea mantener activas dos trampas elaboradas con tela de ara\xF1a en su territorio.
+    Si alguien cae en una de ellas, ver\xE1 reducida su velocidad y la telara\xF1a
+    se romper\xE1. Si no se encuentra con ning\xFAn objetivo, la repondr\xE1 y continuar\xE1
+    con su movimiento habitual, y si encuentra una presa, lo atacar\xE1.\r\n\r\nPor
+    otra parte, est\xE1 envuelta en una armadura confeccionada con su misma tela
+    de ara\xF1a, lo que le otorga la capacidad de soportar un golpe adicional. Sin
+    embargo, esta defensa se desintegra al recibir un impacto, momento en el cual
+    la ara\xF1a priorizar\xE1 alejarse para reconstruir su armadura. Cuando alguien
+    se encuentra dentro de su radio de alcance, desencadena un ataque de \xE1rea
+    a su alrededor."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3021,8 +3044,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3350,7 +3373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 186}
+  m_AnchoredPosition: {x: 0, y: 335}
   m_SizeDelta: {x: -104, y: 129.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2019008347
@@ -3486,7 +3509,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -85}
-  m_SizeDelta: {x: 354, y: 317.7}
+  m_SizeDelta: {x: 430, y: 317.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2096867685
 MonoBehaviour:
@@ -3508,7 +3531,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enemy description
+  m_text: "El lobo es un enemigo con un gran olfato, lo que le permite perseguir
+    a su presa vaya a donde vaya. Es muy r\xE1pido, aunque debe acercarse mucho para
+    poder atacar. Por suerte para \xE9l, dispone de bastante vida, lo que podr\xEDa
+    permitirle resistir alg\xFAn golpe y, aunque no siempre se le brinde la oportunidad
+    de atacar cuando la tiene, la aprovecha bien causando bastante da\xF1o.\r\n\r\nCada
+    cierta distancia avanzada, se toma un tiempo para descansar y volver a tener
+    energ\xEDa para seguir con su persecuci\xF3n. Sin embargo, si su presa se encuentra
+    en un estado de baja salud, el lobo oler\xE1 la situaci\xF3n y aumentar\xE1 su
+    ritmo de caza."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3535,8 +3566,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3602,7 +3633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2097822373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3623,7 +3654,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -118.2, y: 600}
+  m_SizeDelta: {x: -118.2, y: 871.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2097822374
 MonoBehaviour:
@@ -3698,7 +3729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 186}
+  m_AnchoredPosition: {x: 0, y: 335}
   m_SizeDelta: {x: -104, y: 129.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138599337
