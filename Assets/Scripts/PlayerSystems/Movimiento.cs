@@ -23,8 +23,11 @@ public class Movimiento : MonoBehaviour
 
     int actualScene;
 
+    bool notGoal = true;
+
     [SerializeField] private AudioClip grassSteps;
     [SerializeField] private AudioClip caveSteps;
+    [SerializeField] private AudioClip finishLevel;
 
     //----------------------------------------------------------------
     //  METODOS
@@ -106,6 +109,8 @@ public class Movimiento : MonoBehaviour
                 Goal goal = nodoObjetivo.gameObject.GetComponent<Goal>();
                 if (goal != null)
                 {
+                    SFXManager.Instance.EjecutarSonido(finishLevel);
+                    notGoal = false;
                     int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
                     SceneManager.LoadScene(indiceEscenaActual + 1);
                 }
@@ -118,7 +123,7 @@ public class Movimiento : MonoBehaviour
 
                 // Desactivar partículas andar
                 if (particulasAndar != null) particulasAndar.Stop();
-                if (SFXManager.Instance.soundsAudioSource.isPlaying) SFXManager.Instance.soundsAudioSource.Stop();
+                if (SFXManager.Instance.soundsAudioSource.isPlaying && notGoal) SFXManager.Instance.soundsAudioSource.Stop();
                 return;
             }
 

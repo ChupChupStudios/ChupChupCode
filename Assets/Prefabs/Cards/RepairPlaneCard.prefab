@@ -128,3 +128,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   repair: {fileID: 8300000, guid: d41fad712b9673b46bb00a63d3091964, type: 3}
+  win: {fileID: 8300000, guid: fb707bf76241e654994abda39928d38d, type: 3}

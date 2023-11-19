@@ -5941,6 +5941,7 @@ MonoBehaviour:
   slider: {fileID: 1321283334}
   maxStamina: 100
   die: {fileID: 8300000, guid: b42b406a70b1d1d4aa61cc3274b4a718, type: 3}
+  previousScene: {fileID: 11400000, guid: f09fd80990595854a9cf93620d3ea842, type: 2}
 --- !u!114 &1321283334 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7144841698165032324, guid: 0928413a3ad96a04e82096307f790305, type: 3}

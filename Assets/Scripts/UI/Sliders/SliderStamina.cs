@@ -14,6 +14,7 @@ public class SliderStamina : MonoBehaviour
     public static event Action<float> WolfSpeedEvent;
 
     [SerializeField] private AudioClip die;
+    [SerializeField] private SceneSO previousScene;
 
     void Start()
     {
@@ -37,8 +38,9 @@ public class SliderStamina : MonoBehaviour
     {
         if (slider.value <= 0)
         {
+            previousScene.numEscena = SceneManager.GetActiveScene().buildIndex;
             SFXManager.Instance.CambiarMúsica(die, false);
-            SceneManager.LoadScene("FinalScene");
+            SceneManager.LoadScene("LoseScene");
         }
     }
 

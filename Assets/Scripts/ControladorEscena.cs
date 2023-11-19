@@ -8,6 +8,7 @@ public class ControladorEscena : MonoBehaviour
     public GameObject tutorial;
     [SerializeField] private AudioClip clickButton;
     [SerializeField] private AudioClip mainTheme;
+    [SerializeField] private SceneSO previousScene;
 
     public void CambiarEscena(string nombre)
     {
@@ -35,5 +36,12 @@ public class ControladorEscena : MonoBehaviour
     {
         SFXManager.Instance.EjecutarSonido(clickButton);
         Application.Quit();
+    }
+
+    public void ReiniciarNivel()
+    {
+        SFXManager.Instance.CambiarMúsica(mainTheme, true);
+        SFXManager.Instance.EjecutarSonido(clickButton);
+        SceneManager.LoadScene(previousScene.numEscena);
     }
 }

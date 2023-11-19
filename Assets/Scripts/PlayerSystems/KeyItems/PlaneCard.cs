@@ -8,6 +8,7 @@ public class PlaneCard : ACard
     public LayerMask plane;
     private GameObject raycastOutput;
     [SerializeField] private AudioClip repair;
+    [SerializeField] private AudioClip win;
 
     public override void HideEffectArea()
     {
@@ -22,6 +23,7 @@ public class PlaneCard : ACard
         if (Utils.CustomRaycast(tile.gameObject.transform.position + Vector3.down, Vector3.up, out raycastOutput, plane))
         {
             SFXManager.Instance.EjecutarSonido(repair);
+            StartCoroutine(EsperarCambioEscena());
             // Cuando la use en el avión cambiar de escena a la pantalla de ganar
             Debug.Log("Plane repaired successfully");
             // Eliminar la carta
@@ -40,5 +42,12 @@ public class PlaneCard : ACard
         if (!deckManager.BloqueUsuarioDelMazo(deckManager.ownerTransform.forward, out tile)) return;
         affectedBlocks.Add(tile);
         tile.GetComponent<Block>().ChangeColor(baseColor);
+    }
+
+    IEnumerator EsperarCambioEscena()
+    {
+        yield return new WaitForSeconds(2.0f);
+        SFXManager.Instance.CambiarMúsica(win, true);
+        SceneManager.LoadScene("FinalScene");
     }
 }
