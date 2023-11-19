@@ -49,7 +49,11 @@ public class WaterVoxelManager : MonoBehaviour
         {
             for (int j = 0; j < gridHeight; j++)
             {
-                Vector3 position = new Vector3(i * spacing, 0f, j * spacing);
+                //Vector3 position = new Vector3(i * spacing + transform.position.x, -1f + transform.position.y, j * spacing + transform.position.z);
+                float halfWidth = (gridWidth - 1) * spacing / 2.0f;
+                float halfHeight = (gridHeight - 1) * spacing / 2.0f;
+                Vector3 position = new Vector3(i * spacing - halfWidth + transform.position.x, -3f + transform.position.y, j * spacing - halfHeight + transform.position.z);
+
                 GameObject cube = Instantiate(cubePrefab, position, Quaternion.identity);
                 cube.transform.parent = transform;
 
@@ -67,6 +71,7 @@ public class WaterVoxelManager : MonoBehaviour
                 }
             }
         }
+        transform.Rotate(Vector3.up, 45.0f);
     }
 }
 

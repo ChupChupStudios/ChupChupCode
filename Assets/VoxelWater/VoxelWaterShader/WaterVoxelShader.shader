@@ -173,7 +173,7 @@ void vert(inout appdata_full v)
 void surf(Input IN, inout SurfaceOutput o)
 {
     // Utiliza las coordenadas del mundo para obtener la altura
-    float height = IN.worldPos.y;
+    float height = IN.worldPos.y + 3;
 
     // Normaliza la altura para obtener un valor entre 0 y 1
     float normalizedHeight = (height - _GlobalAmplitude) / (_GlobalAmplitude * 2.0);
