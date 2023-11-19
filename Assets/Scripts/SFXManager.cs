@@ -4,16 +4,46 @@ using UnityEngine;
 
 public class SFXManager : MonoBehaviour
 {
-    public AudioClip pickCard;
+    public static SFXManager Instance;
 
-    AudioSource audioSource;
-    void Awake()
+    public AudioSource[] audioSources;
+
+    [HideInInspector] public AudioSource soundsAudioSource;
+    [HideInInspector] public AudioSource musicAudioSource;
+
+    private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        audioSources = GetComponents<AudioSource>();
+        soundsAudioSource = audioSources[0];
+        musicAudioSource = audioSources[1];
     }
 
-    public void PickCardSound()
+    public void EjecutarSonido(AudioClip sonido)
     {
-        audioSource.PlayOneShot(pickCard);
+        soundsAudioSource.PlayOneShot(sonido);
+    }
+
+    public void CambiarMúsica(AudioClip musica, bool bucle)
+    {
+        if (soundsAudioSource.isPlaying) soundsAudioSource.Stop();
+        musicAudioSource.clip = musica;
+        if (bucle)
+        {
+            musicAudioSource.loop = true;
+        }
+        else
+        {
+            musicAudioSource.loop = false;
+        }
+        musicAudioSource.Play();
     }
 }

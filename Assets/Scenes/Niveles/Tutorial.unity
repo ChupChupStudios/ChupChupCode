@@ -3186,7 +3186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d02d5b37189fa14f859f34183545abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sFXManager: {fileID: 0}
+  pickCard: {fileID: 8300000, guid: 9a40bee93e5102840ad2af6d2eff5907, type: 3}
   tileMask:
     serializedVersion: 2
     m_Bits: 136
@@ -4333,6 +4333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifePoints: 1
+  currentNode: {fileID: 0}
   Ground:
     serializedVersion: 2
     m_Bits: 8

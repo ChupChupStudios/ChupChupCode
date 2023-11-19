@@ -123,6 +123,8 @@ MonoBehaviour:
   baseColor: {r: 0.8773585, g: 0.28555536, b: 0.7969006, a: 0}
   cardIndex: 5
   affectedBlocks: []
+  deckManager: {fileID: 0}
   plane:
     serializedVersion: 2
     m_Bits: 1024
+  repair: {fileID: 8300000, guid: d41fad712b9673b46bb00a63d3091964, type: 3}

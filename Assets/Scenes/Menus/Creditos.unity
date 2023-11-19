@@ -638,8 +638,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Rodrigo Hervada Llahosa (Programador y Project Manager)\nFernando Sanz
-    Zambrana (Programador)\nMiguel Carmona Garridoo (Programador)\nSara Gallego Triga
-    (Artista 2D y 3D)\nCarlos Jim\xE9nez L\xF3pez (Artista 2D y programador)\nMarcos
+    Zambrana (Programador)\nMiguel Carmona Garridoo (Programador y Compositor)\nSara
+    Gallego Triga (Artista 2D y 3D)\nCarlos Jim\xE9nez L\xF3pez (Artista 2D y Programador)\nMarcos
     Meca Merino (Artista 3D)\n\nContacto:\nChupchupstudios@gmail.com"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -830,6 +830,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorial: {fileID: 0}
+  clickButton: {fileID: 8300000, guid: fc1ee2f3447966042945c56feba52444, type: 3}
+  mainTheme: {fileID: 0}
 --- !u!1 &1177998539
 GameObject:
   m_ObjectHideFlags: 0

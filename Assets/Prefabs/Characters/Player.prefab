@@ -4904,7 +4904,8 @@ MonoBehaviour:
   velocidad: 2
   umbralLlegadaObjetivo: 0.1
   particulasAndar: {fileID: 0}
-  deckManager: {fileID: 0}
+  grassSteps: {fileID: 8300000, guid: 9359c69a684557f4bb2557eff2db3001, type: 3}
+  caveSteps: {fileID: 8300000, guid: 22f5b0f88a6326d48826015ac2dbcdc0, type: 3}
 --- !u!114 &58057976405807151
 MonoBehaviour:
   m_ObjectHideFlags: 0

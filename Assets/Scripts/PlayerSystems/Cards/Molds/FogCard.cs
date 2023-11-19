@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class FogCard : ACard
 {
+    [SerializeField] private AudioClip wind;
+
     public override void HideEffectArea()
     {
         affectedBlocks.ForEach(tile => tile.GetComponent<Block>().ResetColor());
@@ -27,6 +29,8 @@ public abstract class FogCard : ACard
             deckManager.Deselect();
             return;
         }
+
+        SFXManager.Instance.EjecutarSonido(wind);
 
         affectedBlocks.RemoveAll(
             item => item.GetComponent<Block>().type == Block.Type.Fog);

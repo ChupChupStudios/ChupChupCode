@@ -6,6 +6,9 @@ using UnityEngine;
 public class StaminaCard : ACard
 {
     public static event Action<int> SliderEvent;
+
+    [SerializeField] private AudioClip heal;
+
     public override void ShowEffectArea()
     {
         /*|o  o  o|
@@ -29,6 +32,8 @@ public class StaminaCard : ACard
     public override void CheckAndExecute(Block tile)
     {
         if (!affectedBlocks.Contains(tile.gameObject)) return;
+
+        SFXManager.Instance.EjecutarSonido(heal);
 
         SliderEvent?.Invoke(75);
 

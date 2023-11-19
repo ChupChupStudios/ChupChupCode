@@ -123,6 +123,8 @@ MonoBehaviour:
   baseColor: {r: 0, g: 0.06698942, b: 1, a: 0}
   cardIndex: 6
   affectedBlocks: []
+  deckManager: {fileID: 0}
   flash:
     serializedVersion: 2
     m_Bits: 2048
+  tp: {fileID: 8300000, guid: 9ff71581c72e5fd43a4ffa50f03de893, type: 3}
