@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -767,7 +767,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 812712004}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ea0a6f88085e5e44beefa418c75450b, type: 3}
   m_Name: 
@@ -2956,6 +2956,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CambiarDireccionAbajoDerecha
       objectReference: {fileID: 0}
+    - target: {fileID: 8166513748841508841, guid: 698a6e942b19a3c4eb68fa137126c569, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8584521907824110847, guid: 698a6e942b19a3c4eb68fa137126c569, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3149,10 +3153,9 @@ PrefabInstance:
       objectReference: {fileID: 1814587685}
     - target: {fileID: 6823018932758887524, guid: 1d177cb7fa86112419041751d722aca4, type: 3}
       propertyPath: textoDelCartel
-      value: "No consigo recordar que ha pasado ni a donde nos dirigiamos. Por ahora
-        tenemos que seguir buscando piezas para reparar la avioneta y salir de aqu\xED.
-        Me ayudar\xE9 de Perky y de la mercanc\xEDa que ha ca\xEDdo por la zona para
-        poder avanzar. "
+      value: "Ya voy recordando, despegamos hace un d\xEDa. Se que llev\xE1bamos
+        la carga m\xE1s importante hasta ahora porque Perky estaba muy emocionado.
+        Tenemos que seguir adelante."
       objectReference: {fileID: 0}
     - target: {fileID: 7790776960847048735, guid: 1d177cb7fa86112419041751d722aca4, type: 3}
       propertyPath: m_RootOrder
@@ -3894,7 +3897,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb3b7f8a5882714eb4d69192a885b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoDelCartel: 
+  textoDelCartel: "Se mueven lentamente y sin patr\xF3n definido. Colocan trampas
+    de telara\xF1a que ralentizan. Si las atacas, intentar\xE1n huir y retejer su
+    armadura."
   cartelCanvas: {fileID: 566819988}
   auxiliarPlane: {fileID: 1814587685}
 --- !u!1001 &1042241255

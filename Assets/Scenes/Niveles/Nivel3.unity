@@ -5286,10 +5286,10 @@ PrefabInstance:
       objectReference: {fileID: 1903647508}
     - target: {fileID: 6823018932758887524, guid: 1d177cb7fa86112419041751d722aca4, type: 3}
       propertyPath: textoDelCartel
-      value: "No consigo recordar que ha pasado ni a donde nos dirigiamos. Por ahora
-        tenemos que seguir buscando piezas para reparar la avioneta y salir de aqu\xED.
-        Me ayudar\xE9 de Perky y de la mercanc\xEDa que ha ca\xEDdo por la zona para
-        poder avanzar. "
+      value: "Fue una tormenta lo que caus\xF3 las turbulencias que desestabilizaron
+        la avioneta. El golpe final fue el rayo que golpe\xF3 el ala del avi\xF3n,
+        y debido a la pesada carga no pude mantener el control, y poco despu\xE9s
+        nos estrellamos."
       objectReference: {fileID: 0}
     - target: {fileID: 7790776960847048735, guid: 1d177cb7fa86112419041751d722aca4, type: 3}
       propertyPath: m_RootOrder
@@ -6197,7 +6197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb3b7f8a5882714eb4d69192a885b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoDelCartel: HOLA PRUEBA
+  textoDelCartel: "Se esconder\xE1n si te acercas por detr\xE1s y atacar\xE1n si
+    te enfrentas directamente. Al golpearlos, intentar\xE1n excavar y curarse con
+    una ra\xEDz o atacarte con ella."
   cartelCanvas: {fileID: 147552444}
   auxiliarPlane: {fileID: 1903647508}
 --- !u!1001 &1600076037

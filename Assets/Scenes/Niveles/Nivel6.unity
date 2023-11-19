@@ -4796,10 +4796,10 @@ PrefabInstance:
       objectReference: {fileID: 1594853484}
     - target: {fileID: 6823018932758887524, guid: 1d177cb7fa86112419041751d722aca4, type: 3}
       propertyPath: textoDelCartel
-      value: "No consigo recordar que ha pasado ni a donde nos dirigiamos. Por ahora
-        tenemos que seguir buscando piezas para reparar la avioneta y salir de aqu\xED.
-        Me ayudar\xE9 de Perky y de la mercanc\xEDa que ha ca\xEDdo por la zona para
-        poder avanzar. "
+      value: "Con esta pieza ya es suficiente para arreglar la avioneta. Ahora debo
+        prepararme para completar mi viaje. Los habitantes del pueblo se alegrar\xE1n
+        de verme llegar con sus pedidos, y cuando vuelva a la ciudad habr\xE9 demostrado
+        mi val\xEDa."
       objectReference: {fileID: 0}
     - target: {fileID: 7790776960847048735, guid: 1d177cb7fa86112419041751d722aca4, type: 3}
       propertyPath: m_RootOrder
@@ -4982,7 +4982,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb3b7f8a5882714eb4d69192a885b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoDelCartel: 
+  textoDelCartel: "Bienvenido al Prado Marino. Disfruta de la brisa marina y la serenidad
+    de este oasis verde. Pero no te dejes enga\xF1ar por la calma, criaturas curiosas
+    y desaf\xEDos te aguardan entre las la niebla. Explora con cautela y descubre
+    la belleza y peligros de este rinc\xF3n natural."
   cartelCanvas: {fileID: 2119518579}
   auxiliarPlane: {fileID: 1594853484}
 --- !u!1 &1221755766
