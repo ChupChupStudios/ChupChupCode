@@ -1157,6 +1157,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8875525923268871682, guid: eddcd27958953a44fa062ffce0d443c2, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4762,6 +4766,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider
       objectReference: {fileID: 0}
+    - target: {fileID: 2741055170649243916, guid: 98b45ccb5f6c1ae40beca7ce1ef97637, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2741055170649243916, guid: 98b45ccb5f6c1ae40beca7ce1ef97637, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5542180772650549011, guid: 98b45ccb5f6c1ae40beca7ce1ef97637, type: 3}
       propertyPath: sliderStamina
       value: 
@@ -6105,6 +6117,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2741055170649243916, guid: 98b45ccb5f6c1ae40beca7ce1ef97637, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2741055170649243916, guid: 98b45ccb5f6c1ae40beca7ce1ef97637, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5542180772650549011, guid: 98b45ccb5f6c1ae40beca7ce1ef97637, type: 3}
       propertyPath: sliderStamina
       value: 
@@ -6427,6 +6447,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wolf
       objectReference: {fileID: 0}
+    - target: {fileID: 4357436488990330835, guid: 0e98d545be1381345833500c31da2955, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357436488990330835, guid: 0e98d545be1381345833500c31da2955, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 7764912741864982382, guid: 0e98d545be1381345833500c31da2955, type: 3}
       propertyPath: sliderStamina
       value: 
@@ -6467,6 +6495,14 @@ PrefabInstance:
     - target: {fileID: 2242649765009214020, guid: 32c55fe2c66057946ac64deac9cefcba, type: 3}
       propertyPath: m_Name
       value: Bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242649765009214020, guid: 32c55fe2c66057946ac64deac9cefcba, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2242649765009214020, guid: 32c55fe2c66057946ac64deac9cefcba, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5926156460790775954, guid: 32c55fe2c66057946ac64deac9cefcba, type: 3}
       propertyPath: m_RootOrder
