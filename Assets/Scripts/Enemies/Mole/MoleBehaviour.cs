@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MoleBehaviour : MonoBehaviour
 {
-    public float raycastDistance = 2.0f;
-    public float alturaInicialRayoPlayer = 2.0f; // Nueva altura inicial del rayo Player
+    public float raycastDistance = 3.0f;
+    public float alturaInicialRayoPlayer = 3.0f; // Nueva altura inicial del rayo Player
     public float alturaInicialRayoCasilla = 0.5f; // Nueva altura inicial del rayo Casilla
-    float velEnterr = 0.5f;
+    float velEnterr =1.0f;
 
     public LayerMask casillaLayer;
     public LayerMask playerLayer;
@@ -29,6 +29,8 @@ public class MoleBehaviour : MonoBehaviour
 
     private bool curarse;
     //public bool enCasilla = false;
+
+    Color blockColor;
 
     Vector3[] casillaCenters;
 
@@ -216,6 +218,7 @@ public class MoleBehaviour : MonoBehaviour
                     if (renderer != null)
                     {
                         renderersAfectados.Add(renderer); // Agregar a la lista de renderers afectados
+                        blockColor = renderer.material.color;
                         Color32 nuevoColor = new Color32(255, 0, 0, 255); // Rojo /RGBA
                         renderer.material.color = nuevoColor;
                     }
@@ -234,27 +237,27 @@ public class MoleBehaviour : MonoBehaviour
 
     void Enterrar()
     {
-        transform.GetChild(0).position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+        transform.GetChild(0).position = new Vector3(transform.GetChild(0).position.x, 0.5f, transform.GetChild(0).position.z);
         transform.position += velEnterr * Time.deltaTime * Vector3.down;
-        transform.GetChild(0).transform.localScale += velEnterr * Time.deltaTime * (Vector3.right + Vector3.forward);
-        if (transform.position.y <= 0.0f)
+        transform.GetChild(0).transform.localScale += 3 * velEnterr * Time.deltaTime * Vector3.one;
+        if (transform.position.y <= -0.75f)
         {
-            transform.position = new Vector3(transform.position.x, 0.0f, transform.position.z);
-            transform.GetChild(0).transform.localScale = new Vector3(1.5f, 0.1f, 1.5f);
+            transform.position = new Vector3(transform.position.x, -0.75f, transform.position.z);
+            transform.GetChild(0).transform.localScale = new Vector3(4.5f, 4.5f, 4.5f);
             enterrado = true;
         }
     }
 
     void Desenterrar()
     {
-        transform.GetChild(0).position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+        transform.GetChild(0).position = new Vector3(transform.GetChild(0).position.x, 0.5f, transform.GetChild(0).position.z);
         transform.position += velEnterr * Time.deltaTime * Vector3.up;
-        transform.GetChild(0).transform.localScale -= velEnterr * Time.deltaTime * (Vector3.right + Vector3.forward);
+        transform.GetChild(0).transform.localScale -= 3 * velEnterr * Time.deltaTime * Vector3.one;
         if (transform.position.y >= 0.5f)
         {
-            transform.GetChild(0).position = new Vector3(transform.position.x, 0.0f, transform.position.z);
+            transform.GetChild(0).position = new Vector3(transform.GetChild(0).position.x, 0.0f, transform.GetChild(0).position.z);
             transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
-            transform.GetChild(0).transform.localScale = new Vector3(1.0f, 0.1f, 1.0f);
+            transform.GetChild(0).transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             enterrado = false;
         }
     }
@@ -279,7 +282,7 @@ public class MoleBehaviour : MonoBehaviour
     {
         foreach (Renderer renderer in renderersAfectados)
         {
-            renderer.material.color = new Color32(0, 159, 8, 255); // Restaurar el color original
+            renderer.material.color = blockColor; // Restaurar el color original
         }
         renderersAfectados.Clear(); // Limpiar la lista
     }
