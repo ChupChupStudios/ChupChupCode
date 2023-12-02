@@ -19583,8 +19583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 2004130861}
   maxStamina: 100
-  die: {fileID: 0}
-  previousScene: {fileID: 0}
+  die: {fileID: 8300000, guid: b42b406a70b1d1d4aa61cc3274b4a718, type: 3}
+  previousScene: {fileID: 11400000, guid: f09fd80990595854a9cf93620d3ea842, type: 2}
 --- !u!1 &2013461534 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2956984322185808318, guid: 62770ffa9e57a614a9e93effd3385670, type: 3}

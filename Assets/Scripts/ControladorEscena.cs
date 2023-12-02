@@ -16,7 +16,8 @@ public class ControladorEscena : MonoBehaviour
 
     private void Start()
     {
-        bestiario.onClick.AddListener(() => { SFXManager.Instance.EjecutarSonido(clickButton); panelBestiario.SetActive(true); });
+        if(bestiario != null)
+            bestiario.onClick.AddListener(() => { SFXManager.Instance.EjecutarSonido(clickButton); panelBestiario.SetActive(true); });
     }
 
     public void CambiarEscena(string nombre)
