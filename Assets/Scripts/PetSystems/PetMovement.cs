@@ -47,7 +47,7 @@ public class PetMovement : MonoBehaviour
 
         Utils.Log($"{objetivo.gameObject.name}, {camino == null}");
 
-        if(camino.Count>0) animator.SetBool("Moviendo", true);
+        if(camino?.Count>0) animator.SetBool("Moviendo", true);
         if (nodoObjetivo == null && camino != null) nodoObjetivo = camino.Pop();  
     }
 
@@ -87,7 +87,7 @@ public class PetMovement : MonoBehaviour
                     return false;
                 }
                 // se ha llegado a casilla adyacente a objetivo
-                else if (camino?.Peek() == nodoObjetivoFinal)
+                else if (camino?.Count > 0 && camino?.Peek() == nodoObjetivoFinal)
                 {
                     animator.SetBool("Moviendo", false);
                     direccion = camino.Peek().posicionGlobal - nodoObjetivo.posicionGlobal;
