@@ -8811,14 +8811,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 939055604142551848, guid: e2ad4fe3e1f03b24693e2f07ad39e2a9, type: 3}
-      propertyPath: selectedTileColor.b
-      value: 0.08235294
-      objectReference: {fileID: 0}
-    - target: {fileID: 939055604142551848, guid: e2ad4fe3e1f03b24693e2f07ad39e2a9, type: 3}
-      propertyPath: selectedTileColor.g
-      value: 0.9607843
-      objectReference: {fileID: 0}
     - target: {fileID: 11074934590411807, guid: 906bae1e5ffdcfe44983c974fc5add7a, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -8866,6 +8858,14 @@ PrefabInstance:
     - target: {fileID: 7315854377152860525, guid: 906bae1e5ffdcfe44983c974fc5add7a, type: 3}
       propertyPath: m_Name
       value: SueloN1
+      objectReference: {fileID: 0}
+    - target: {fileID: 939055604142551848, guid: e2ad4fe3e1f03b24693e2f07ad39e2a9, type: 3}
+      propertyPath: selectedTileColor.b
+      value: 0.08235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 939055604142551848, guid: e2ad4fe3e1f03b24693e2f07ad39e2a9, type: 3}
+      propertyPath: selectedTileColor.g
+      value: 0.9607843
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

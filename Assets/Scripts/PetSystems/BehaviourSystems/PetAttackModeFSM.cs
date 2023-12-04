@@ -74,6 +74,7 @@ public class PetAttackModeFSM : BehaviourSystem
 
     void Attacking()
     {
+        Utils.Log($"Intento atacar, contiene al enemigo: {systemOwner.attack.enemiesTouched.Contains(targetEnemyTransform.gameObject)}");
         // ENEMIGO FUERA DE DISTANCIA DE ATAQUE
         if (!systemOwner.attack.enemiesTouched.Contains(targetEnemyTransform.gameObject))
         {
@@ -87,6 +88,7 @@ public class PetAttackModeFSM : BehaviourSystem
         //  - atacar a todo enemigo en rango de ataque
         EnemyVariablesManager enemyVariables = targetEnemyTransform.GetComponent<EnemyVariablesManager>();
         enemyVariables.GetDamage();
+        Utils.Log($"Atacando a {enemyVariables.name}");
         // reducir estamina
         systemOwner.statusVariables.AddStamina(-systemOwner.statusVariables.attackCost);
 

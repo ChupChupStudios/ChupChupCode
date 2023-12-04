@@ -40,14 +40,14 @@ public class PetMovement : MonoBehaviour
         if (persecucion)
             camino = Pathfinding.Instance.HacerPathFindingEnemigo(transform.position, ultimoNodoDeObjetivo.posicionGlobal);
         else
-            camino = Pathfinding.Instance.HacerPathFinding(transform.position, ultimoNodoDeObjetivo.posicionGlobal);
+            camino = Pathfinding.Instance.HacerPathFindingEnemigo(transform.position, ultimoNodoDeObjetivo.posicionGlobal);
 
         this.persecucion = persecucion;
         this.emergencia = emergencia;
 
         Utils.Log($"{objetivo.gameObject.name}, {camino == null}");
 
-        if(camino.Count>0) animator.SetBool("Moviendo", true);
+        if(camino?.Count>0) animator.SetBool("Moviendo", true);
         if (nodoObjetivo == null && camino != null) nodoObjetivo = camino.Pop();  
     }
 
@@ -87,7 +87,7 @@ public class PetMovement : MonoBehaviour
                     return false;
                 }
                 // se ha llegado a casilla adyacente a objetivo
-                else if (camino?.Peek() == nodoObjetivoFinal)
+                else if (camino?.Count > 0 && camino?.Peek() == nodoObjetivoFinal)
                 {
                     animator.SetBool("Moviendo", false);
                     direccion = camino.Peek().posicionGlobal - nodoObjetivo.posicionGlobal;

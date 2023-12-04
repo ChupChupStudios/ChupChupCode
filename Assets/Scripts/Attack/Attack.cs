@@ -8,6 +8,7 @@ public class Attack : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Utils.Log($"COLISION Entra: {other.name}");
         if (!other.CompareTag("Enemy")) return;
 
         enemiesTouched.Add(other.gameObject);
@@ -15,6 +16,7 @@ public class Attack : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        Utils.Log($"COLISION Sale: {other.name}");
         if (!other.CompareTag("Enemy")) return;
 
         enemiesTouched.Remove(other.gameObject);

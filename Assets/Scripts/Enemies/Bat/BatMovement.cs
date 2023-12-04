@@ -54,7 +54,7 @@ public class BatMovement : MonoBehaviour
         Vector3 posicioMurcielago = transform.position;
         posicioMurcielago = new Vector3(posicioMurcielago.x, 0f, posicioMurcielago.z);
 
-        Debug.Log("Nodo objetivo: " + camino.Peek() + ", Distancia: " + Vector3.Distance(posicionSiguiente, posicioMurcielago));
+        //Debug.Log("Nodo objetivo: " + camino.Peek() + ", Distancia: " + Vector3.Distance(posicionSiguiente, posicioMurcielago));
         if (Vector3.Distance(posicionSiguiente, posicioMurcielago) < 0.01)
         {
             camino.Pop();
