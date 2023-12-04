@@ -40,7 +40,7 @@ public class PetMovement : MonoBehaviour
         if (persecucion)
             camino = Pathfinding.Instance.HacerPathFindingEnemigo(transform.position, ultimoNodoDeObjetivo.posicionGlobal);
         else
-            camino = Pathfinding.Instance.HacerPathFinding(transform.position, ultimoNodoDeObjetivo.posicionGlobal);
+            camino = Pathfinding.Instance.HacerPathFindingEnemigo(transform.position, ultimoNodoDeObjetivo.posicionGlobal);
 
         this.persecucion = persecucion;
         this.emergencia = emergencia;
