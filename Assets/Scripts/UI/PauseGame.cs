@@ -17,7 +17,9 @@ public class PauseGame : MonoBehaviour
 
     public Button bestiario;
     public GameObject panelBestiario;
-	[SerializeField] private AudioClip clickButton;
+    public GameObject pantallaAjustes;
+
+    [SerializeField] private AudioClip clickButton;
 
     void Start()
     {
@@ -30,8 +32,8 @@ public class PauseGame : MonoBehaviour
         //MovementComponent = GameObject.FindObjectOfType<MovementComponent>();
         //ShootComponent = GameObject.FindObjectOfType<ShootComponent>();
 
-    bestiario.onClick.AddListener(() => { SFXManager.Instance.EjecutarSonido(clickButton); panelBestiario.SetActive(true); });
-}
+        bestiario.onClick.AddListener(() => { SFXManager.Instance.EjecutarSonido(clickButton); panelBestiario.SetActive(true); });
+    }
 
     void Update()
     {
@@ -52,46 +54,47 @@ public class PauseGame : MonoBehaviour
 
     public void ShowPauseMenu()
     {
-		SFXManager.Instance.EjecutarSonido(clickButton);
+        SFXManager.Instance.EjecutarSonido(clickButton);
         // Mostrar el menú de pausa
         Canvas pauseCanvas = GameObject.Find("PauseCanvas").GetComponent<Canvas>();
         pauseCanvas.enabled = true;
         auxiliarPlane.SetActive(true);
 
-		// Pausar el juego
+        // Pausar el juego
         currentState = GameState.Paused;
         Time.timeScale = 0;
-        
+
     }
 
     public void HidePauseMenu()
     {
-		SFXManager.Instance.EjecutarSonido(clickButton);
+        SFXManager.Instance.EjecutarSonido(clickButton);
         // Ocultar el menú de pausa
         Canvas pauseCanvas = GameObject.Find("PauseCanvas").GetComponent<Canvas>();
         pauseCanvas.enabled = false;
         auxiliarPlane.SetActive(false);
-		
+
         // Reanudar el juego
         currentState = GameState.Running;
         Time.timeScale = 1;
 
     }
-	
-	public void PauseButton(){
-		 if (currentState == GameState.Running)
-            {
-                ShowPauseMenu();
-            }
-            else if (currentState == GameState.Paused)
-            {
-                HidePauseMenu();
-            }
-	}
+
+    public void PauseButton()
+    {
+        if (currentState == GameState.Running)
+        {
+            ShowPauseMenu();
+        }
+        else if (currentState == GameState.Paused)
+        {
+            HidePauseMenu();
+        }
+    }
 
     public void MainMenu()
     {
-		SFXManager.Instance.EjecutarSonido(clickButton);
+        SFXManager.Instance.EjecutarSonido(clickButton);
         // Volver al menú principal
         Canvas pauseCanvas = GameObject.Find("PauseCanvas").GetComponent<Canvas>();
         pauseCanvas.enabled = false;
@@ -102,16 +105,30 @@ public class PauseGame : MonoBehaviour
 
     public void ExitGame()
     {
-		SFXManager.Instance.EjecutarSonido(clickButton);
+        SFXManager.Instance.EjecutarSonido(clickButton);
         // Cerrar el juego
         UnityEngine.Application.Quit();
     }
-	
-	public void RestartLevel(){
-		SFXManager.Instance.EjecutarSonido(clickButton);
-		
-		int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
-		SceneManager.LoadScene(indiceEscenaActual);
-		Time.timeScale = 1;
-	}
+
+    public void RestartLevel()
+    {
+        SFXManager.Instance.EjecutarSonido(clickButton);
+
+        int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(indiceEscenaActual);
+        Time.timeScale = 1;
+    }
+
+    public void Configuration()
+    {
+        SFXManager.Instance.EjecutarSonido(clickButton);
+        if (!pantallaAjustes.activeSelf)
+        {
+            pantallaAjustes.SetActive(true);
+        }
+        else
+        {
+            pantallaAjustes.SetActive(false);
+        }
+    }
 }

@@ -13,6 +13,7 @@ public class ControladorEscena : MonoBehaviour
 
     public Button bestiario;
     public GameObject panelBestiario;
+    public GameObject pantallaAjustes;
 
     private void Start()
     {
@@ -55,5 +56,16 @@ public class ControladorEscena : MonoBehaviour
         SceneManager.LoadScene(previousScene.numEscena);
     }
 
-
+    public void Configuration()
+    {
+        SFXManager.Instance.EjecutarSonido(clickButton);
+        if (!pantallaAjustes.activeSelf)
+        {
+            pantallaAjustes.SetActive(true);
+        }
+        else
+        {
+            pantallaAjustes.SetActive(false);
+        }
+    }
 }

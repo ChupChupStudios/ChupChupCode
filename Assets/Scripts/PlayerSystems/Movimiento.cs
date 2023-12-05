@@ -52,11 +52,16 @@ public class Movimiento : MonoBehaviour
         //camino = Pathfinding.Instance.HacerPathFinding(transform.position, destino.posicionGlobal);
         Vector3 origen = (nodoObjetivo == null) ? transform.position : nodoObjetivo.posicionGlobal;
         camino = Pathfinding.Instance.HacerPathFinding(origen, destino.posicionGlobal);
-        if (nodoObjetivo == null && camino != null) nodoObjetivo = camino.Pop();
+        if (nodoObjetivo == null && camino != null)
+        {
+            nodoObjetivo = camino.Pop();
 
-        // NOTIFICAR CAMBIO DE ESTADO (a moviendose)
-        PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.Movement;
-        animator.SetBool("Moviendo", true);
+            // NOTIFICAR CAMBIO DE ESTADO (a moviendose)
+            PlayerStateManager.Instance.CurrentState = PlayerStateManager.State.Movement;
+            animator.SetBool("Moviendo", true);
+        }
+
+        
     }
 
     void SeguirCamino()
