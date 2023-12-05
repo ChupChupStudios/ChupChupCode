@@ -67,6 +67,7 @@ public class Movimiento : MonoBehaviour
     void SeguirCamino()
     {
         if (nodoObjetivo == null) return;
+        if (camino == null) return;
     
         //Debug.Log("Direccion " + direccion);
         // SEGUIR CAMINO
@@ -112,7 +113,7 @@ public class Movimiento : MonoBehaviour
 
                 // COMPROBAR SI ESTA EN CASILLA OBJETIVO
                 Goal goal = nodoObjetivo.gameObject.GetComponent<Goal>();
-                if (goal != null)
+                if (goal != null && goal.enabled == true)
                 {
                     SFXManager.Instance.EjecutarSonido(finishLevel);
                     notGoal = false;

@@ -14,6 +14,7 @@ public class Block : MonoBehaviour
 
     public Type type = Type.None;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask obstacleLayer;
 
     protected Renderer myRenderer;
 
@@ -62,7 +63,8 @@ public class Block : MonoBehaviour
         if(type == Type.Fog &&
             Utils.CustomRaycast(transform.position + Vector3.up*3, Vector3.down, out GameObject blockGO, groundLayer))
         {
-            blockGO.GetComponent<Nodo>().caminable = true;
+            if (!Utils.CustomRaycast(blockGO.transform.position + Vector3.down * 3, Vector3.up, out GameObject blockGOO, obstacleLayer))
+                blockGO.GetComponent<Nodo>().caminable = true;
         }
 
     }

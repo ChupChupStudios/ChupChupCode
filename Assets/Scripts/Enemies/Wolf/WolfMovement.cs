@@ -22,7 +22,7 @@ public class WolfMovement : MonoBehaviour
 
     // VARIABLE DE CORUTINA
 
-    private bool esperar = true;
+    private bool esperar = false;
     private bool descansando = false;
     Nodo nodoObjetivoAux;
 
@@ -44,6 +44,7 @@ public class WolfMovement : MonoBehaviour
 
     private void Update()
     {
+        if (esperar) return; 
         SeguirCamino();
     }
 
@@ -81,6 +82,7 @@ public class WolfMovement : MonoBehaviour
             return;
         }
 
+
         // SEGUIR CAMINO
 
         Vector3 posicionSiguiente = new(nodoObjetivo.posicionGlobal.x, 0.45f, nodoObjetivo.posicionGlobal.z);
@@ -88,6 +90,7 @@ public class WolfMovement : MonoBehaviour
         posicionLobo = new(posicionLobo.x, 0.45f, posicionLobo.z);
 
         Vector3 posicion = nodoObjetivo.transform.GetChild(0).position;
+        //Debug.Log("Nodo objetivo " + nodoObjetivo.posicionGlobal + "direccion " + direccion + " nodoActual " + posicionLobo + " Distandia " + Vector3.Distance(posicionSiguiente, posicionLobo));
         transform.position = Vector3.MoveTowards(transform.position, posicionSiguiente, velocidad * Time.deltaTime);
 
         // AVANZAR NODO
@@ -122,13 +125,17 @@ public class WolfMovement : MonoBehaviour
 
     IEnumerator EsperarYMover()
     {
+        esperar = true;
         direccion = Vector3.zero;
         float tiempoEspera = Random.Range(3f, 8f);
         yield return new WaitForSeconds(tiempoEspera);
+        
+        /*
         if (player.gameObject.GetComponent<PlayerStateManager>().CurrentState == PlayerStateManager.State.Idle)
             {
               StartCoroutine(EsperarYMover());
             }
+        */
         descanso = 0; 
         nodoDestino = player.currentNode.GetComponent<Nodo>();
         DefinirCamino(nodoDestino);

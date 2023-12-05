@@ -16,6 +16,8 @@ public class WolfAttack : MonoBehaviour
 
     public SliderStamina sliderStamina;
 
+    public Animator animator;
+
     void Update()
     {
         Vector3[] casillaCenters = ObtenerCentrosCasillas();
@@ -26,6 +28,7 @@ public class WolfAttack : MonoBehaviour
             {
                 DetectarCasillas(casillaCenters);
                 jugadorDetectado = true; // Establecer que el jugador ha sido detectado
+                animator.SetBool("Moviendo", false);
                 sliderStamina.ActualizarSlider(this, 5f);
             }
             gameObject.GetComponent<WolfMovement>().nodoObjetivo = null;

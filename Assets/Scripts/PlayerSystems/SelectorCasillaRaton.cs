@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SelectorCasillaRaton : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class SelectorCasillaRaton : MonoBehaviour
     public LayerMask capaNiebla;
     Camera camaraPrincipal;
     Movimiento movimientoPersonaje;
+
+    public Tutorial tutorial;
 
     private void Start()
     {
@@ -18,6 +21,10 @@ public class SelectorCasillaRaton : MonoBehaviour
     private void Update()
     {
         if (!Input.GetMouseButtonDown(0)) return;
+        if (tutorial != null)
+        {
+            if (SceneManager.GetActiveScene().name == "Tutorial" && tutorial.explaining) return;
+        }
 
         Vector3 posicionRaton = new(Input.mousePosition.x, Input.mousePosition.y, camaraPrincipal.nearClipPlane);
         Vector3 origen = camaraPrincipal.ScreenToWorldPoint(posicionRaton);

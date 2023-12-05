@@ -61,6 +61,10 @@ public class Tutorial : MonoBehaviour
     public GameObject keyItem;
     public GameObject plane;
 
+    public GameObject planoAuxiliar;
+
+    public bool explaining = true;
+
     void Start()
     {
         tutorialFog.gameObject.SetActive(false);
@@ -74,7 +78,7 @@ public class Tutorial : MonoBehaviour
 
     public void TutorialStart()
     {
-        startButton.gameObject.SetActive(false);
+         
 
         GameObject[] foundObjects = GameObject.FindObjectsOfType<GameObject>();
 
@@ -89,7 +93,12 @@ public class Tutorial : MonoBehaviour
             //text.enabled = true;
         }
             firstMoveTile.GetComponent<Block>().ChangeColor(new Color32(243, 129, 0, 255));
-        text.text = "Clica sobre la casilla marcada para andar hasta ella";
+        text.text = "Clica sobre la casilla marcada para andar hasta ella.";
+
+        startButton.gameObject.SetActive(false);
+        messageButton.SetActive(true);
+        planoAuxiliar.SetActive(true);
+        //Time.timeScale = 0;
         //WalkImage.gameObject.SetActive(true);
 
     }
@@ -107,16 +116,22 @@ public class Tutorial : MonoBehaviour
         }
 
 
-        text.text = "Camina para rellenar la barra de exploracion. " +
-           "Al rellenarla, podrás clicar sobre ella y recibir una recompensa." +
-           "Pero cuidado, cuando caminas, también pierdes estamina." +
-           "Si agotas la barra amarilla, perderás la partida." +
-           "Para recuperar stamina, selecciona una carta de tu mazo y" +
-           "pulsa sobre la casilla que se ilumina.";
-        //messageButton.SetActive(true);
+        text.text = "Camina para rellenar la barra azul. La llamamos barra de exploración. " +
+           "Al rellenarla, deberás clicar sobre ella. Recibirás una recompensa y podrás continuar con el tutorial." +
+           " Pero cuidado, cuando caminas, también pierdes stamina." +
+           " Si agotas la barra amarilla, perderás la partida." +
+           " Para recuperar stamina, selecciona una carta de tu mazo y" +
+           " pulsa sobre la casilla que se ilumina.";
+
+
+        messageButton.SetActive(true);
+        planoAuxiliar.SetActive(true);
+        explaining = true;
+        //Time.timeScale = 0; 
 
 
         tutorialArrow.gameObject.SetActive(false);
+        //Time.timeScale = 0;
         //hand.gameObject.SetActive(true);
 
         //GameObject[] foundObjects = GameObject.FindObjectsOfType<GameObject>();
@@ -172,8 +187,12 @@ public class Tutorial : MonoBehaviour
             b.SetActive(true);
         }
 
-        text.text = "Pulsa sobre los botones que han aparecido para cambiar de dirección";
+        text.text = "Pulsa sobre los botones que han aparecido en la " +
+            "esquina inferior derecha para cambiar de dirección.";
         messageButton.SetActive(true);
+        //Time.timeScale = 0;
+        planoAuxiliar.SetActive(true);
+        explaining = true;
     }
 
 
@@ -181,9 +200,12 @@ public class Tutorial : MonoBehaviour
     {
 
         text.text = "Ha aparecido un enemigo." +
-            "Tendras que dirigirta hacia él y usar la carta de ataque para derrotarlo." +
+            " Tendrás que dirigirte hacia él pulsando en la casilla indicada. Usa la carta de ataque para derrotarlo." +
             "Pero cuidado, si entras en su rango de ataque, te atacará y perderás stamina.";
         messageButton.SetActive(true);
+        //Time.timeScale = 0;
+        planoAuxiliar.SetActive(true);
+        explaining = true;
 
 
         tutorialTileObject.GetComponent<Nodo>().enabled = false;
@@ -207,12 +229,17 @@ public class Tutorial : MonoBehaviour
     public void TutorialNiebla()
     {
         Debug.Log("tutoFog");
-        text.text = "Busca y usa la carta de niebla para despejar el mapa.";
+        text.text = "Se ha generado niebla. Cuando aparecen estos bloques," +
+            " no puedes ver lo que hay debajo ni caminar sobre ellos. Para eliminarla, busca entre los objetos" +
+            " que han aparecido una carta blanca. Con ella podrás despejar la niebla. ";
         messageButton.SetActive(true);
+        //Time.timeScale = 0;
+        planoAuxiliar.SetActive(true);
+        explaining = true;
         //EnemyImage.gameObject.SetActive(false);
         //FogImage.gameObject.SetActive(true);
 
-        tutorialTileEnemy.GetComponent<Block>().ChangeColor(new Color32(0, 159, 8, 255));
+        tutorialTileEnemy.GetComponent<Block>().ChangeColor(new Color32(29, 132, 9, 255));
         tutorialFog.gameObject.SetActive(true);
 
         GameObject[] foundObjects = GameObject.FindObjectsOfType<GameObject>();
@@ -234,10 +261,13 @@ public class Tutorial : MonoBehaviour
 
     public void TutorialMascota()
     {
-        text.text = "Perky se mueve y puede atacar enemigos o recoger objetos" +
-            "A veces se cansa y tiene que volver a su sitio de descanso." +
-            "Si ha cogido algun objeto, podemos pedirselo pulsando el botón";
+        text.text = "Perky se mueve solo y puede atacar enemigos o recoger objetos." +
+            " A veces se cansa y tiene que volver a su sitio de descanso." +
+            " Si ha cogido algun objeto, podemos pedírselo pulsando el botón que encontramos en la esquina superior derecha.";
         messageButton.SetActive(true);
+        //Time.timeScale = 0;
+        planoAuxiliar.SetActive(true);
+        explaining = true;
         mascota.SetActive(true);
         botonMascota.SetActive(true);
         itemPerky.SetActive(true);
@@ -246,9 +276,15 @@ public class Tutorial : MonoBehaviour
 
     public void TutorialAvion()
     {
-        text.text = "Antes de pasar al siguiente nivel, debes encontrar" +
-            "la pieza del avion y arreglarlo.";
+        text.text = "Antes de pasar al siguiente nivel, debes recoger" +
+            " la pieza del avion que ha aparecido en el mapa y arreglarlo. Para ello, verás que" +
+            " al recoger la carta, al lado de las barras de stamina y exploración, aumentara el contador de piezas." +
+            " Cuando tengas todas las piezas, podrás pulsar sobre el indicador de piezas conseguidas para" +
+            " recibir la carta con la que arreglarás el avión. Úsala sobre una casilla en la que este el avión. ";
         messageButton.SetActive(true);
+        //Time.timeScale = 0;
+        planoAuxiliar.SetActive(true);
+        explaining = true;
 
         keyButton.SetActive(true);
         keyText.SetActive(true);
@@ -265,9 +301,12 @@ public class Tutorial : MonoBehaviour
         text.text = "La casilla marcada indica el final del nivel." +
             "Si llegas a ella sin perder la stamina, habrás completado el tutorial.";
         messageButton.SetActive(true);
+        //Time.timeScale = 0;
+        planoAuxiliar.SetActive(true);
+        explaining = true;
         foreach (GameObject o in tutorialGoalItems)
         {
-            o.gameObject.SetActive(true);
+            //o.gameObject.SetActive(true);
         }
         tutorialGoal.GetComponent<Goal>().enabled = true;
 
@@ -290,7 +329,9 @@ public class Tutorial : MonoBehaviour
         sliderButton.gameObject.SetActive(true);
         tutorialTileObject.gameObject.SetActive(true);
         tutorialItem.gameObject.SetActive(true);
-        text.text = "Recoge el objeto para recibir una carta.";
+        messageButton.SetActive(true);
+        explaining = true;
+        text.text = "Ha aparecido un objeto, recógelo para recibir una carta.";
         //SliderImage.gameObject.SetActive(false);
         //ObjectImage.gameObject.SetActive(true);
 
@@ -339,7 +380,23 @@ public class Tutorial : MonoBehaviour
 
     public void OnClickMessage()
     {
-        Debug.Log("DETECTA BOTON");
+        planoAuxiliar.SetActive(false);
         messageButton.SetActive(!messageButton.activeSelf);
+        explaining = false;
+
     }
+
+
+    /*
+    IEnumerator EsperarSegundos()
+    {
+        // Haz algo antes de esperar
+        planoAuxiliar.SetActive(false);
+        messageButton.SetActive(!messageButton.activeSelf);
+        yield return new WaitForSeconds(1f);
+        Debug.Log("ENTRA");
+        Time.timeScale = 1;
+        // Haz algo después de esperar
+    }
+    */
 }
