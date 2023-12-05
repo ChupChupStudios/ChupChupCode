@@ -8,4 +8,9 @@ public class Goal : MonoBehaviour
     {
         gameObject.GetComponent<Renderer>().material.color = new Color32(255, 0, 232, 255);
     }
+
+    void Update()
+    {
+        gameObject.GetComponent<Renderer>().material.color = new Color32(255, 0, 232, 255);
+    }
 }
