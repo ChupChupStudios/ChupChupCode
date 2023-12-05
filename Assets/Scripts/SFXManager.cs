@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SFXManager : MonoBehaviour
 {
@@ -45,5 +46,15 @@ public class SFXManager : MonoBehaviour
             musicAudioSource.loop = false;
         }
         musicAudioSource.Play();
+    }
+
+    public void EfectsVolume(float value)
+    {
+        soundsAudioSource.volume = value;
+    }
+
+    public void MusicVolume(float value)
+    {
+        musicAudioSource.volume = value;
     }
 }
