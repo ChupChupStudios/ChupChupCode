@@ -117,6 +117,10 @@ public class Movimiento : MonoBehaviour
                 {
                     SFXManager.Instance.EjecutarSonido(finishLevel);
                     notGoal = false;
+                    // INDICAR NIVEL COMPLETADO
+                    KeyItemManager keyItemManager = FindObjectOfType<KeyItemManager>();
+                    if(keyItemManager!=null) keyItemManager.itemsCollected.LevelCompletedCallBack();
+
                     int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
                     SceneManager.LoadScene(indiceEscenaActual + 1);
                 }

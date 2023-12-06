@@ -18,33 +18,31 @@ public class KeyItemManager : MonoBehaviour
 
     void Start()
     {
-        ActualizarContador();
+        ActualizarContador(itemsCollected.CollectedItems);
     }
 
-    void ActualizarContador()
+    void ActualizarContador(int piezasActuales)
     {
-        contadorText.text = itemsCollected.collectedItems + "/" + totalObjetos;
+        contadorText.text = piezasActuales + "/" + totalObjetos;
     }
 
     public void RecogerObjeto()
     {
-        //objetosRecogidos++;
-        itemsCollected.collectedItems++;
-        ActualizarContador();
+        ActualizarContador(itemsCollected.CollectedItems+1);
     }
 
     public void AllItemsCollected()
     {
         if(SceneManager.GetActiveScene().name == "Tutorial")
         {
-            if (itemsCollected.collectedItems == totalObjetosTutorial)
+            if (itemsCollected.CollectedItems == totalObjetosTutorial)
             {
                 if (DeckManager.Instance.cards.Count == 7) return;
                 DeckManager.Instance.CreateCard(cardPrefab[0]);
                 button.gameObject.SetActive(false);
             }
         }
-        if (itemsCollected.collectedItems == totalObjetos)
+        if (itemsCollected.CollectedItems == totalObjetos)
         {
             if (DeckManager.Instance.cards.Count == 7) return;
             DeckManager.Instance.CreateCard(cardPrefab[0]);
