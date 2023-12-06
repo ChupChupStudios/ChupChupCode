@@ -7026,6 +7026,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6480401339626243370, guid: d25bece0ec45bbb49a8a95ec077c32aa, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480401339626243370, guid: d25bece0ec45bbb49a8a95ec077c32aa, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480401339626243370, guid: d25bece0ec45bbb49a8a95ec077c32aa, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 8574656180065378599, guid: d25bece0ec45bbb49a8a95ec077c32aa, type: 3}
       propertyPath: auxiliarPlane
       value: 
