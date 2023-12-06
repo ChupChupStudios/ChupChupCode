@@ -37,7 +37,7 @@ public class TutorialKeyItem : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // Obtener el script del contador
-            KeyItemManager keyItemManager = FindObjectOfType<KeyItemManager>();
+            TutorialKeyItemManager keyItemManager = FindObjectOfType<TutorialKeyItemManager>();
 
             // Comprobar si se encontró el script
             if (keyItemManager != null)
