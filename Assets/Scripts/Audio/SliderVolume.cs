@@ -25,4 +25,10 @@ public class SliderVolume : MonoBehaviour
     {
         SFXManager.Instance.MusicVolume(volumen);
     }
+
+    public void ToggleFullScreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
 }
+

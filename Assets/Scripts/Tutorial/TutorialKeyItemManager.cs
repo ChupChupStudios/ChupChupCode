@@ -5,16 +5,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class KeyItemManager : MonoBehaviour
+public class TutorialKeyItemManager : MonoBehaviour
 {
     public ACard[] cardPrefab;
     public TextMeshProUGUI contadorText;
-    //private int objetosRecogidos = 0;
+    private int objetosRecogidos = 0;
     public int totalObjetos = 0;
     public int totalObjetosTutorial = 1;
     public Button button;
 
-    public ItemsCollectedSO itemsCollected; 
+    //public ItemsCollectedSO itemsCollected;
 
     void Start()
     {
@@ -23,28 +23,28 @@ public class KeyItemManager : MonoBehaviour
 
     void ActualizarContador()
     {
-        contadorText.text = itemsCollected.collectedItems + "/" + totalObjetos;
+        contadorText.text = objetosRecogidos + "/" + totalObjetosTutorial;
     }
 
     public void RecogerObjeto()
     {
         //objetosRecogidos++;
-        itemsCollected.collectedItems++;
+        objetosRecogidos++;
         ActualizarContador();
     }
 
     public void AllItemsCollected()
     {
-        if(SceneManager.GetActiveScene().name == "Tutorial")
+        if (SceneManager.GetActiveScene().name == "Tutorial")
         {
-            if (itemsCollected.collectedItems == totalObjetosTutorial)
+            if (objetosRecogidos == totalObjetosTutorial)
             {
                 if (DeckManager.Instance.cards.Count == 7) return;
                 DeckManager.Instance.CreateCard(cardPrefab[0]);
                 button.gameObject.SetActive(false);
             }
         }
-        if (itemsCollected.collectedItems == totalObjetos)
+        if (objetosRecogidos == totalObjetos)
         {
             if (DeckManager.Instance.cards.Count == 7) return;
             DeckManager.Instance.CreateCard(cardPrefab[0]);
