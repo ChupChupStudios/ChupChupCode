@@ -2241,6 +2241,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2778305324725527511, guid: 0e98d545be1381345833500c31da2955, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 927048419}
     - target: {fileID: 4357436488990330835, guid: 0e98d545be1381345833500c31da2955, type: 3}
       propertyPath: m_Name
       value: Wolf (1)
@@ -2254,6 +2258,10 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7764912741864982382, guid: 0e98d545be1381345833500c31da2955, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 505619749}
+    - target: {fileID: 7764912741864982382, guid: 0e98d545be1381345833500c31da2955, type: 3}
       propertyPath: sliderStamina
       value: 
       objectReference: {fileID: 399114633}
@@ -2262,6 +2270,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e98d545be1381345833500c31da2955, type: 3}
+--- !u!95 &505619749 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 36004923176652151, guid: 0e98d545be1381345833500c31da2955, type: 3}
+  m_PrefabInstance: {fileID: 505619748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &505619750 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2778305324725527511, guid: 0e98d545be1381345833500c31da2955, type: 3}
+  m_PrefabInstance: {fileID: 505619748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc448d0f630106b46b790d84e2944114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &510131912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3486,6 +3510,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Patt
       objectReference: {fileID: 0}
+    - target: {fileID: 6018401741323365036, guid: 01957063c4a20c543abe75cd2cea9350, type: 3}
+      propertyPath: wolfMovement
+      value: 
+      objectReference: {fileID: 505619750}
     - target: {fileID: 6771436830855430814, guid: 01957063c4a20c543abe75cd2cea9350, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -3544,6 +3572,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a00073eba9cb32341896f794618e8f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &927048419 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6018401741323365036, guid: 01957063c4a20c543abe75cd2cea9350, type: 3}
+  m_PrefabInstance: {fileID: 927048417}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fbf40cd6ba239c4899d4404154e3317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &956430984
@@ -4126,10 +4165,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3711119856582434683, guid: 25b731de2116a7141a6724b58d5d10b3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 18019216454416896, guid: b57564c527dc68540bee87f71fd3f10f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.75
@@ -4565,6 +4600,10 @@ PrefabInstance:
     - target: {fileID: 9197570011440412847, guid: b57564c527dc68540bee87f71fd3f10f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711119856582434683, guid: 25b731de2116a7141a6724b58d5d10b3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

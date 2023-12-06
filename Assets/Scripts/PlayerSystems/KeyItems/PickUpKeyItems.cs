@@ -9,6 +9,7 @@ public class PickUpKeyItems : MonoBehaviour
     public Canvas cartelCanvas;
     private TextMeshProUGUI textoUI;
     public GameObject auxiliarPlane;
+    public GameObject casillaGoal;
 
     private void Start()
     {
@@ -60,6 +61,8 @@ public class PickUpKeyItems : MonoBehaviour
     {
         // Espera durante 3 segundos
         yield return new WaitForSeconds(0.25f);
+
+        if (casillaGoal != null) casillaGoal.GetComponent<Goal>().enabled = true;
 
         // Llama a la función deseada después de esperar
         LoreText();

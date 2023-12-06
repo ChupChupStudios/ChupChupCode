@@ -8,9 +8,11 @@ public class KeyItemManager : MonoBehaviour
 {
     public ACard[] cardPrefab;
     public TextMeshProUGUI contadorText;
-    private int objetosRecogidos = 0;
+    //private int objetosRecogidos = 0;
     public int totalObjetos = 0;
     public Button button;
+
+    public ItemsCollectedSO itemsCollected; 
 
     void Start()
     {
@@ -19,18 +21,19 @@ public class KeyItemManager : MonoBehaviour
 
     void ActualizarContador()
     {
-        contadorText.text = objetosRecogidos + "/" + totalObjetos;
+        contadorText.text = itemsCollected.collectedItems + "/" + totalObjetos;
     }
 
     public void RecogerObjeto()
     {
-        objetosRecogidos++;
+        //objetosRecogidos++;
+        itemsCollected.collectedItems++;
         ActualizarContador();
     }
 
     public void AllItemsCollected()
     {
-        if (objetosRecogidos == totalObjetos)
+        if (itemsCollected.collectedItems == totalObjetos)
         {
             if (DeckManager.Instance.cards.Count == 7) return;
             DeckManager.Instance.CreateCard(cardPrefab[0]);

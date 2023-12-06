@@ -35,15 +35,15 @@ RectTransform:
   - {fileID: 7639228846799446238}
   - {fileID: 2186551965917053925}
   - {fileID: 3996776522913220412}
-  - {fileID: 2900215950417380170}
   - {fileID: 3344442577647166846}
+  - {fileID: 2900215950417380170}
   - {fileID: 4907770001909682325}
   - {fileID: 8875758024680323341}
   - {fileID: 5826639710422446401}
   - {fileID: 4962271190901153982}
   - {fileID: 4696129815175605332}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

@@ -151,5 +151,6 @@ MonoBehaviour:
   cardPrefab:
   - {fileID: -5715398686018085158, guid: 54d6d0e6f872c1c45a7195afe5057c19, type: 3}
   contadorText: {fileID: 7081257879434859126}
-  totalObjetos: 1
+  totalObjetos: 6
   button: {fileID: 0}
+  itemsCollected: {fileID: 11400000, guid: d89544549b4a0a343ab2b8cce2626f4c, type: 2}

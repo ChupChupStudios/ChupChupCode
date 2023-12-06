@@ -136,6 +136,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (4)
@@ -197,6 +201,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (18)
@@ -328,6 +336,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (8)
@@ -741,6 +753,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4813308145170681958, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -811,6 +827,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (11)
@@ -1012,6 +1032,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (13)
@@ -1642,6 +1666,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (19)
@@ -2396,6 +2424,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (14)
@@ -2857,6 +2889,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4813308145170681958, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3231,6 +3267,10 @@ PrefabInstance:
       value: KeyItemPlanePiece
       objectReference: {fileID: 0}
     - target: {fileID: 6823018932758887524, guid: 1d177cb7fa86112419041751d722aca4, type: 3}
+      propertyPath: casillaGoal
+      value: 
+      objectReference: {fileID: 4558608511437061298}
+    - target: {fileID: 6823018932758887524, guid: 1d177cb7fa86112419041751d722aca4, type: 3}
       propertyPath: cartelCanvas
       value: 
       objectReference: {fileID: 2124612878}
@@ -3384,6 +3424,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (10)
@@ -3668,6 +3712,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4813308145170681958, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -3830,6 +3878,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4813308145170681958, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4056,6 +4108,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (6)
@@ -4350,6 +4406,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (15)
@@ -4411,6 +4471,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (12)
@@ -4651,6 +4715,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (17)
@@ -5103,6 +5171,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (5)
@@ -5234,6 +5306,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (9)
@@ -5365,6 +5441,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (7)
@@ -5441,6 +5521,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1370646853}
     m_Modifications:
+    - target: {fileID: -8999601632590865740, guid: 3543be04890543142b662c0594849cc3, type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4829392637071193059, guid: 3543be04890543142b662c0594849cc3, type: 3}
       propertyPath: m_Name
       value: obstaculo (16)
@@ -9287,6 +9371,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5087484650494846040, guid: 906bae1e5ffdcfe44983c974fc5add7a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7315854377152860525, guid: 906bae1e5ffdcfe44983c974fc5add7a, type: 3}
       propertyPath: m_Name
       value: SueloN1
@@ -9327,6 +9415,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1603836190}
   m_SourcePrefab: {fileID: 100100000, guid: 906bae1e5ffdcfe44983c974fc5add7a, type: 3}
+--- !u!1 &4558608511437061298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2190100769542071222, guid: 906bae1e5ffdcfe44983c974fc5add7a, type: 3}
+  m_PrefabInstance: {fileID: 4558608511437061297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4832936822665828152
 PrefabInstance:
   m_ObjectHideFlags: 0
