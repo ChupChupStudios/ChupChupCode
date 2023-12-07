@@ -135,11 +135,13 @@ public class SpiderMovement : MonoBehaviour
         Nodo nodoActual = gestorCuadricula.NodoCoincidente(transform.position);
         List<Nodo> vecinos = gestorCuadricula.ListaDeVecinos(nodoActual);
         List<Nodo> casillasDisponibles = new List<Nodo>();
-
+        Debug.Log("Nodos vecinos:" + vecinos.Count);
         foreach (Nodo vecino in vecinos)
         {
-            if (vecino != null && vecino.caminable)
+            Debug.Log("A");
+            if (vecino != null && !vecino.objeto)
             {
+                Debug.Log("b");
                 casillasDisponibles.Add(vecino);
             }
         }
@@ -168,7 +170,7 @@ public class SpiderMovement : MonoBehaviour
                 {
                     if (otherTelaraña.activeSelf && otherTelaraña != telaraña)
                     {
-                        if (Vector3.Distance(newPosition, otherTelaraña.transform.position) < 0.1f)
+                        if (Vector3.Distance(newPosition, otherTelaraña.transform.position) < 0.01f)
                         {
                             overlapping = true;
                             break;
