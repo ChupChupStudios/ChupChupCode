@@ -63,11 +63,16 @@ public class Tutorial : MonoBehaviour
 
     public GameObject planoAuxiliar;
 
-    public bool explaining = true;
+    public bool explaining;
+
+    public GameObject[] assets;
+    public GameObject[] flowers;
+    public GameObject finalTile;
 
     void Start()
     {
         tutorialFog.gameObject.SetActive(false);
+        explaining = true;
     }
 
     // Update is called once per frame
@@ -112,6 +117,16 @@ public class Tutorial : MonoBehaviour
             {
                 foundObject.SetActive(false);
             }
+            //text.enabled = true;
+        }
+        foreach (GameObject foundAsset in assets)
+        {
+                foundAsset.SetActive(false);   
+            //text.enabled = true;
+        }
+        foreach (GameObject foundFlowers in flowers)
+        {
+            foundFlowers.SetActive(false);
             //text.enabled = true;
         }
 
@@ -178,6 +193,17 @@ public class Tutorial : MonoBehaviour
                 foundObject.SetActive(true);
                 foundObject.GetComponent<Nodo>().enabled = false;
                 foundObject.GetComponent<Block>().enabled = false;
+            }
+            foreach (GameObject foundAsset in assets)
+            {
+                foundAsset.SetActive(true);
+                //text.enabled = true;
+            }
+
+            foreach (GameObject foundFlowers in flowers)
+            {
+                foundFlowers.SetActive(true);
+                //text.enabled = true;
             }
             //text.enabled = true;
         }
@@ -304,6 +330,7 @@ public class Tutorial : MonoBehaviour
         //Time.timeScale = 0;
         planoAuxiliar.SetActive(true);
         explaining = true;
+        finalTile.SetActive(true);
         foreach (GameObject o in tutorialGoalItems)
         {
             //o.gameObject.SetActive(true);

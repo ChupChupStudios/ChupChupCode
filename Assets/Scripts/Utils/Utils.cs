@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Utils
 {
-    static bool mostrarLogs = true;
+    static bool mostrarLogs = false;
 
     // Devuelve true si choca con un objeto en layermask
     // Si hay colision devuelve el GameObject correspondiente

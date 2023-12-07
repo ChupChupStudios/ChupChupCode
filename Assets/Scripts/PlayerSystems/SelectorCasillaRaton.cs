@@ -23,6 +23,7 @@ public class SelectorCasillaRaton : MonoBehaviour
         if (!Input.GetMouseButtonDown(0)) return;
         if (tutorial != null)
         {
+            Debug.Log(tutorial.explaining);
             if (SceneManager.GetActiveScene().name == "Tutorial" && tutorial.explaining) return;
         }
 
