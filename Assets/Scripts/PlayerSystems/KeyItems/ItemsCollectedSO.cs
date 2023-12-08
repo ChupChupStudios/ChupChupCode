@@ -32,7 +32,7 @@ public class ItemsCollectedSO : ScriptableObject
 
     //magia fer? (rarete) si rodro magia
 
-    private void Reset()
+    private void OnEnable()
     {
         collectedItemsIndex = new();
     }
