@@ -18,6 +18,8 @@ public class WolfAttack : MonoBehaviour
 
     public Animator animator;
 
+    Color blockColor;
+
     void Update()
     {
         Vector3[] casillaCenters = ObtenerCentrosCasillas();
@@ -78,6 +80,7 @@ public class WolfAttack : MonoBehaviour
                 if (renderer != null)
                 {
                     renderersAfectados.Add(renderer); // Agregar a la lista de renderers afectados
+                    blockColor = renderer.material.color;
                     Color32 nuevoColor = new Color32(255, 0, 0, 255); // Rojo /RGBA
                     renderer.material.color = nuevoColor;
                 }
@@ -97,7 +100,7 @@ public class WolfAttack : MonoBehaviour
     {
         foreach (Renderer renderer in renderersAfectados)
         {
-            renderer.material.color = new Color32(0, 159, 8, 255); // Restaurar el color original
+            renderer.material.color = blockColor; // Restaurar el color original
         }
         renderersAfectados.Clear(); // Limpiar la lista
     }

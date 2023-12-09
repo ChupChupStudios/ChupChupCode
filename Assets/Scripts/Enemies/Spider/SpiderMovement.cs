@@ -74,6 +74,7 @@ public class SpiderMovement : MonoBehaviour
         posicionSiguiente = new(posicionSiguiente.x, 0f, posicionSiguiente.z);
         Vector3 posicionArana = transform.position;
         posicionArana = new(posicionArana.x, 0f, posicionArana.z);
+        //Debug.Log("posicoin arña" + posicionArana + "Posicion siguiente " + posicionSiguiente + " Distancia " + (Vector3.Distance(posicionSiguiente, posicionArana)));
 
         if (Vector3.Distance(posicionSiguiente, posicionArana) < 0.2)
         {
@@ -96,6 +97,7 @@ public class SpiderMovement : MonoBehaviour
             if (calcularHuida)
             {
                 camino.Clear();
+                direccion =Vector3.zero;
                 return;
             }
 
@@ -103,6 +105,7 @@ public class SpiderMovement : MonoBehaviour
 
             if (camino.Count == 0)
             {
+                direccion = Vector3.zero;   
                 casillaAlcanzada = true;
                 return;
             }
@@ -154,6 +157,7 @@ public class SpiderMovement : MonoBehaviour
             camino = new();
             camino.Push(casillaAleatoria);
             camino.Push(nodoActual);
+            //direccion = Vector3.Normalize((casillaAleatoria.posicionGlobal - nodoActual.posicionGlobal));
         }
     }
 

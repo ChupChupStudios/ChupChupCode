@@ -16,6 +16,8 @@ public class BatAttack : MonoBehaviour
 
     public SliderStamina sliderStamina;
 
+    Color blockColor;
+
     void Update()
     {
         Vector3 posicionMurcielago = transform.position + transform.forward;
@@ -66,6 +68,7 @@ public class BatAttack : MonoBehaviour
             if (renderer != null)
             {
                 renderersAfectados.Add(renderer); // Agregar a la lista de renderers afectados
+                blockColor = renderer.material.color;
                 Color32 nuevoColor = new Color32(75, 142, 29, 255); // Rojo /RGBA
                 renderer.material.color = nuevoColor;
             }
@@ -81,7 +84,7 @@ public class BatAttack : MonoBehaviour
     {
         foreach (Renderer renderer in renderersAfectados)
         {
-            renderer.material.color = new Color32(64, 226, 159, 255); // Restaurar el color original
+            renderer.material.color = blockColor; // Restaurar el color original
         }
         renderersAfectados.Clear(); // Limpiar la lista
     }
