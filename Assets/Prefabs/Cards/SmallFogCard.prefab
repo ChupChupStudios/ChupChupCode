@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  baseColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+  baseColor: {r: 0.3529412, g: 0.3529412, b: 0.3529412, a: 0}
   cardIndex: 1
   affectedBlocks: []
   deckManager: {fileID: 0}

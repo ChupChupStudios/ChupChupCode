@@ -242,7 +242,7 @@ public class Tutorial : MonoBehaviour
         //ObjectImage.gameObject.SetActive(false);
         //EnemyImage.gameObject.SetActive(true);
 
-        tutorialTileObject.GetComponent<Block>().ChangeColor(new Color32(0, 159, 8, 255));
+        tutorialTileObject.GetComponent<Block>().ChangeColor(new Color32(29, 132, 9, 255));
         tutorialTileEnemy.GetComponent<Block>().ChangeColor(new Color32(243, 129, 0, 255));
 
         tutorialArrow.SetActive(true);

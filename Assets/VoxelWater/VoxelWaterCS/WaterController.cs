@@ -11,16 +11,26 @@ public class WaterController : MonoBehaviour
 
     private Voxel[,] voxels;
 
+    public GameObject[] VoxelsAux;
     void Start()
     {
-        GenerateWaterGrid();
+        //GenerateWaterGrid();
+        GameObject[] fogVoxel = GameObject.FindGameObjectsWithTag("Fog");
+        foreach (GameObject objeto in fogVoxel)
+        {
+            // Hacer algo con cada objeto encontrado
+            Debug.Log("Objeto encontrado con tag " + objeto.name);
+        }
+
+        VoxelsAux = fogVoxel;
     }
 
     void Update()
     {
-        UpdateWaterSimulation();
+        //UpdateWaterSimulation();
     }
 
+    /*
     void GenerateWaterGrid()
     {
         voxels = new Voxel[gridSizeX, gridSizeY];
@@ -36,7 +46,8 @@ public class WaterController : MonoBehaviour
             }
         }
     }
-
+    */
+    /*
     void UpdateWaterSimulation()
     {
         float time = Time.time * waveSpeed;
@@ -49,4 +60,15 @@ public class WaterController : MonoBehaviour
             }
         }
     }
+    */
+
+    
+    void UpdateWaterSimulation()
+    {
+        foreach(GameObject fog in VoxelsAux)
+        {
+            fog.GetComponent<Voxel>().UpdatePosition(Time.time * waveSpeed);
+        }
+    }
+    
 }
