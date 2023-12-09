@@ -150,6 +150,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &82603674164828132
 GameObject:
@@ -363,6 +366,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &207329772174679275
 GameObject:
@@ -545,6 +551,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &301223297747548491
 GameObject:
@@ -694,6 +703,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -847,6 +859,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &308244285661318752
 GameObject:
@@ -996,6 +1011,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -1180,6 +1198,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &333358550344704126
 GameObject:
@@ -1360,6 +1381,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -1544,6 +1568,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &366124389023102299
 GameObject:
@@ -1693,6 +1720,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -1877,6 +1907,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &422841756478791115
 GameObject:
@@ -2026,6 +2059,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -2179,6 +2215,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &486261186004252230
 GameObject:
@@ -2328,6 +2367,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -2512,6 +2554,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &588250355053679329
 GameObject:
@@ -2663,6 +2708,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &671988911015786342
 GameObject:
@@ -2812,6 +2860,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -3025,6 +3076,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -3271,6 +3325,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &957293946702190872
 GameObject:
@@ -3420,6 +3477,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -3697,6 +3757,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &1161116019261033313
 GameObject:
@@ -3846,6 +3909,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -4061,6 +4127,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &1291926977659893710
 GameObject:
@@ -4243,6 +4312,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &1366663775619386032
 GameObject:
@@ -4392,6 +4464,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -4545,6 +4620,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &1418138302748687459
 GameObject:
@@ -4695,6 +4773,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -4858,6 +4939,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -5135,6 +5219,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &1580484790324106707
 GameObject:
@@ -5315,6 +5402,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -5530,6 +5620,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &1771917399993094500
 GameObject:
@@ -5743,6 +5836,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &1852535023906596443
 GameObject:
@@ -5892,6 +5988,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -6107,6 +6206,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &2158867696052776137
 GameObject:
@@ -6256,6 +6358,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -6440,6 +6545,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &2300301330568659833
 GameObject:
@@ -6591,6 +6699,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &2309984730708534737
 GameObject:
@@ -6740,6 +6851,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -6955,6 +7069,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &2367378354098348667
 GameObject:
@@ -7104,6 +7221,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -7257,6 +7377,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &2384833627950402385
 GameObject:
@@ -7406,6 +7529,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -7652,6 +7778,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &2529249172116490796
 GameObject:
@@ -7801,6 +7930,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -7985,6 +8117,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &2598111653318687374
 GameObject:
@@ -8167,6 +8302,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &2685293959050916625
 GameObject:
@@ -8316,6 +8454,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -8469,6 +8610,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &2703571072051734165
 GameObject:
@@ -8618,6 +8762,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -8802,6 +8949,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &2764214827639160653
 GameObject:
@@ -8982,6 +9132,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -9321,6 +9474,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &2908976567902738855
 GameObject:
@@ -9470,6 +9626,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -9652,6 +9811,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -9929,6 +10091,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &3133057930487280137
 GameObject:
@@ -10173,6 +10338,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &3230805410732577518
 GameObject:
@@ -10324,6 +10492,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &3245352403693525966
 GameObject:
@@ -10473,6 +10644,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -10688,6 +10862,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &3333452675475871540
 GameObject:
@@ -10839,6 +11016,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &3448611420475115615
 GameObject:
@@ -10988,6 +11168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -11172,6 +11355,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &3618067240802930280
 GameObject:
@@ -11323,6 +11509,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &3649504047219967464
 GameObject:
@@ -11472,6 +11661,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -11718,6 +11910,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &3721815904619444332
 GameObject:
@@ -11931,6 +12126,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &3823570389333854591
 GameObject:
@@ -12111,6 +12309,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -12295,6 +12496,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &3928862716910542878
 GameObject:
@@ -12475,6 +12679,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -12690,6 +12897,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &4124081662050336654
 GameObject:
@@ -12839,6 +13049,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -12992,6 +13205,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &4153413852623405942
 GameObject:
@@ -13141,6 +13357,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -13323,6 +13542,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -13569,6 +13791,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &4604812071411284593
 GameObject:
@@ -13749,6 +13974,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -13933,6 +14161,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &4714685818237964454
 GameObject:
@@ -14113,6 +14344,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -14359,6 +14593,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &4829275199590840539
 GameObject:
@@ -14508,6 +14745,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -14723,6 +14963,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &4971146084147536271
 GameObject:
@@ -14904,7 +15147,7 @@ Transform:
   - {fileID: 7533851732452942432}
   - {fileID: 4554183506612499434}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4996903721451657031
 GameObject:
@@ -15087,6 +15330,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &5019209051972156765
 GameObject:
@@ -15236,6 +15482,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -15420,6 +15669,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &5149944727054854656
 GameObject:
@@ -15569,6 +15821,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -15908,6 +16163,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &5476685726136534257
 GameObject:
@@ -16088,6 +16346,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -16272,6 +16533,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &5539861233110147990
 GameObject:
@@ -16423,6 +16687,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &5602640228811704450
 GameObject:
@@ -16572,6 +16839,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -16849,6 +17119,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &5722189447992298065
 GameObject:
@@ -17000,6 +17273,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &5771171891043127801
 GameObject:
@@ -17149,6 +17425,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -17331,6 +17610,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -17639,6 +17921,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &6043822478144553795
 GameObject:
@@ -17788,6 +18073,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -17941,6 +18229,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &6113779126747612901
 GameObject:
@@ -18090,6 +18381,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -18243,6 +18537,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &6195194661670771799
 GameObject:
@@ -18392,6 +18689,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -18576,6 +18876,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &6252491848748865847
 GameObject:
@@ -18725,6 +19028,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -18909,6 +19215,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &6350894279865571704
 GameObject:
@@ -19058,6 +19367,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -19211,6 +19523,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &6402063618083204909
 GameObject:
@@ -19360,6 +19675,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -19544,6 +19862,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &6421920683629205517
 GameObject:
@@ -19726,6 +20047,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &6457287245267165055
 GameObject:
@@ -19877,6 +20201,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &6476120895807023422
 GameObject:
@@ -20026,6 +20353,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -20210,6 +20540,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &6569735444518399493
 GameObject:
@@ -20359,6 +20692,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -20605,6 +20941,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &6763968606481686846
 GameObject:
@@ -20785,6 +21124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -20969,6 +21311,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &6881663692407092662
 GameObject:
@@ -21151,6 +21496,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &6927206475993624538
 GameObject:
@@ -21300,6 +21648,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -21484,6 +21835,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &7052110844487481977
 GameObject:
@@ -21635,6 +21989,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &7064867211904331102
 GameObject:
@@ -21784,6 +22141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -21968,6 +22328,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &7174661622502039390
 GameObject:
@@ -22148,6 +22511,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -22332,6 +22698,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &7266904134313509578
 GameObject:
@@ -22512,6 +22881,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -22727,6 +23099,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &7401858903216595302
 GameObject:
@@ -22940,6 +23315,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &7481354939274907040
 GameObject:
@@ -23089,6 +23467,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -23271,6 +23652,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -23486,6 +23870,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &7756247165526072039
 GameObject:
@@ -23635,6 +24022,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -23817,6 +24207,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -24063,6 +24456,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &7836881599979151382
 GameObject:
@@ -24307,6 +24703,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &7896216694483427915
 GameObject:
@@ -24458,6 +24857,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &7949800512443937747
 GameObject:
@@ -24607,6 +25009,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -24789,6 +25194,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -25035,6 +25443,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &8199742248553069268
 GameObject:
@@ -25184,6 +25595,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -25368,6 +25782,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &8246547680930375250
 GameObject:
@@ -25517,6 +25934,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -25763,6 +26183,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &8305330390041870620
 GameObject:
@@ -25945,6 +26368,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &8374262278580584661
 GameObject:
@@ -26094,6 +26520,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -26309,6 +26738,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &8554067305488393127
 GameObject:
@@ -26522,6 +26954,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &8670152093092092528
 GameObject:
@@ -26671,6 +27106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -26948,6 +27386,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &8856830461775946593
 GameObject:
@@ -27130,6 +27571,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
 --- !u!1 &8867168627533693163
 GameObject:
@@ -27279,6 +27723,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -27461,6 +27908,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
@@ -27674,6 +28124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleLayer:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
