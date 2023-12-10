@@ -95,9 +95,8 @@ public class SpiderAttack : MonoBehaviour
     void RestablecerColorCasillas()
     {
         foreach (Renderer renderer in renderersAfectados)
-        {
-            renderer.material.color = blockColor; // Restaurar el color original
-        }
+            renderer.GetComponent<Block>().ResetColor();
+
         renderersAfectados.Clear(); // Limpiar la lista
     }
 
