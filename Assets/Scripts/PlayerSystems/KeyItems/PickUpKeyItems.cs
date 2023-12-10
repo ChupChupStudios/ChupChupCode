@@ -11,12 +11,41 @@ public class PickUpKeyItems : MonoBehaviour
     public GameObject auxiliarPlane;
     public GameObject casillaGoal;
 
+    int itMostrar;
+    bool subir;
+
     private void Start()
     {
+        itMostrar = 0;
+        subir = true;
         cartelCanvas.gameObject.SetActive(false);
         textoUI = cartelCanvas.GetComponentInChildren<TextMeshProUGUI>();
         auxiliarPlane.SetActive(false);
     }
+
+    void Update()
+    {
+        if (itMostrar < 3)
+        {
+            if (subir)
+            {
+                transform.position += Vector3.up * Time.deltaTime;
+                if (transform.position.y >= 2.5)
+                    subir = false;
+            }
+            else
+            {
+                transform.position -= Vector3.up * Time.deltaTime;
+                if (transform.position.y <= 0.7)
+                {
+                    subir = true;
+                    itMostrar++;
+                    transform.position = new Vector3(transform.position.x, 0.7f, transform.position.z);
+                }
+            }
+        }
+    }
+
     public void LoreText()
     {
         textoUI.text = textoDelCartel;
