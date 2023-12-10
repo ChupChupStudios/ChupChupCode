@@ -80,7 +80,7 @@ public class Movimiento : MonoBehaviour
 
         if (!SFXManager.Instance.soundsAudioSource.isPlaying)
         {
-            if (actualScene == 4 || actualScene == 5) //|| actualScene == 6)
+            if (actualScene == 4 || actualScene == 5 || actualScene == 6)
             {
                 SFXManager.Instance.EjecutarSonido(caveSteps);
             }

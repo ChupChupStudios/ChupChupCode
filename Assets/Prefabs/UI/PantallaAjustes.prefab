@@ -1483,8 +1483,8 @@ RectTransform:
   - {fileID: 5666295655034524468}
   - {fileID: 382043267177025854}
   - {fileID: 4846635981433899902}
-  - {fileID: 4214571589708205520}
   - {fileID: 7627946328718783794}
+  - {fileID: 4214571589708205520}
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1521,7 +1521,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f1643822a48c42f48b28f27f7bf2f630, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1742,9 +1742,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8434783412888667357}
         m_TargetAssemblyTypeName: ControladorEscena, Assembly-CSharp
-        m_MethodName: Configuration
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

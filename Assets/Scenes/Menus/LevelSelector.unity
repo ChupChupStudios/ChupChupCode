@@ -167,7 +167,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 180fb90a82cdff94c86dcb2b18034f8b, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -701,6 +701,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuNiveles
       objectReference: {fileID: 0}
+    - target: {fileID: 1118597779532694590, guid: 15c7a602dc69bc64e81f8ccca241000e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1119699880445931851, guid: 15c7a602dc69bc64e81f8ccca241000e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -717,10 +721,42 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1383470040120047882, guid: 15c7a602dc69bc64e81f8ccca241000e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433122644496950767, guid: 15c7a602dc69bc64e81f8ccca241000e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1465786276770355767, guid: 15c7a602dc69bc64e81f8ccca241000e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 963401038}
+    - target: {fileID: 1528141336055175071, guid: 15c7a602dc69bc64e81f8ccca241000e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528141336055175071, guid: 15c7a602dc69bc64e81f8ccca241000e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528141336055175071, guid: 15c7a602dc69bc64e81f8ccca241000e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528141336055175071, guid: 15c7a602dc69bc64e81f8ccca241000e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528141336055175071, guid: 15c7a602dc69bc64e81f8ccca241000e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -1820
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528141336055175071, guid: 15c7a602dc69bc64e81f8ccca241000e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -1340
+      objectReference: {fileID: 0}
     - target: {fileID: 1933814793145350873, guid: 15c7a602dc69bc64e81f8ccca241000e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
