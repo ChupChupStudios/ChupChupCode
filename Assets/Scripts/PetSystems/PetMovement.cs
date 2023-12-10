@@ -98,6 +98,8 @@ public class PetMovement : MonoBehaviour
                 }
             }
 
+            //if (camino != null) return true;
+
             // FINAL DE CAMINO
             if (camino.Count == 0)
             {

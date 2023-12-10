@@ -67,6 +67,8 @@ public class WolfMovement : MonoBehaviour
             nodoObjetivo = camino.Pop();
         }
 
+        if (camino == null) return;
+
         Utils.Log($"camino {camino == null}, nodoObjetivo {nodoObjetivo == null}");
         direccion = camino.Peek().posicionGlobal -nodoObjetivo.posicionGlobal;
 
