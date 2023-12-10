@@ -7677,9 +7677,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb3b7f8a5882714eb4d69192a885b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoDelCartel: "Se esconder\xE1n si te acercas por detr\xE1s y atacar\xE1n si
-    te enfrentas directamente. Al golpearlos, intentar\xE1n excavar y curarse con
-    una ra\xEDz o atacarte con ella."
+  textoDelCartel: "Topo: Se esconder\xE1n si te acercas por detr\xE1s y atacar\xE1n
+    si te enfrentas directamente. Al golpearlos, intentar\xE1n excavar y curarse
+    con una ra\xEDz o atacarte con ella."
   cartelCanvas: {fileID: 147552444}
   auxiliarPlane: {fileID: 1903647508}
 --- !u!1001 &1600076037

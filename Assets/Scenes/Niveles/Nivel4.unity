@@ -4048,9 +4048,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb3b7f8a5882714eb4d69192a885b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoDelCartel: "Rastrean tu \xFAltima ubicaci\xF3n y te persiguen, aunque deber\xE1n
-    descansar. Si te encuentran, atacar\xE1n directamente y si te da\xF1an, aumentar\xE1n
-    su ritmo."
+  textoDelCartel: "Lobo: Rastrean tu \xFAltima ubicaci\xF3n y te persiguen, aunque
+    deber\xE1n descansar. Si te encuentran, atacar\xE1n directamente y si te da\xF1an,
+    aumentar\xE1n su ritmo."
   cartelCanvas: {fileID: 788256935}
   auxiliarPlane: {fileID: 1930474937}
 --- !u!1 &759517689 stripped

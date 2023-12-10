@@ -7212,7 +7212,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb3b7f8a5882714eb4d69192a885b5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoDelCartel: LORE CARTEL NV5
+  textoDelCartel: "Advertencia: Cueva Profunda. Sum\xE9rgete en la oscuridad, evita
+    las trampas naturales y prep\xE1rate para criaturas que acechan en las sombras.
+    Este laberinto subterr\xE1neo esconde secretos y peligros inimaginables. \xBFTienes
+    el coraje para explorar sus misterios?"
   cartelCanvas: {fileID: 718177170}
   auxiliarPlane: {fileID: 890699824}
 --- !u!114 &1421928793 stripped
@@ -8961,10 +8964,9 @@ PrefabInstance:
       objectReference: {fileID: 890699824}
     - target: {fileID: 6823018932758887524, guid: 1d177cb7fa86112419041751d722aca4, type: 3}
       propertyPath: textoDelCartel
-      value: "Ahora comprendo por qu\xE9 est\xE1bamos tan ilusionados con esta entrega,
-        era una entrega para el pueblo m\xE1s remoto del pa\xEDs, un encargo que
-        solo le dan a los mejores pilotos mensajeros. No puedo decepcionar a los
-        clientes."
+      value: "Ya tenemos casi todas las piezas para arreglar el avi\xF3n. Est\xE1
+        siendo un camino duro pero ya falta poco. El pueblo estar\xE1 preocupado,
+        tengo que seguir adelante y conseguir entregar la mercanc\xEDa."
       objectReference: {fileID: 0}
     - target: {fileID: 7790776960847048735, guid: 1d177cb7fa86112419041751d722aca4, type: 3}
       propertyPath: m_RootOrder

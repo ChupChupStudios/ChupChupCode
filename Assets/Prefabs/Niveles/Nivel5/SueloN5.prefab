@@ -15147,7 +15147,7 @@ Transform:
   - {fileID: 7533851732452942432}
   - {fileID: 4554183506612499434}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4996903721451657031
 GameObject:
@@ -23179,7 +23179,6 @@ GameObject:
   - component: {fileID: 5099480910385785724}
   - component: {fileID: 1958660777843971930}
   - component: {fileID: 6950062770558584750}
-  - component: {fileID: 7588025732551883542}
   m_Layer: 3
   m_Name: suelo (81)
   m_TagString: Untagged
@@ -23320,21 +23319,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   selectedTileColor: {r: 1, g: 0.9607843, b: 0.08235294, a: 1}
---- !u!114 &7588025732551883542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7454942965536118177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb3b7f8a5882714eb4d69192a885b5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoDelCartel: LORE CARTEL NV5
-  cartelCanvas: {fileID: 0}
-  auxiliarPlane: {fileID: 0}
 --- !u!1 &7481354939274907040
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,18 +33,18 @@ public class MoleMovement : MonoBehaviour
     {
         if (camino == null || camino.Count == 0) return;
 
-        transform.position += velocidad * Time.deltaTime * direccion;
-
+        // coger la posicion siguiente en el camino:
         Vector3 posicionSiguiente = camino.Peek().posicionGlobal;
-        posicionSiguiente = new(posicionSiguiente.x, 0f, posicionSiguiente.z);
-        Vector3 posicionTopo = transform.position;
-        posicionTopo = new(posicionTopo.x, 0f, posicionTopo.z);
+        posicionSiguiente = new(posicionSiguiente.x, transform.position.y, posicionSiguiente.z);
 
-        if (Vector3.Distance(posicionSiguiente, posicionTopo) < 0.1)
+        // desplazarse:
+        transform.position = Vector3.MoveTowards(transform.position, posicionSiguiente, velocidad * Time.deltaTime);
+
+        // comprobar si se ha llegado a una casilla
+        if (Vector3.Distance(posicionSiguiente, transform.position) < 0.1)
         {
 
             camino.Pop();
-            //mb.CasillaAlcanzadaCallBack();
 
             if (camino.Count == 0)
             {
