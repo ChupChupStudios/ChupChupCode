@@ -40,4 +40,14 @@ public class StaminaCard : ACard
         deckManager.Deselect();
         Destroy(gameObject);
     }
+
+    public void Execute()
+    {
+
+        SFXManager.Instance.EjecutarSonido(heal);
+
+        SliderEvent?.Invoke(75);
+        deckManager.Deselect();
+        Destroy(gameObject);
+    }
 }

@@ -3974,6 +3974,7 @@ MonoBehaviour:
   - {fileID: -5715398686018085158, guid: 54d6d0e6f872c1c45a7195afe5057c19, type: 3}
   cards: []
   ownerTransform: {fileID: 0}
+  selectedCard: {fileID: 0}
 --- !u!4 &356730964
 Transform:
   m_ObjectHideFlags: 0
@@ -5042,6 +5043,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8056449015173434616, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
   m_PrefabInstance: {fileID: 456325505}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &456325507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+  m_PrefabInstance: {fileID: 456325505}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a0dc6887185724084976ee7d31bca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &458791819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6385,6 +6397,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+--- !u!114 &578984266 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+  m_PrefabInstance: {fileID: 578984265}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a0dc6887185724084976ee7d31bca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &589201116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9138,6 +9161,11 @@ MonoBehaviour:
   - {fileID: 253145567}
   - {fileID: 878350470}
   finalTile: {fileID: 1059950115}
+  planeNodes:
+  - {fileID: 1287489317}
+  - {fileID: 456325507}
+  - {fileID: 578984266}
+  - {fileID: 1940812133}
 --- !u!4 &820980382
 Transform:
   m_ObjectHideFlags: 0
@@ -10322,7 +10350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fdbab8df6ad9e9942b99c8e9f9c12a22, type: 3}
       propertyPath: m_Name
-      value: Avion_texturizado
+      value: BoxPlane
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fdbab8df6ad9e9942b99c8e9f9c12a22, type: 3}
       propertyPath: m_Layer
@@ -14872,6 +14900,10 @@ PrefabInstance:
       propertyPath: tutorial
       value: 
       objectReference: {fileID: 820980381}
+    - target: {fileID: 3941490687327258857, guid: 01957063c4a20c543abe75cd2cea9350, type: 3}
+      propertyPath: deckManager
+      value: 
+      objectReference: {fileID: 356730963}
     - target: {fileID: 4915669144777314059, guid: 01957063c4a20c543abe75cd2cea9350, type: 3}
       propertyPath: tutorial
       value: 
@@ -15113,6 +15145,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8056449015173434616, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
   m_PrefabInstance: {fileID: 1287489315}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1287489317 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+  m_PrefabInstance: {fileID: 1287489315}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a0dc6887185724084976ee7d31bca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1289594740 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8056449015173434616, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
@@ -18638,6 +18681,13 @@ MonoBehaviour:
   capaNiebla:
     serializedVersion: 2
     m_Bits: 0
+  capaJugador:
+    serializedVersion: 2
+    m_Bits: 0
+  capaEnemigo:
+    serializedVersion: 2
+    m_Bits: 0
+  deckManager: {fileID: 0}
   tutorial: {fileID: 0}
 --- !u!114 &1563552576
 MonoBehaviour:
@@ -23332,6 +23382,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+--- !u!114 &1940812133 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5125211742476913381, guid: 4efa93da2e8ecf840a17abd440d3ec68, type: 3}
+  m_PrefabInstance: {fileID: 1940812132}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a0dc6887185724084976ee7d31bca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1943560503 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1250875789536411641, guid: 9293d65d10dcb59469478256b3bceedf, type: 3}

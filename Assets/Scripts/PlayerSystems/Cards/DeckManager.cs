@@ -41,7 +41,7 @@ public class DeckManager : MonoBehaviour
     [HideInInspector] public Transform ownerTransform;
 
     // GESTION DE LA CARTA SELECCIONADA
-    ACard selectedCard;
+    public ACard selectedCard;
     public ACard SelectedCard
     {
         get => selectedCard;

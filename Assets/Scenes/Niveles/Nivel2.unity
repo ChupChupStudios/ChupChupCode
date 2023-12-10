@@ -2745,6 +2745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Patt
       objectReference: {fileID: 0}
+    - target: {fileID: 3941490687327258857, guid: 01957063c4a20c543abe75cd2cea9350, type: 3}
+      propertyPath: deckManager
+      value: 
+      objectReference: {fileID: 1258592117}
     - target: {fileID: 6771436830855430814, guid: 01957063c4a20c543abe75cd2cea9350, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -6812,6 +6816,7 @@ MonoBehaviour:
   - {fileID: 6851903375823060754, guid: bffd45f0ba82ae4489e40545a93006be, type: 3}
   cards: []
   ownerTransform: {fileID: 0}
+  selectedCard: {fileID: 0}
 --- !u!4 &1258592118
 Transform:
   m_ObjectHideFlags: 0
@@ -7377,6 +7382,13 @@ MonoBehaviour:
   capaNiebla:
     serializedVersion: 2
     m_Bits: 0
+  capaJugador:
+    serializedVersion: 2
+    m_Bits: 0
+  capaEnemigo:
+    serializedVersion: 2
+    m_Bits: 0
+  deckManager: {fileID: 0}
   tutorial: {fileID: 0}
 --- !u!114 &1301461070
 MonoBehaviour:
