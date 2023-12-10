@@ -9,6 +9,7 @@ public class EnemyVariablesManager : MonoBehaviour
     public GameObject currentNode;
     GameObject previousNode;
     public LayerMask Ground;
+    bool aux;
 
     public EventHandler<int> Golpeado;
 
@@ -18,9 +19,12 @@ public class EnemyVariablesManager : MonoBehaviour
         //lifePoints = 2;
         if (Utils.CustomRaycast(transform.position + Vector3.up, Vector3.down, out currentNode, Ground))
         {
+            aux = currentNode.GetComponent<Nodo>().caminable;
+            //if (currentNode.GetComponent<Nodo>().caminable == false) return;
             currentNode.GetComponent<Nodo>().caminable = false;
             currentNode.GetComponent<Nodo>().objeto = true;
             previousNode = currentNode;
+            //aux = previousNode.GetComponent<Nodo>().caminable;
         }
     }
 
@@ -31,12 +35,13 @@ public class EnemyVariablesManager : MonoBehaviour
         {
             if (currentNode != previousNode)
             {
-                previousNode.GetComponent<Nodo>().caminable = true;
+                
+                previousNode.GetComponent<Nodo>().caminable = aux;
+                aux = currentNode.GetComponent<Nodo>().caminable;
                 currentNode.GetComponent<Nodo>().caminable = false;
                 previousNode.GetComponent<Nodo>().objeto = false;
                 currentNode.GetComponent<Nodo>().objeto = true;
                 previousNode = currentNode;
-
             }
         }
     }

@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4154863720931394942
 MonoBehaviour:
@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubePrefab: {fileID: 5999260752509598723, guid: 06c7b74c4a135994a92d2ac4a8ad0e0a, type: 3}
-  gridWidth: 15
-  gridHeight: 15
+  gridWidth: 17
+  gridHeight: 17
   spacing: 1
   globalSpeed: 0.2
   globalAmplitude: 0.2
