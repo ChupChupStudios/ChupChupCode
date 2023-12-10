@@ -69,6 +69,7 @@ public class Tutorial : MonoBehaviour
     public GameObject[] flowers;
     public GameObject finalTile;
 
+    public Nodo[] planeNodes;
     void Start()
     {
         tutorialFog.gameObject.SetActive(false);
@@ -317,6 +318,10 @@ public class Tutorial : MonoBehaviour
         keyIcon.SetActive(true);
         keyItem.SetActive(true);
         plane.SetActive(true);
+        foreach(Nodo n in planeNodes)
+        {
+            n.caminable = false;
+        }
 
 
 }

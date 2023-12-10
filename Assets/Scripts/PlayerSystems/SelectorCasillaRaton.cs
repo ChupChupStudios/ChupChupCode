@@ -7,6 +7,10 @@ public class SelectorCasillaRaton : MonoBehaviour
 {
     public LayerMask capaBloques;
     public LayerMask capaNiebla;
+    public LayerMask capaJugador;
+    public LayerMask capaEnemigo;
+
+    public DeckManager deckManager;
     Camera camaraPrincipal;
     Movimiento movimientoPersonaje;
 
@@ -32,6 +36,22 @@ public class SelectorCasillaRaton : MonoBehaviour
         Vector3 direccion = camaraPrincipal.transform.forward;
 
         // RAYCAST DESDE LA POSICION DEL RATON HACIA ADELANTE (lookAt de la camara)
+        if (Physics.Raycast(origen, direccion, out RaycastHit hitPlayer, Mathf.Infinity, capaJugador))
+        {
+            if(deckManager.selectedCard.type==CardType.Estamina)
+            {
+                deckManager.selectedCard.CheckAndExecute(gameObject.GetComponent<GestorCasillaActual>().currentNode.gameObject.GetComponent<Block>());
+            }
+        }
+
+        if (Physics.Raycast(origen, direccion, out RaycastHit hitEnemigo, Mathf.Infinity, capaEnemigo))
+        {
+            if (deckManager.selectedCard.type == CardType.Ataque)
+            {
+                deckManager.selectedCard.CheckAndExecute(hitEnemigo.collider.gameObject.GetComponent<EnemyVariablesManager>().currentNode.GetComponent<Block>());
+            }
+        }
+
         if (!Physics.Raycast(origen, direccion, out RaycastHit hit, Mathf.Infinity, capaBloques)) return;
 
         GameObject casilla = hit.collider.gameObject;
