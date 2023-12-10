@@ -76,7 +76,7 @@ public class WolfMovement : MonoBehaviour
 
     void SeguirCamino()
     {
-        if (nodoObjetivo == null)
+        if (nodoObjetivo == null || camino == null)
         {
             animator.SetBool("Moviendo", false);
             return;

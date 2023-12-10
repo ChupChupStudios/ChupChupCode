@@ -12,6 +12,7 @@ public class KeyItemManager : MonoBehaviour
     //private int objetosRecogidos = 0;
     public int totalObjetos = 0;
     public int totalObjetosTutorial = 1;
+    private int _objetoRecogido = 0;
     public Button button;
 
     public ItemsCollectedSO itemsCollected; 
@@ -21,14 +22,15 @@ public class KeyItemManager : MonoBehaviour
         ActualizarContador(itemsCollected.CollectedItems);
     }
 
+    public void RecogerObjeto()
+    {
+        _objetoRecogido++;
+        ActualizarContador(itemsCollected.CollectedItems + _objetoRecogido);
+    }
+
     void ActualizarContador(int piezasActuales)
     {
         contadorText.text = piezasActuales + "/" + totalObjetos;
-    }
-
-    public void RecogerObjeto()
-    {
-        ActualizarContador(itemsCollected.CollectedItems+1);
     }
 
     public void AllItemsCollected()
@@ -42,8 +44,9 @@ public class KeyItemManager : MonoBehaviour
                 button.gameObject.SetActive(false);
             }
         }
-        if (itemsCollected.CollectedItems == totalObjetos)
+        if (itemsCollected.CollectedItems + _objetoRecogido == totalObjetos)
         {
+            Debug.Log("entrar en dar carta");
             if (DeckManager.Instance.cards.Count == 7) return;
             DeckManager.Instance.CreateCard(cardPrefab[0]);
             button.gameObject.SetActive(false);

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,12 +24,19 @@ public class PlaneCard : ACard
         if (Utils.CustomRaycast(tile.gameObject.transform.position + Vector3.down, Vector3.up, out raycastOutput, plane))
         {
             SFXManager.Instance.EjecutarSonido(repair);
-            StartCoroutine(EsperarCambioEscena());
+            
             // Cuando la use en el avión cambiar de escena a la pantalla de ganar
             Debug.Log("Plane repaired successfully");
-            // Eliminar la carta
-            raycastOutput.gameObject.GetComponent<TutorialPlane>().Goal();
+            
+            // si se gasta la carta en el tutorial:
+            if (SceneManager.GetActiveScene().name == "Tutorial")
+                raycastOutput.gameObject.GetComponent<TutorialPlane>().Goal();
+            // si es en un nivel normal:
+            else
+                CambioEscenaVictoria();
 
+
+            // Eliminar la carta
             deckManager.Deselect();
             Destroy(gameObject);
         }
@@ -44,10 +52,19 @@ public class PlaneCard : ACard
         tile.GetComponent<Block>().ChangeColor(baseColor);
     }
 
-    IEnumerator EsperarCambioEscena()
+    void CambioEscenaVictoria()
     {
-        yield return new WaitForSeconds(2.0f);
+        Debug.Log("cambiar a victoria");
         SFXManager.Instance.CambiarMúsica(win, true);
         SceneManager.LoadScene("FinalScene");
     }
+
+    //IEnumerator EsperarCambioEscena()
+    //{
+    //    Debug.Log("empezar corrutina");
+    //    yield return new WaitForSeconds(2.0f);
+    //    Debug.Log("tiempo transcurrido");
+    //    SFXManager.Instance.CambiarMúsica(win, true);
+    //    SceneManager.LoadScene("FinalScene");
+    //}
 }

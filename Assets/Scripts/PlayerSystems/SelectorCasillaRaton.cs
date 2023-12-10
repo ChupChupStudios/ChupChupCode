@@ -38,7 +38,8 @@ public class SelectorCasillaRaton : MonoBehaviour
         // RAYCAST DESDE LA POSICION DEL RATON HACIA ADELANTE (lookAt de la camara)
         if (Physics.Raycast(origen, direccion, out RaycastHit hitPlayer, Mathf.Infinity, capaJugador))
         {
-            if(deckManager.selectedCard.type==CardType.Estamina)
+            if (deckManager.selectedCard == null) return;
+            if (deckManager.selectedCard.type==CardType.Estamina)
             {
                 deckManager.selectedCard.CheckAndExecute(gameObject.GetComponent<GestorCasillaActual>().currentNode.gameObject.GetComponent<Block>());
             }
@@ -46,6 +47,7 @@ public class SelectorCasillaRaton : MonoBehaviour
 
         if (Physics.Raycast(origen, direccion, out RaycastHit hitEnemigo, Mathf.Infinity, capaEnemigo))
         {
+            if (deckManager.selectedCard == null) return;
             if (deckManager.selectedCard.type == CardType.Ataque)
             {
                 deckManager.selectedCard.CheckAndExecute(hitEnemigo.collider.gameObject.GetComponent<EnemyVariablesManager>().currentNode.GetComponent<Block>());

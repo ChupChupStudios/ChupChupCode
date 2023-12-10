@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0a09c1d2e73c34eb7326722ade2b67, type: 3}
   m_Name: ItemsCollected
   m_EditorClassIdentifier: 
-  collectedItems: 0
+  collectedItemsIndex: 
