@@ -36,9 +36,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/LoseScene.unity
     guid: 500f09daac08d1b4e93d525e76e48922
   - enabled: 1
-    path: Assets/Scenes/Pruebas/MainScene.unity
-    guid: cd3febb6703445a44bf013f43c2500d5
-  - enabled: 1
     path: Assets/Scenes/Menus/Creditos.unity
     guid: 5c8281721b17b744f905985ae6d08217
   - enabled: 1
