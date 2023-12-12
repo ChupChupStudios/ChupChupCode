@@ -304,7 +304,7 @@ public class Tutorial : MonoBehaviour
     public void TutorialAvion()
     {
         text.text = "Antes de pasar al siguiente nivel, debes recoger" +
-            " la pieza del avion que ha aparecido en el mapa y arreglarlo. Para ello, verás que" +
+            " la pieza del avión que ha aparecido en el mapa y arreglarlo. Para ello, verás que" +
             " al recoger la carta, al lado de las barras de stamina y exploración, aumentara el contador de piezas." +
             " Cuando tengas todas las piezas, podrás pulsar sobre el indicador de piezas conseguidas para" +
             " recibir la carta con la que arreglarás el avión. Úsala sobre una casilla en la que este el avión. ";
