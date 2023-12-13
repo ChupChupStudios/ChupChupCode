@@ -36,6 +36,6 @@ public class CollectDataButton : MonoBehaviour
         userData.genero = genreDropdown.value;
 
         // PASAR A MENU PRINCIPAL
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("MenuPrincipal");
     }
 }
