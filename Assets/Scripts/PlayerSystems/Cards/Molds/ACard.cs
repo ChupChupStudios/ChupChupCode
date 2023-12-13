@@ -65,5 +65,8 @@ public abstract class ACard : MonoBehaviour
     {    
         deckManager.cards.Remove(this.gameObject);
         deckManager.UpdateCardsPositions();
+
+        // INDICAR CARTA GASTADA
+        RecolectorMetricas.Instance.cartasUsadas++;
     }
 }

@@ -121,6 +121,9 @@ public class Movimiento : MonoBehaviour
                     KeyItemManager keyItemManager = FindObjectOfType<KeyItemManager>();
                     if(keyItemManager!=null) keyItemManager.itemsCollected.LevelCompletedCallBack();
 
+                    // GUARDAR DATOS DEL JUGADOR AL TERMINAR EL NIVEL
+                    RecolectorMetricas.Instance.GuardarDatos();
+
                     int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
                     SceneManager.LoadScene(indiceEscenaActual + 1);
                 }
