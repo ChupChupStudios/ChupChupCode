@@ -121,11 +121,15 @@ public class Movimiento : MonoBehaviour
                     KeyItemManager keyItemManager = FindObjectOfType<KeyItemManager>();
                     if(keyItemManager!=null) keyItemManager.itemsCollected.LevelCompletedCallBack();
 
+                    // CAMBIO DE NIVEL AL SIGUIENTE (TUTORIAL)
+                    if (SceneManager.GetActiveScene().name.Equals("Tutorial"))
+                    {
+                        int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
+                        SceneManager.LoadScene(indiceEscenaActual + 1);
+                    }
                     // GUARDAR DATOS DEL JUGADOR AL TERMINAR EL NIVEL
-                    RecolectorMetricas.Instance.GuardarDatos();
+                    else RecolectorMetricas.Instance?.GuardarDatos();
 
-                    int indiceEscenaActual = SceneManager.GetActiveScene().buildIndex;
-                    SceneManager.LoadScene(indiceEscenaActual + 1);
                 }
                 nodoObjetivo = null;
 

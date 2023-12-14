@@ -4509,7 +4509,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 778567076}
-  - component: {fileID: 778567075}
+  - component: {fileID: 778567077}
+  - component: {fileID: 778567078}
   m_Layer: 0
   m_Name: RecolectorDatosDePartida
   m_TagString: Untagged
@@ -4517,21 +4518,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &778567075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778567074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7585831cc52bf46b2509804f6bfa15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cartasUsadas: 0
-  casillasRecorridas: 0
-  userData: {fileID: 11400000, guid: 2b8c7723007cb0f4699ae4b79904073e, type: 2}
 --- !u!4 &778567076
 Transform:
   m_ObjectHideFlags: 0
@@ -4547,6 +4533,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &778567077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778567074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c398886e0f8ac4482b7f8b8a388cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cartasUsadas: 0
+  casillasRecorridas: 0
+  userData: {fileID: 11400000, guid: 2b8c7723007cb0f4699ae4b79904073e, type: 2}
+--- !u!114 &778567078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778567074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c3c718c7ebb1c4d9de91f957679c2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &784394842 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1880200392940479811, guid: 9293d65d10dcb59469478256b3bceedf, type: 3}
@@ -16424,6 +16437,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 939055604142551848, guid: e2ad4fe3e1f03b24693e2f07ad39e2a9, type: 3}
+      propertyPath: selectedTileColor.b
+      value: 0.08235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 939055604142551848, guid: e2ad4fe3e1f03b24693e2f07ad39e2a9, type: 3}
+      propertyPath: selectedTileColor.g
+      value: 0.9607843
+      objectReference: {fileID: 0}
     - target: {fileID: 11074934590411807, guid: 906bae1e5ffdcfe44983c974fc5add7a, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -16475,14 +16496,6 @@ PrefabInstance:
     - target: {fileID: 7315854377152860525, guid: 906bae1e5ffdcfe44983c974fc5add7a, type: 3}
       propertyPath: m_Name
       value: SueloN1
-      objectReference: {fileID: 0}
-    - target: {fileID: 939055604142551848, guid: e2ad4fe3e1f03b24693e2f07ad39e2a9, type: 3}
-      propertyPath: selectedTileColor.b
-      value: 0.08235294
-      objectReference: {fileID: 0}
-    - target: {fileID: 939055604142551848, guid: e2ad4fe3e1f03b24693e2f07ad39e2a9, type: 3}
-      propertyPath: selectedTileColor.g
-      value: 0.9607843
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

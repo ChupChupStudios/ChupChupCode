@@ -56,7 +56,9 @@ public class PlaneCard : ACard
     {
         Debug.Log("cambiar a victoria");
         SFXManager.Instance.CambiarMúsica(win, true);
-        SceneManager.LoadScene("FinalScene");
+        //SceneManager.LoadScene("FinalScene");
+        // GUARDAR DATOS DEL NIVEL
+        RecolectorMetricas.Instance.GuardarDatos();
     }
 
     //IEnumerator EsperarCambioEscena()

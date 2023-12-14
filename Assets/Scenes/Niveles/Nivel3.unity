@@ -9393,6 +9393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2112674257}
   - component: {fileID: 2112674256}
+  - component: {fileID: 2112674258}
   m_Layer: 0
   m_Name: RecolectorDatosDePartida
   m_TagString: Untagged
@@ -9409,7 +9410,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2112674255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7585831cc52bf46b2509804f6bfa15, type: 3}
+  m_Script: {fileID: 11500000, guid: d6c398886e0f8ac4482b7f8b8a388cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cartasUsadas: 0
@@ -9430,6 +9431,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2112674258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112674255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43c3c718c7ebb1c4d9de91f957679c2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2122313767
 PrefabInstance:
   m_ObjectHideFlags: 0

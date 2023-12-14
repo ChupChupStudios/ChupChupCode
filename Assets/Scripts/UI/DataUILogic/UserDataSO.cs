@@ -9,10 +9,10 @@ public class UserDataSO : ScriptableObject
     public int edad;
     public int genero;
 
-    public void OnEnable()
-    {
-        nombre = "";
-        edad = 0;
-        genero = 0;
-    }
+    //public void OnEnable()
+    //{
+    //    nombre = "";
+    //    edad = 0;
+    //    genero = 0;
+    //}
 }

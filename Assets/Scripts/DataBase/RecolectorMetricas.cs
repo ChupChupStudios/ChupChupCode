@@ -12,6 +12,7 @@ public class RecolectorMetricas : MonoBehaviour
     public int casillasRecorridas;
 
     public UserDataSO userData;
+    private DatabaseManager _databaseManager;
 
     private void Start()
     {
@@ -26,6 +27,9 @@ public class RecolectorMetricas : MonoBehaviour
         // EVENTO CUANDO EL JUGADOR MUEVE UNA CASILLA
         Movimiento movimientoJugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Movimiento>();
         movimientoJugador.CasillaMovida += (sender, staminaUsed) => casillasRecorridas++;
+
+        // BUSCAR GESTOR DE BASE DE DATOS
+        _databaseManager = GetComponent<DatabaseManager>();
     }
 
     // GUARDAR DATOS (SE DEBE LLAMAR CUANDO SE ACABA LA PARTIDA)
@@ -45,5 +49,9 @@ public class RecolectorMetricas : MonoBehaviour
         // casillas recorridas: casillasRecorridas
 
         Debug.Log($"indice {indiceNivel}, tiempo {tiempoNivel}, cartas {cartasUsadas}, casillas {casillasRecorridas}");
+
+        // SUBIR DATOS A LA BASE DE DATOS
+        _databaseManager.UploadData(userData.nombre, userData.edad.ToString(), userData.genero.ToString(),
+            indiceNivel.ToString(), tiempoNivel.ToString().Replace(',', '.'), cartasUsadas.ToString(), casillasRecorridas.ToString());
     }
 }
